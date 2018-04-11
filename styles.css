@@ -1,10 +1,9 @@
 /* Styles */
 
 body{
-	background: #fff;
-	color: #333;
+	background: #eae7dc;
 	font-family: verdana, sans-serif;
-	font-size: 14px;
+	font-size: 1em;
 	margin: 0;
 	padding: 0;
 }
@@ -19,16 +18,71 @@ body{
 	margin: 0 auto;
 }
 
-.footer {
+.aboutMe{
+    font-size: 1.6em;
+    margin: auto;
+    font-weight: bolder;
+    padding: 10%;
+    width: 50%;
+}
+
+a{
+	text-decoration: none;
+	padding: 15px;
+}
+
+a:hover{
+	background-color: #eae7dc;
+	color: #111;
+}
+
+footer a, nav a{
+    color: #909999;
+}
+
+nav{
+    position: fixed;
+    background: #111;
+    padding: 15px 0;
+    width: 100%;
+    top: 0;
+}
+
+footer {
     position: fixed;
     background: #111;
     color: #909999;
-    padding: 10px 0;
+    paddin
+    padding: 15px 0;
     width: 100%;
     bottom: 0;
 }
-    .ft-right{
-        float: right;
-        white-space: nowrap;
-        overflow: hidden;
-    }
+
+.ft-left{
+	float: left;
+}
+.ft-right{
+	float: right; 
+}
+
+.grid-platform{
+    margin: auto;
+	padding-top: 5%;
+	display: grid;
+	grid-gap: 50px 100px;
+	grid-template-columns: auto auto auto;
+}
+
+.grid-container{
+    padding-top: 5%;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.skills {
+	padding: 20px;
+	width: 300px;
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.19);
+	border-radius: 25px 25px;
+	background-color: #747474
+}
