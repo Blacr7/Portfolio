@@ -8,30 +8,54 @@ body{
 	padding: 0;
 }
 
-.portfolioImage img{
-    float: right;
-    height: 350px;
-    border-radius: 50%;
-}
 .container{
-	width: 80%;
-	margin: 0 auto;
+	margin: 0;
 }
 
 .aboutMe{
-    font-size: 1.6em;
-    margin: auto;
-    font-weight: bolder;
-    padding: 10%;
-    width: 50%;
-}
+	background-color: #747474;
+	height: 70vh;
+	width: 95em;
 
-a{
+}
+	.aboutMeHeader{
+		margin: 0;
+		font-size: 2.5em;
+		color: #FFFFFF;
+		padding: 2em 2em 0em 2em;
+		font-weight: bold;
+	}
+
+	.aboutMeContent{
+		margin: 0;
+		padding: 4em 0em 0em 8em;
+		width: 70%;
+	}
+
+nav a{
 	text-decoration: none;
-	padding: 15px;
+	padding: 2em;
 }
 
-a:hover{
+
+nav a:hover{
+	background-color: #747474;
+	color: #111;
+}
+
+nav{
+    background: #111;
+    padding: 1em 0em;
+    width: 100%;
+    min-width: 100em;
+}
+
+footer a{
+	text-decoration: none;
+	padding: 2em 2em 13px 2em;
+}
+
+footer a:hover{
 	background-color: #eae7dc;
 	color: #111;
 }
@@ -40,30 +64,21 @@ footer a, nav a{
     color: #909999;
 }
 
-nav{
-    position: fixed;
-    background: #111;
-    padding: 15px 0;
-    width: 100%;
-    top: 0;
-}
-
 footer {
-    position: fixed;
-    background: #111;
-    color: #909999;
-    paddin
-    padding: 15px 0;
+	background: #111;
+	bottom: 0;
+    padding: 2em 0em;
     width: 100%;
-    bottom: 0;
+    min-width: 100em;
+	margin-top: 2em;
+	color: #909999;
 }
-
-.ft-left{
-	float: left;
-}
-.ft-right{
-	float: right; 
-}
+	.ft-left{
+		float: left;
+	}
+	.ft-right{
+		float: right; 
+	}
 
 .grid-platform{
     margin: auto;
@@ -80,8 +95,8 @@ footer {
     text-align: center;
 }
 .skills {
-	padding: 20px;
-	width: 300px;
+	padding: 2em;
+	width: 20em;
 	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.19);
 	border-radius: 25px 25px;
 	background-color: #747474
