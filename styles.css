@@ -2,52 +2,74 @@
 
 body{
 	background: #eae7dc;
-	font-family: verdana, sans-serif;
+	font-family: 'Bitter', sans-serif;
 	font-size: 1em;
 	margin: 0;
 	padding: 0;
 }
 
-.container{
-	margin: 0;
-}
 
 .aboutMe{
 	background-color: #747474;
-	height: 70vh;
+	height: 60vh;
 	width: 95em;
-
+	border-radius: 0em 4em 4em;
+	box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.50);
 }
 	.aboutMeHeader{
 		margin: 0;
-		font-size: 2.5em;
-		color: #FFFFFF;
-		padding: 2em 2em 0em 2em;
+		font-size: 3.5em;
+		color: #eae7dc;
+		padding: 2em 2em 0em 5em;
 		font-weight: bold;
 	}
 
 	.aboutMeContent{
+		color: #eae7dc;
+		font-size: 1.5em;
 		margin: 0;
-		padding: 4em 0em 0em 8em;
+		padding: 2em 0em 0em 15em;
 		width: 70%;
 	}
 
 nav a{
 	text-decoration: none;
 	padding: 2em;
+	color: #111;
 }
 
 
 nav a:hover{
 	background-color: #747474;
-	color: #111;
+	color: #eae7dc;
 }
 
 nav{
-    background: #111;
     padding: 1em 0em;
     width: 100%;
     min-width: 100em;
+}
+
+.grid-platform{
+	padding-top: 5%;
+	display: grid;
+	grid-gap: 3em 6em;
+	grid-template-columns: auto auto auto;
+}
+
+.grid-container{
+    padding-top: 5%;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.skills {
+	padding: 2em;
+	width: 20em;
+	box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.19);
+	border-radius: 25px 25px;
+	background-color: #747474;
 }
 
 footer a{
@@ -60,44 +82,56 @@ footer a:hover{
 	color: #111;
 }
 
-footer a, nav a{
-    color: #909999;
+footer a{
+    color: #eae7dc;;
 }
 
 footer {
-	background: #111;
-	bottom: 0;
+	background: #747474;
+	color: #eae7dc;
     padding: 2em 0em;
     width: 100%;
     min-width: 100em;
 	margin-top: 2em;
-	color: #909999;
 }
 	.ft-left{
 		float: left;
+		width: 100%;
 	}
 	.ft-right{
 		float: right; 
 	}
 
-.grid-platform{
-    margin: auto;
-	padding-top: 5%;
-	display: grid;
-	grid-gap: 50px 100px;
-	grid-template-columns: auto auto auto;
-}
+@media only screen and (max-width: 425px){
+	.aboutMe{
+		background-color: #747474;
+		height: 80vh;
+		width: 85em;
+		border-radius: 0em 4em 4em;
+		box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.50);
+	}
+	
+	.grid-container{
+		margin: auto;
+		width: 50%;
+		text-align: center;
+	}
 
-.grid-container{
-    padding-top: 5%;
-    margin: auto;
-    width: 50%;
-    text-align: center;
-}
-.skills {
-	padding: 2em;
-	width: 20em;
-	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.19);
-	border-radius: 25px 25px;
-	background-color: #747474
+	.grid-platform{
+		display: grid;
+		grid-gap: 8em 15em;
+		grid-template-columns: auto auto;
+		margin: auto;
+		padding-top: 10%;
+		width: 50%;
+	}
+
+	footer{
+		position: fixed;
+		bottom: 0;
+	}
+		.ft-right{
+			float: right;
+			margin-right: ; 
+		}
 }
