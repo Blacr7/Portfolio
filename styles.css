@@ -1,4 +1,7 @@
-/* Styles */
+:root {
+	--mainColor: #eae7dc;
+	--secondColor: #747474;
+}
 
 body{
 	background: #eae7dc;
@@ -8,12 +11,14 @@ body{
 	padding: 0;
 }
 
+.container {
+}
 
 .aboutMe{
 	background-color: #747474;
-	height: 60vh;
+	height: 90vh;
 	width: 95em;
-	border-radius: 0em 4em 4em;
+	/*border-radius: 0em 4em 4em; */
 	box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.50);
 }
 	.aboutMeHeader{
@@ -55,23 +60,31 @@ nav{
 	display: grid;
 	grid-gap: 3em 6em;
 	grid-template-columns: auto auto auto;
+	margin: auto;
+	width: 50%;
 }
 
 .grid-container{
     padding-top: 5%;
     margin: auto;
-    width: 50%;
     text-align: center;
 }
 
 .skills {
 	padding: 2em;
-	width: 20em;
+	width: 12em;
 	box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.19);
 	border-radius: 25px 25px;
 	background-color: #747474;
 }
-
+	.skills img {
+		height: 128px;
+		width: 128px;
+	}
+	
+	.skills h3{
+		color: #eae7dc;
+	}
 footer a{
 	text-decoration: none;
 	padding: 2em 2em 13px 2em;
@@ -126,12 +139,38 @@ footer {
 		width: 50%;
 	}
 
+	.skills {
+		padding: 2em;
+		width: 20em;
+		box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.19);
+		border-radius: 25px 25px;
+		background-color: #747474;
+	}
+		.skills img {
+			height: 256px;
+			width: 256px;
+		}
+
 	footer{
 		position: fixed;
 		bottom: 0;
 	}
 		.ft-right{
-			float: right;
-			margin-right: ; 
+			float: right; 
 		}
+}
+
+@media only screen and (max-width: 1024px){
+	.skills {
+		padding: 2em;
+		width: 15em;
+		box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.19);
+		border-radius: 25px 25px;
+		background-color: #747474;
+	}
+		.skills img {
+			height: 192px;
+			width: 192px;
+		}
+
 }
