@@ -7,6 +7,7 @@
 	margin: 0;
 
 }
+
 body{
 	background: #eae7dc;
 	font-family: 'Bitter', sans-serif;
@@ -23,7 +24,7 @@ body{
 	display: grid;
 	grid-template-areas:
 		 "nav     nav     nav"
-		 "aboutMe aboutMe aboutMe"
+		 "overView overView overView"
 		 "skill   skill   skill "
 		 "footer  footer  footer";
 }
@@ -53,27 +54,27 @@ nav{
 		color: #eae7dc;
 	}
 
-.aboutMe{
+.overView{
 	background-color: #747474;
 	display: flex;
 	flex-direction:column;
 	justify-content: center;	
 	text-align: center;
-	grid-area: aboutMe;
+	grid-area: overView;
 	height: 90vh;
-	width: 80vw;
+	width: 90vw;
 	border-radius: 0em 4em 4em 0em;
 	box-shadow: 0em .5em 1em rgba(0, 0, 0, 0.50);
 
 }
-	.aboutMeHeader{
+	.overViewHeader{
 		color: #eae7dc;
 		display: inline;
 		float: none;
 		font-size: 3.5em;
 		font-weight: bold;
 	}
-	.aboutMeContent{
+	.overViewContent{
 		color: #eae7dc;
 		font-size: 1.5em;
 		display: inline;
@@ -86,8 +87,6 @@ nav{
 	grid-area: skill;
 	grid-gap: 2em;
 	grid-template-columns: auto auto auto;
-	float: right;
-	position: relative;
 	padding-top: 2em;
 	margin: auto;
 }
@@ -165,19 +164,23 @@ footer{
 		padding: 2em 2em 1em 2em;
 	}
 }
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 725px){
 	nav{
 		padding: 1em 0em;
 	}
-
 		nav a{
 			padding: 1em;
 		}
-
-	.aboutMe{
-		width: 125vw;
+	.overView{
+		width: 100vw;
+		border-radius: 0;
 	}
-
+	.skillGrid{
+		grid-template-columns: auto auto;
+	}
+		.skills{
+			padding: 1.5em;
+		}
 	footer{
 		padding: 1em 0em;
 	}
@@ -187,24 +190,10 @@ footer{
 }
 
 @media only screen and (max-width: 375px){
-	.aboutMe{
-		width: 145vw;
-	}
-}
-
-@media only screen and (max-width: 320px){
-	nav a:hover{
-		background-color: #eae7dc;
-		color: #111;
-	}
-
-	.aboutMe{
-		width: 170vw;
-	}
-	
-	.skills{
-		padding: 2em;
-	}
+	/* change the nav bar to fit smaller screens */
+	* {
+		font-size:small;
+	} 
 	.skills img {
 		height: 96px;
 		width: 96px;
