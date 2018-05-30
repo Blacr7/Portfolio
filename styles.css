@@ -1,1 +1,201 @@
-/* Styles */
+:root {
+	--mainColor: #eae7dc;
+	--secondColor: #747474;
+}
+
+*{
+	margin: 0;
+
+}
+
+body{
+	background: #eae7dc;
+	font-family: 'Bitter', sans-serif;
+	font-size: 1em;
+}
+
+	body, html{
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+
+.pageContainer {
+	display: grid;
+	grid-template-areas:
+		 "nav     nav     nav"
+		 "overView overView overView"
+		 "skill   skill   skill "
+		 "footer  footer  footer";
+}
+
+nav{
+	grid-area: nav;
+    padding: 2em 0em;
+    width: 100%;
+}
+
+	nav li, nav ul{
+		display: inline;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	nav a{
+		text-decoration: none;
+		padding: 2em;
+		color: #111;
+	}
+
+
+	nav a:hover{
+		background-color: #747474;
+		color: #eae7dc;
+	}
+
+.overView{
+	background-color: #747474;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;	
+	text-align: center;
+	grid-area: overView;
+	height: 90vh;
+	width: 90vw;
+	border-radius: 0em 4em 4em 0em;
+	box-shadow: 0em .5em 1em rgba(0, 0, 0, 0.50);
+
+}
+	.overViewHeader{
+		color: #eae7dc;
+		display: inline;
+		float: none;
+		font-size: 3.5em;
+		font-weight: bold;
+	}
+	.overViewContent{
+		color: #eae7dc;
+		font-size: 1.5em;
+		display: inline;
+		float: none;
+		padding-top: 5%;
+	}
+
+.skillGrid{
+	display: grid;
+	grid-area: skill;
+	grid-gap: 2em;
+	grid-template-columns: auto auto auto;
+	padding-top: 2em;
+	margin: auto;
+}
+
+	.skillContainer{
+		text-align: center;
+	}
+
+	.skills {
+		padding: 2em;
+		box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.19);
+		border-radius: 25px 25px;
+		background-color: #747474;
+	}
+		.skills img {
+			height: 128px;
+			width: 128px;
+		}
+		
+		.skills h3{
+			color: #eae7dc;
+		}
+
+
+footer{
+	background: #747474;
+	color: #eae7dc;
+	grid-area: footer;
+  	height: 16px;
+	margin-top: 2em;
+	padding: 2em 0em;
+	width: 100%;
+}
+	.ft-left{
+		float: left;
+		width: 100%;
+	}
+	.ft-right{
+		float: right; 
+	}
+	footer a{
+		color: #eae7dc;
+		padding: 2em;
+		text-decoration: none;	
+	}
+	footer a:hover{
+		background-color: #eae7dc;
+		color: #111;
+	}
+
+@media only screen and (min-width: 2560px){
+	*{
+		font-size: x-large;
+	}
+	nav{
+		padding: 1.5em 0em;
+	}
+	.skillGrid{
+		grid-gap: 10% 1;
+		padding-top: 5em;
+	}
+
+	.skills{
+		padding: 3em;
+	}
+		.skills img {
+			height: 256px;
+			width: 256px;
+		}
+
+	footer { 
+		padding: 1.5em 0em;
+	}
+	footer a{
+		padding: 2em 2em 1em 2em;
+	}
+}
+@media only screen and (max-width: 725px){
+	nav{
+		padding: 1em 0em;
+	}
+		nav a{
+			padding: 1em;
+		}
+	.overView{
+		width: 100vw;
+		border-radius: 0;
+	}
+	.skillGrid{
+		grid-template-columns: auto auto;
+	}
+		.skills{
+			padding: 1.5em;
+		}
+	footer{
+		padding: 1em 0em;
+	}
+		footer a {
+			padding: 1em
+		}
+}
+
+@media only screen and (max-width: 375px){
+	/* change the nav bar to fit smaller screens */
+	* {
+		font-size:small;
+	} 
+	.skills img {
+		height: 96px;
+		width: 96px;
+	}
+}
