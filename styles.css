@@ -114,13 +114,51 @@ nav{
 		}
 
 .contact{
+	/* Change the  sides of the border that are rounded*/
 	border-radius: 4em 0em 0em 4em;
 }
+	.contactForm{
+		display: grid;
+		grid-template-areas:
+		" leftForm rightForm "
+		" bottomForm bottomForm "
+	}
 
-.contactBackground{
-	grid-area: contact;
-	padding-top: 2em;
-}
+	.leftForm, .rightForm{
+		padding: 2em 0 0 2em;
+	}
+		.leftForm{
+			grid-area: leftForm;
+		}
+		.rightForm{
+			grid-area: rightForm;
+		}
+
+	.contactForm input[type="email"], .contactForm input[type="text"], #Message{
+		border: solid 1px #eae7dc;
+		display: inline-grid;
+		font-size: x-large;
+	}
+
+	.bottomForm{
+		grid-area: bottomForm;
+		display: inline-grid;
+	}
+		.bottomForm label{
+			display: grid;
+		}
+		#Message{
+			height: 300%;
+		}
+		.contactForm input, .bottomForm textarea{
+			background-color: #eae7dc
+		}
+		
+	.contactBackground{
+		grid-area: contact;
+		padding-top: 2em;
+
+	}
 
 footer{
 	background: #747474;
@@ -183,10 +221,21 @@ footer{
 		nav a{
 			padding: 1em;
 		}
-	.overView{
+
+	.pageContainer {
+		grid-template-areas:
+		 "nav      nav     "
+		 "overView overView "
+		 "skill    skill    "
+		 "contact  contact "
+		 "footer   footer  ";
+	}
+
+	.overView, .contact{
 		width: 100vw;
 		border-radius: 0;
 	}
+
 	.skillGrid{
 		grid-template-columns: auto auto;
 	}
@@ -198,6 +247,11 @@ footer{
 			height: 128px;
 			width: 128px;
 		}
+
+	.bottomForm textarea{
+		display: table-row;
+		width: 100%;
+	}
 	footer{
 		padding: 1em 0em;
 	}
@@ -207,7 +261,7 @@ footer{
 }
 
 @media only screen and (max-width: 375px){
-	/* change the nav bar to fit smaller screens */
+		/* change the nav bar to fit smaller screens */
 	* {
 		font-size:small;
 	} 
