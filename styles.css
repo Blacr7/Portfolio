@@ -116,6 +116,8 @@ nav{
 .contact{
 	/* Change the  sides of the border that are rounded*/
 	border-radius: 4em 0em 0em 4em;
+	color: #eae7dc;
+	font-weight: Bold;
 }
 	.contactForm{
 		display: grid;
@@ -149,6 +151,7 @@ nav{
 		}
 		#Message{
 			height: 300%;
+			font-weight: bolder
 		}
 		.contactForm input, .bottomForm textarea{
 			background-color: #eae7dc
@@ -188,7 +191,7 @@ footer{
 
 @media only screen and (min-width: 2560px){
 	*{
-		font-size: x-large;
+		font-size: xx-large;
 	}
 	nav{
 		padding: 1.5em 0em;
@@ -207,6 +210,11 @@ footer{
 			width: 256px;
 		}
 
+	#Message{
+		height: 500%;
+		font-weight: bolder
+	}
+
 	footer { 
 		padding: 1.5em 0em;
 	}
@@ -223,6 +231,7 @@ footer{
 		}
 
 	.pageContainer {
+		grid-template-columns: auto auto;
 		grid-template-areas:
 		 "nav      nav     "
 		 "overView overView "
@@ -232,7 +241,6 @@ footer{
 	}
 
 	.overView, .contact{
-		width: 100vw;
 		border-radius: 0;
 	}
 
@@ -261,12 +269,6 @@ footer{
 }
 
 @media only screen and (max-width: 375px){
-		/* change the nav bar to fit smaller screens */
-	* {
-		font-size:small;
+		* {
+		font-size: large;
 	} 
-	.skills img {
-		height: 96px;
-		width: 96px;
-	}
-}
