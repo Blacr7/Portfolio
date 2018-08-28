@@ -122,8 +122,9 @@ nav{
 	.contactForm{
 		display: grid;
 		grid-template-areas:
-		" leftForm rightForm "
-		" bottomForm bottomForm "
+		" leftForm   .          rightForm "
+		" bottomForm bottomForm bottomForm "
+		" .          submit     .";
 	}
 
 	.leftForm, .rightForm{
@@ -138,20 +139,19 @@ nav{
 
 	.contactForm input[type="email"], .contactForm input[type="text"], #Message{
 		border: solid 1px #eae7dc;
-		display: inline-grid;
 		font-size: x-large;
 	}
 
 	.bottomForm{
 		grid-area: bottomForm;
-		display: inline-grid;
+		display: inline;
 	}
 		.bottomForm label{
 			display: grid;
 		}
 		#Message{
-			height: 300%;
-			font-weight: bolder
+			font-weight: bolder;
+			width: 99.5%;
 		}
 		.contactForm input, .bottomForm textarea{
 			background-color: #eae7dc
@@ -160,9 +160,19 @@ nav{
 	.contactBackground{
 		grid-area: contact;
 		padding-top: 2em;
-
 	}
 
+	.submit{
+		grid-area: submit;
+		padding-top: 25%;
+	}
+		.submit input[type="submit"]{
+			border: none;
+			font-size: 18px;
+			color: #eae7dc;
+			padding: 0px;
+			background-color: #747474;
+		}
 footer{
 	background: #747474;
 	color: #eae7dc;
