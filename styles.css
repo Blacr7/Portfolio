@@ -173,6 +173,10 @@ nav{
 			padding: 0px;
 			background-color: #747474;
 		}
+
+		.submit input[type="submit"]:hover{
+			cursor: pointer;
+		}
 footer{
 	background: #747474;
 	color: #eae7dc;
@@ -281,4 +285,5 @@ footer{
 @media only screen and (max-width: 375px){
 		* {
 		font-size: large;
-	} 
+	}
+} 
