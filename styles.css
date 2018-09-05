@@ -5,7 +5,7 @@
 
 *{
 	margin: 0;
-
+	scroll-behavior: smooth;
 }
 
 body{
@@ -32,7 +32,7 @@ body{
 		 "footer   footer  footer";
 }
 
-nav{
+header{
 	grid-area: nav;
     padding: 2em 0em;
 }
@@ -86,10 +86,7 @@ nav{
 		padding-top: 5%;
 	}
 
-	.moreBelow{
-		position: absolute;
-		right: 5%;
-		bottom: 5%;
+	.scrollAnchor{
 		color: #eae7dc;
 		font-size: 2em;
 		text-decoration: none;
@@ -106,10 +103,23 @@ nav{
 			visibility: hidden;
 		  }
 		}
-		.moreBelow:hover{
+	#moreBelow{
+		position: absolute;
+		right: 5%;
+		bottom: 5%;
+	}
+		#moreBelow:hover{
 			animation: none;
 		}
 		
+	#moreAbove{
+		position: absolute;
+		left: 5%;
+		bottom: 5%;
+	}
+		#moreAbove:hover{
+			animation:none;
+		}
 .skillGrid{
 	display: grid;
 	grid-area: skill;
@@ -228,11 +238,12 @@ footer{
 		color: #111;
 	}
 
+
 @media only screen and (min-width: 2560px){
 	*{
 		font-size: xx-large;
 	}
-	nav{
+	header{
 		padding: 1.5em 0em;
 	}
 	.skillGrid{
@@ -265,10 +276,10 @@ footer{
 	}
 }
 @media only screen and (max-width: 825px){
-	nav{
+	header{
 		padding: 1em 0em;
 	}
-		nav a{
+		header a{
 			padding: 1em;
 		}
 
