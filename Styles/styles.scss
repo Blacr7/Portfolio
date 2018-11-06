@@ -237,7 +237,7 @@ header{
 		grid-area: content;
 		width: 70%;
 		font-size: 2.5em;
-		padding-top: 25%;
+		margin: auto;
 	}	
 
 	#PortfolioImage{
@@ -259,11 +259,6 @@ header{
 	}
 	
 }
-
-
-
-
-
 footer{
 	background: $secondColor;
 	color: $mainColor;
@@ -293,10 +288,7 @@ footer{
 		color: #111;
 	}
 }
-    
-	
-	
-	
+
 @media only screen and (min-width: 2560px){
 	*{
 		font-size: xx-large;
@@ -361,7 +353,7 @@ footer{
 		grid-template-columns: 2em auto auto 2em;
 		grid-template-areas:
 		" . content profilePic . ";
-		
+
 		.descContent{
 			margin: auto;
 			padding-top: none;
