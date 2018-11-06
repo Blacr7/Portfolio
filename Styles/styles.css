@@ -3,6 +3,14 @@
   scroll-behavior: smooth;
 }
 
+.inactive, .style2 {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
 body {
   background: #eae7dc;
   font-family: 'Bitter', sans-serif;
@@ -16,18 +24,18 @@ body, html {
 }
 
 .pageContainer {
-  max-width: none;
+  max-width: 100vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15em auto auto 15em;
-      grid-template-columns: 15em auto auto 15em;
-      grid-template-areas: "nav nav nav nav" "overView overView overView ." "desc desc profilePic profilePic" ".  contact contact contact" ".    skill   skill  ." "footer   footer  footer footer";
+  -ms-grid-columns: 15em auto 15em;
+      grid-template-columns: 15em auto 15em;
+      grid-template-areas: "nav nav nav " "overView overView ." "desc desc desc" ".  contact contact " ".    skill     ." "footer   footer   footer";
 }
 
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-column-span: 3;
   grid-area: nav;
   padding: 2em 0em;
 }
@@ -64,7 +72,6 @@ header nav a:hover {
           justify-content: center;
   text-align: center;
   height: 90vh;
-  border-radius: 0em 4em 4em 0em;
   -webkit-box-shadow: 0em 0.5em 1em rgba(0, 0, 0, 0.5);
           box-shadow: 0em 0.5em 1em rgba(0, 0, 0, 0.5);
   position: relative;
@@ -73,27 +80,24 @@ header nav a:hover {
 .overViewBackground {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: overView;
 }
 
 .overViewBackground .overViewHeader {
   color: #eae7dc;
-  display: inline;
-  float: none;
-  font-size: 3.5em;
-  font-weight: bold;
+  font-size: 3em;
+  font-weight: bolder;
 }
 
 .overViewBackground .overViewContent {
   color: #eae7dc;
   font-size: 1.5em;
-  display: inline;
   float: none;
   padding-top: 5%;
 }
 
-.scrollAnchor {
+.overViewBackground .scrollAnchor {
   color: #eae7dc;
   font-size: 2em;
   text-decoration: none;
@@ -113,25 +117,13 @@ header nav a:hover {
   }
 }
 
-#moreBelow {
+.overViewBackground #moreBelow {
   position: absolute;
   right: 5%;
   bottom: 5%;
 }
 
-#moreBelow:hover {
-  -webkit-animation: none;
-          animation: none;
-}
-
-#moreAbove {
-  position: absolute;
-  left: 5%;
-  bottom: 5%;
-  color: #747474;
-}
-
-#moreAbove:hover {
+.overViewBackground #moreBelow:hover {
   -webkit-animation: none;
           animation: none;
 }
@@ -141,7 +133,6 @@ header nav a:hover {
   display: grid;
   -ms-grid-row: 5;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: skill;
   grid-gap: 2em;
   -ms-grid-columns: auto auto auto auto;
@@ -171,40 +162,31 @@ header nav a:hover {
   color: #eae7dc;
 }
 
-.contact {
-  border-radius: 4em 0em 0em 4em;
+.contactBackground {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: contact;
+  padding-top: 2em;
+}
+
+.contactBackground .contact {
   color: #eae7dc;
   font-weight: Bold;
 }
 
-.contact .contactForm {
+.contactBackground .contact .contactForm {
   display: -ms-grid;
   display: grid;
       grid-template-areas: " leftForm   .          rightForm " " bottomForm bottomForm bottomForm " " .          submit     .";
 }
 
-.contact .leftForm, .contact .rightForm {
-  padding: 2em 0 0 2em;
-}
-
-.contact .leftForm {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: leftForm;
-}
-
-.contact .rightForm {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: rightForm;
-}
-
-.contactForm input[type="email"], .contactForm input[type="text"], #Message {
+.contactBackground .contact .contactForm input[type="email"], .contactBackground .contact .contactForm input[type="text"], .contactBackground .contact .contactForm #Message {
   border: solid 1px #eae7dc;
   font-size: x-large;
 }
 
-.bottomForm {
+.contactBackground .contact .contactForm .bottomForm {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -212,36 +194,23 @@ header nav a:hover {
   display: inline;
 }
 
-.bottomForm label {
+.contactBackground .contact .contactForm .bottomForm label {
   display: -ms-grid;
   display: grid;
 }
 
-#Message {
-  font-weight: bolder;
-  width: 99.5%;
-}
-
-.contactForm input, .bottomForm textarea {
+.contactBackground .contact .contactForm input, .contactBackground .contact .contactForm .bottomForm textarea {
   background-color: #eae7dc;
 }
 
-.contactBackground {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-area: contact;
-  padding-top: 2em;
-}
-
-.submit {
+.contactBackground .contact .contactForm .submit {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: submit;
   padding-top: 25%;
 }
 
-.submit input[type="submit"] {
+.contactBackground .contact .contactForm .submit input[type="submit"] {
   border: none;
   font-size: 18px;
   color: #eae7dc;
@@ -249,33 +218,90 @@ header nav a:hover {
   background-color: #747474;
 }
 
-.submit input[type="submit"]:hover {
+.contactBackground .contact .contactForm .submit input[type="submit"]:hover {
   cursor: pointer;
+}
+
+.contactBackground .contact .leftForm, .contactBackground .contact .rightForm {
+  padding: 2em 0 0 2em;
+}
+
+.contactBackground .contact .leftForm {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: leftForm;
+}
+
+.contactBackground .contact .rightForm {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: rightForm;
+}
+
+.contactBackground .contact #Message {
+  font-weight: bolder;
+  width: 99.6%;
+  resize: none;
 }
 
 .description {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: desc;
   color: #747474;
-  height: 60vh;
+  height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15em auto auto 15em;
+      grid-template-columns: 15em auto auto 15em;
+      grid-template-areas: " . content profilePic . ";
 }
 
 .description .descContent {
-  width: 50%;
-  margin: auto;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+  width: 70%;
   font-size: 2.5em;
-  padding-top: 15%;
+  padding-top: 25%;
 }
 
-#PortfolioImage {
-  -ms-grid-row: 3;
+.description #PortfolioImage {
+  -ms-grid-row: 1;
   -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
   grid-area: profilePic;
   border-radius: 50%;
   margin: auto;
+}
+
+.description #moreAbove {
+  color: #eae7dc;
+  font-size: 2em;
+  text-decoration: none;
+  animation: blinking 2s steps(5, start) infinite;
+  -webkit-animation: blinking 2s steps(5, start) infinite;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: #747474;
+}
+
+@keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+
+.description #moreAbove:hover {
+  -webkit-animation: none;
+          animation: none;
 }
 
 footer {
@@ -283,7 +309,7 @@ footer {
   color: #eae7dc;
   -ms-grid-row: 6;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-column-span: 3;
   grid-area: footer;
   height: 16px;
   margin-top: 2em;
@@ -291,12 +317,12 @@ footer {
   width: 100%;
 }
 
-.ft-left {
+footer .ft-left {
   float: left;
   width: 100%;
 }
 
-.ft-right {
+footer .ft-left .ft-right {
   float: right;
 }
 
@@ -355,19 +381,27 @@ footer a:hover {
   .pageContainer {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
-        grid-template-areas: "nav      nav     " "overView overView " "desc  profilePic" "contact  contact " "skill    skill    " "footer   footer  ";
+        grid-template-areas: "nav      nav     " "overView overView " "desc  desc" "contact  contact " "skill    skill    " "footer   footer  ";
   }
   .overView, .contact {
     border-radius: 0;
   }
+  .description {
+    -ms-grid-columns: 2em auto auto 2em;
+        grid-template-columns: 2em auto auto 2em;
+        grid-template-areas: " . content profilePic . ";
+  }
   .description .descContent {
-    width: 40%;
+    margin: auto;
+    padding-top: none;
+    width: 70%;
     font-size: 28px;
     line-height: 54px;
   }
   #PortfolioImage {
     height: 337px;
     width: 225px;
+    text-align: center;
   }
   .skillGrid {
     -ms-grid-columns: auto auto;

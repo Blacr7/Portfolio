@@ -1,10 +1,21 @@
 $mainColor: #eae7dc;
 $secondColor: #747474;
 
-
 *{
 	margin: 0;
 	scroll-behavior: smooth;
+}
+
+.inactive{
+	opacity: 0;
+}
+
+.active{
+	opacity: 1;
+}
+
+.style1{
+	@extend .inactive;
 }
 
 body{
@@ -16,20 +27,16 @@ body{
 body, html{
 	margin: 0;
 	padding: 0;
-	position: relative;
 }
 
 .pageContainer {
-	max-width: none;
+	max-width: 100vw;
+	max-height: 100vh;
 	display: grid;
-	grid-template-columns: 15em auto auto 15em;
 	grid-template-areas:
-		 "nav nav nav nav"
-		 "overView overView overView ."
-		 "desc desc profilePic profilePic"
-		 ".  contact contact contact"
-		 ".    skill   skill  ."
-		 "footer   footer  footer footer";
+	"nav nav nav"
+	"page page ."
+	"footer footer footer"
 }
 
 header{
@@ -48,23 +55,58 @@ header{
 		color: #111;
 	}
 
-
 	nav a:hover{
 		background-color: $secondColor;
 		color: $mainColor;
 	}
+
+	
+}
+				label{
+					position: relative;
+					float: left;
+					z-index: 5;	
+					width: 40px;
+					height: 40px;
+					text-align: center;
+					line-height: 38px;
+					color: #8398AD;
+					cursor: pointer;
+					font-size: 14px;
+					transition: background .5s ease-in-out;
+				}
+
+				input[type="radio"] {
+					display: none;
+				}
+
+				#test:checked ~ .Page{
+					pointer-events: all;
+					opacity: 1;
+				}
+
+				input[type="radio"]:checked{
+					.skillGrid{
+						@extend .active;
+					}
+				}
+
+
+.Page{
+	width: 80vw;
+	background-color: $secondColor;
+	top: 80px;
+	position: absolute;
+	grid-area: page;
+	box-shadow: 0em .5em 1em rgba(0, 0, 0, 0.50);
+	pointer-events: none;
+	@extend .inactive;
 }
 
 .overView, .contact{
-	background-color: $secondColor;
-	display: flex;
 	flex-direction:column;
 	justify-content: center;	
 	text-align: center;
-	height: 90vh;
-	border-radius: 0em 4em 4em 0em;
-	box-shadow: 0em .5em 1em rgba(0, 0, 0, 0.50);
-	position: relative;
 }
 
 .overViewBackground{
@@ -125,7 +167,6 @@ header{
 	}     
 		
 .skillGrid{
-	display: grid;
 	grid-area: skill;
 	grid-gap: 2em;
     grid-template-columns: auto auto auto auto;
@@ -154,39 +195,41 @@ header{
 
 
 .contact{
-	border-radius: 4em 0em 0em 4em;
 	color: $mainColor;
-    font-weight: Bold;
+	font-weight: Bold;
+	
     .contactForm{
 		display: grid;
 		grid-template-areas:
 		" leftForm   .          rightForm "
 		" bottomForm bottomForm bottomForm "
 		" .          submit     .";
+		
+		input[type="email"],  input[type="text"], #Message{
+			border: solid 1px $mainColor;
+			font-size: x-large;
+		}
+		
+		.bottomForm{
+			grid-area: bottomForm;
+			display: inline;
+			
+			label{
+				display: grid;
+			}
+		}
 	}
 
 	.leftForm, .rightForm{
 		padding: 2em 0 0 2em;
 	}
-		.leftForm{
-			grid-area: leftForm;
-		}
-		.rightForm{
-			grid-area: rightForm;
-        }
+	.leftForm{
+		grid-area: leftForm;
+	}
+	.rightForm{
+		grid-area: rightForm;
+	}
 }
-    .contactForm input[type="email"], .contactForm input[type="text"], #Message{
-		border: solid 1px $mainColor;
-		font-size: x-large;
-	}
-
-	.bottomForm{
-		grid-area: bottomForm;
-		display: inline;
-	}
-		.bottomForm label{
-			display: grid;
-		}
 		#Message{
 			font-weight: bolder;
 			width: 99.5%;
@@ -203,29 +246,30 @@ header{
 	.submit{
 		grid-area: submit;
 		padding-top: 25%;
-	}
-		.submit input[type="submit"]{
+
+		input[type="submit"]{
 			border: none;
 			font-size: 18px;
 			color: $mainColor;
 			padding: 0px;
 			background-color: $secondColor;
 		}
-
-		.submit input[type="submit"]:hover{
+		
+		input[type="submit"]:hover{
 			cursor: pointer;
         }
+	}
 
 .description{
 	grid-area: desc;
 	color: $secondColor;
-	height: 60vh;
+	height: 80vh;
 
 	.descContent{
 		width: 50%;
 		margin: auto;
 		font-size: 2.5em;
-		padding-top: 15%;
+		padding-top: 25%;
 	}	
 }
 
@@ -235,33 +279,37 @@ header{
 	margin: auto;
 }
 
-
-
 footer{
 	background: $secondColor;
 	color: $mainColor;
 	grid-area: footer;
-  	height: 16px;
-	margin-top: 2em;
 	padding: 2em 0em;
-    width: 100%;    
-}
-    .ft-left{
+	width: 100%;    
+	position: absolute;
+	bottom: 0px;
+	.ft-left{
 		float: left;
 		width: 100%;
+		
+		.ft-right{
+			float: right; 
+		}
 	}
-	.ft-right{
-		float: right; 
-	}
-	footer a{
+	
+	a{
 		color: $mainColor;
 		padding: 2em;
 		text-decoration: none;	
 	}
-	footer a:hover{
+
+	a:hover{
 		background-color: $mainColor;
 		color: #111;
 	}
+}
+    
+	
+	
 	
 @media only screen and (min-width: 2560px){
 	*{
@@ -334,6 +382,7 @@ footer{
 	#PortfolioImage{
 		height: 337px;
 		width: 225px;
+		text-align: center;
 	}
 
 	.skillGrid{

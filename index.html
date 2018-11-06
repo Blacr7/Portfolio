@@ -5,7 +5,7 @@
   <title>Robert Black Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Styles/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   <script src="script.js"></script>
 </head>
@@ -14,18 +14,29 @@
     <div class="pageContainer">
         <header id="goToTop">
             <nav>
-                <ul>
-                    <!-- <li><a href="index.html" >Homepage</a></li> -->
-                    <li><a href="#goToSkills">Skills</a></li>
+                <ul class="style1">
                     <li><a href="#goToContact" >Contact</a></li>
+                    <li><a href="#goToSkills">Skills</a></li>
                     <li><a href="assets/RobertBlackResume.pdf" target="none">Resume</a></li>
+                </ul>
+
+                <ul class="style2">
+                    <li><a href="">Overview</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About Me</a></li>
+                    
+                    <label for="test">Test</label>
+                    <input id="test" type="radio" name="test">
+
+                    <label for="test1">Test1</label>
+                    <input id="test1" type="radio" name="test">
+
                 </ul>
             </nav>
         </header>
 
-        <img src="Images/PortfolioImage.png" alt="Portfolio Image" id="PortfolioImage">
-        
-        <section class="overViewBackground">
+        <section class="overViewBackground Page">
             <section class="overView">
                 <h1 class="overViewHeader">Robert Black JR</h1>
                 
@@ -34,7 +45,7 @@
             </section>
         </section>
         
-        <section class="skillGrid" id="goToSkills">
+        <section id="goToSkills" class="skillGrid Page" >
             <div class="skillContainer">
                 <div class="skills"><img src="Images/github-logo.png" alt="Github logo"><h3>Github</h3></div>
             </div>
@@ -67,22 +78,22 @@
             </div>
         </section>
 
-        <section id="goToContact" class="contactBackground">
+        <section id="goToContact" class="contactBackground Page">
             <div class="contact">
                 <form class="contactForm" method="post" action="https://formspree.io/blacr7mail@gmail.com">
                     <div class="leftForm">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email">  
+                        <input type="email" id="email" name="email" required>  
                     </div>
                     
                     <div class="rightForm">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name"><br><br> 
+                        <input type="text" id="name" name="name" required><br><br> 
                     </div>
                         
                     <div class="bottomForm">
                         <label for="Message">Message</label>
-                        <textarea name="Message" id="Message" rows="6"></textarea><br><br>
+                        <textarea name="Message" id="Message" rows="8" required></textarea><br><br>
                     </div>
 
                     <div class="submit">
@@ -92,17 +103,17 @@
             </div>
         </section>
 
-        <section class="description">
+        <section id="goToDescription" class="description Page">
             <div class="descContent">
                 <hr>
                 <span >Hello, my name is Robert. </span>
                 <span>I am a Jamaican American with a lifelong love for all things computer</span>
+                
             </div>
-            
-            <a id="moreAbove" class="scrollAnchor" href="#goToTop">&uArr;</a>
-        </section>
+            <img src="Images/PortfolioImage.png" alt="Portfolio Image" id="PortfolioImage">
 
-        
+            <a id="moreAbove" href="#goToTop">&uArr;</a>
+        </section>
 
         <footer class="footer">
             <div class="ft-left">&copy; 
