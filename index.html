@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="pageContainer">
-        <header id="goToTop">
+    <div class="pageContainer" id="goToTop">
+        <header>
             <nav>
                 <ul class="style1">
                     <li><a href="#goToContact" >Contact</a></li>
@@ -41,10 +41,50 @@
                 <h1 class="overViewHeader">Robert Black JR</h1>
                 
                 <p class="overViewContent">Web Developer, Programmer, Gamer</p>
-                <a id="moreBelow" class="scrollAnchor" href="#goToSkills">&dArr;</a>
+                <a id="moreBelow" class="scrollAnchor" href="#goToDescription">&dArr;</a>
             </section>
         </section>
-        
+
+        <section id="goToDescription" class="description Page">
+            <div class="descContent">
+                <hr>
+                <span >Hello, my name is Robert. </span>
+                <span>I am a Jamaican American with a lifelong love for all things computer</span>
+                
+            </div>
+            <img src="Images/PortfolioImage.png" alt="Portfolio Image" id="PortfolioImage">
+            
+            <a id="moreBelow2" class="scrollAnchor" href="#goToContact">&dArr;</a>
+            
+        </section>
+
+        <section id="goToContact" class="contactBackground Page">
+            <div class="contact">
+                <form class="contactForm" method="post" action="https://formspree.io/blacr7mail@gmail.com">
+                    <div class="leftForm">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>  
+                    </div>
+                    
+                    <div class="rightForm">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required><br><br> 
+                    </div>
+                        
+                    <div class="bottomForm">
+                        <label for="Message">Message</label>
+                        <textarea name="Message" id="Message" rows="8" required></textarea><br><br>
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" name="submit">
+                    </div>
+                </form>
+                
+                <a id="moreBelow3" class="scrollAnchor" href="#goToSkills">&dArr;</a>
+            </div>
+        </section>
+
         <section id="goToSkills" class="skillGrid Page" >
             <div class="skillContainer">
                 <div class="skills"><img src="Images/github-logo.png" alt="Github logo"><h3>Github</h3></div>
@@ -74,45 +114,9 @@
                 <div class="skills"><img src="Images/reactLogo.png" alt="React logo"><h3>React</h3></div>
             </div>
             <div class="skillContainer">
-                <div class="skills"><img src="Images/es6Logo.jpg" alt="es6 logo"><h3>ECMAScript 6</h3></div>
+                <div class="skills"><img src="Images/es6Logo.jpg" alt="es6 logo"><h3>EScript 6</h3></div>
             </div>
-        </section>
-
-        <section id="goToContact" class="contactBackground Page">
-            <div class="contact">
-                <form class="contactForm" method="post" action="https://formspree.io/blacr7mail@gmail.com">
-                    <div class="leftForm">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>  
-                    </div>
-                    
-                    <div class="rightForm">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required><br><br> 
-                    </div>
-                        
-                    <div class="bottomForm">
-                        <label for="Message">Message</label>
-                        <textarea name="Message" id="Message" rows="8" required></textarea><br><br>
-                    </div>
-
-                    <div class="submit">
-                        <input type="submit" name="submit">
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <section id="goToDescription" class="description Page">
-            <div class="descContent">
-                <hr>
-                <span >Hello, my name is Robert. </span>
-                <span>I am a Jamaican American with a lifelong love for all things computer</span>
-                
-            </div>
-            <img src="Images/PortfolioImage.png" alt="Portfolio Image" id="PortfolioImage">
-
-            <a id="moreAbove" href="#goToTop">&uArr;</a>
+            <a id="moreAbove" class="scrollAnchor" href="#goToTop">&uArr;</a>
         </section>
 
         <footer class="footer">

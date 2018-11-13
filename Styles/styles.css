@@ -3,14 +3,6 @@
   scroll-behavior: smooth;
 }
 
-.inactive, .style2 {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
 body {
   background: #eae7dc;
   font-family: 'Bitter', sans-serif;
@@ -29,7 +21,40 @@ body, html {
   display: grid;
   -ms-grid-columns: 15em auto 15em;
       grid-template-columns: 15em auto 15em;
-      grid-template-areas: "nav nav nav " "overView overView ." "desc desc desc" ".  contact contact " ".    skill     ." "footer   footer   footer";
+      grid-template-areas: "nav nav nav " "overView overView ." ". desc . " ".  contact contact " ".    skill     ." "footer   footer   footer";
+}
+
+.pageContainer .scrollAnchor {
+  color: #eae7dc;
+  font-size: 2em;
+  text-decoration: none;
+  animation: blinking 2s steps(5, start) infinite;
+  -webkit-animation: blinking 2s steps(5, start) infinite;
+}
+
+@keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+
+.pageContainer .scrollAnchor:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.pageContainer .inactive, .pageContainer .style2 {
+  display: none;
+}
+
+.pageContainer .active {
+  display: block;
 }
 
 header {
@@ -97,35 +122,10 @@ header nav a:hover {
   padding-top: 5%;
 }
 
-.overViewBackground .scrollAnchor {
-  color: #eae7dc;
-  font-size: 2em;
-  text-decoration: none;
-  animation: blinking 2s steps(5, start) infinite;
-  -webkit-animation: blinking 2s steps(5, start) infinite;
-}
-
-@keyframes blinking {
-  to {
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes blinking {
-  to {
-    visibility: hidden;
-  }
-}
-
 .overViewBackground #moreBelow {
   position: absolute;
   right: 5%;
   bottom: 5%;
-}
-
-.overViewBackground #moreBelow:hover {
-  -webkit-animation: none;
-          animation: none;
 }
 
 .skillGrid {
@@ -147,9 +147,8 @@ header nav a:hover {
 
 .skillGrid .skills {
   padding: 2em;
-  -webkit-box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.19);
-          box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.19);
-  border-radius: 25px 25px;
+  -webkit-box-shadow: 0em 0.5em 1em rgba(0, 0, 0, 0.5);
+          box-shadow: 0em 0.5em 1em rgba(0, 0, 0, 0.5);
   background-color: #747474;
 }
 
@@ -162,12 +161,20 @@ header nav a:hover {
   color: #eae7dc;
 }
 
+.skillGrid #moreAbove {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: #747474;
+}
+
 .contactBackground {
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: contact;
   padding-top: 2em;
+  position: relative;
 }
 
 .contactBackground .contact {
@@ -244,23 +251,30 @@ header nav a:hover {
   resize: none;
 }
 
+.contactBackground #moreBelow3 {
+  position: absolute;
+  right: 20%;
+  bottom: 5%;
+  color: #eae7dc;
+}
+
 .description {
   -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column: 2;
   grid-area: desc;
   color: #747474;
   height: 90vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15em auto auto 15em;
-      grid-template-columns: 15em auto auto 15em;
-      grid-template-areas: " . content profilePic . ";
+  position: relative;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+      grid-template-areas: " content profilePic ";
 }
 
 .description .descContent {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: content;
   width: 70%;
   font-size: 2.5em;
@@ -269,39 +283,17 @@ header nav a:hover {
 
 .description #PortfolioImage {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-area: profilePic;
   border-radius: 50%;
   margin: auto;
 }
 
-.description #moreAbove {
-  color: #eae7dc;
-  font-size: 2em;
-  text-decoration: none;
-  animation: blinking 2s steps(5, start) infinite;
-  -webkit-animation: blinking 2s steps(5, start) infinite;
+.description #moreBelow2 {
   position: absolute;
-  left: 5%;
+  right: 7%;
   bottom: 5%;
   color: #747474;
-}
-
-@keyframes blinking {
-  to {
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes blinking {
-  to {
-    visibility: hidden;
-  }
-}
-
-.description #moreAbove:hover {
-  -webkit-animation: none;
-          animation: none;
 }
 
 footer {
@@ -383,13 +375,16 @@ footer a:hover {
         grid-template-columns: auto auto;
         grid-template-areas: "nav      nav     " "overView overView " "desc  desc" "contact  contact " "skill    skill    " "footer   footer  ";
   }
+  .contactBackground #moreBelow3 {
+    right: 5%;
+  }
   .overView, .contact {
-    border-radius: 0;
+    width: 100%;
   }
   .description {
-    -ms-grid-columns: 2em auto auto 2em;
-        grid-template-columns: 2em auto auto 2em;
-        grid-template-areas: " . content profilePic . ";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: "  content profilePic  ";
   }
   .description .descContent {
     margin: auto;
@@ -398,16 +393,16 @@ footer a:hover {
     font-size: 28px;
     line-height: 54px;
   }
-  #PortfolioImage {
+  .description #PortfolioImage {
     height: 337px;
     width: 225px;
-    text-align: center;
+    margin-right: 2em;
   }
   .skillGrid {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
   }
-  .skills img {
+  .skillGrid .skills img {
     height: 128px;
     width: 128px;
   }
