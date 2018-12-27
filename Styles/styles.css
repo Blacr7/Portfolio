@@ -173,7 +173,6 @@ header nav a:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: contact;
-  padding-top: 2em;
   position: relative;
 }
 
