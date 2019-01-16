@@ -11,10 +11,14 @@ $DescColor: #fff;
 	font-size: 2em;
 	text-decoration: none;
 	-webkit-animation: wobble 1.7s steps(5, end) infinite;
-	        animation: wobble 1.7s steps(5, end) infinite;
+			animation: wobble 1.7s steps(5, end) infinite;
 	position: absolute;
 	bottom: 5%;
 	right: 5%;
+	border-radius: 100%;
+	width: 2em;
+	height: 2em;
+	margin: 0 auto;
 
 	@-webkit-keyframes wobble {
 		0%,
@@ -156,7 +160,7 @@ header{
 
 .heroImage{
 	height: 100vh;
-	width: 99vw;
+	width: 100vw;
 	grid-area: hero;
 	background: url("/Images/Blue.jpg");
 	background-attachment: fixed;
@@ -190,6 +194,7 @@ header{
     .overViewHeader{
 		font-size: 5rem;
 	}
+
 	.overViewContent{
 		font-size: 2rem;
 	}
@@ -206,7 +211,7 @@ header{
 	
 	.descContainer{
 		position: relative;
-		top: 20%;
+		top: 30%;
 		left: 50%;
 		-moz-transform: translateX(-50%) translateY(-50%);
 		-webkit-transform: translateX(-50%) translateY(-50%);
@@ -226,6 +231,7 @@ header{
 			p{
 				font-size: 24px;
 				color: #333;
+				padding-bottom: .5em;
 			}
 			
 			p:nth-child(3){
@@ -259,7 +265,7 @@ header{
 				}
 		
 				h3{
-					color: $DescColor;
+					color: #444;
 				}
 			}
 		}
@@ -282,6 +288,12 @@ header{
 
 .portfolio{
 	grid-area: portfolio;
+
+	img{
+		height: 1240px;
+		width: 800px;
+	}
+
 }
 
 .skillGrid{
@@ -344,118 +356,3 @@ footer{
 	a:hover{
 	}
 }
-
-@media only screen and (min-width: 2560px){
-	*{
-		font-size: xx-large;
-	}
-	header{
-		padding: 1.5em 0em;
-	}
-	.skillGrid{
-		grid-template-columns: auto auto auto auto;
-		height: 100%;
-	}
-
-	.skills{
-		padding: 2em;
-	}
-		.skills img {
-			height: 256px;
-			width: 256px;
-		}
-
-	#Message{
-		height: 13em;
-		font-weight: bolder
-	}
-	.submit input[type="submit"]{
-		font-size: xx-large;
-	}
-	
-	footer { 
-		padding: 1.5em 0em;
-	}
-	footer a{
-		padding: 2em 2em 1em 2em;
-	}
-}
-
-@media only screen and (max-width: 825px){
-	header{
-		padding: 2em 0em;
-
-		a{
-			padding: 1em;
-		}
-	} 
-
-	.pageContainer {
-		grid-template-columns: auto auto;
-		grid-template-areas:
-		 "nav      nav     "
-		 "desc  desc"
-		 " hero hero "
-		 "overView overView "
-		 "contact  contact "
-		 "skill    skill    "
-		 "footer   footer  ";
-	}
-
-	.contactBackground #moreBelow3{
-		right: 5%;
-	}
-
-	.overView, .contact{
-		width: 100vw;
-	}
-
-	.description{
-		grid-template-columns:  auto auto ;
-		grid-template-areas:
-		"  content profilePic  ";
-
-		.descContent{
-			margin: auto;
-			padding-top: none;
-			width: 70%;
-			font-size: 28px;
-			line-height: 54px;
-		}
-		
-		#PortfolioImage{
-			height: 337px;
-			width: 225px;
-			margin-right: 2em;
-		}
-	} 
-
-	.skillGrid{
-		grid-template-columns: auto auto;
-
-		.skills img {
-			height: 128px;
-			width: 128px;
-		}
-	}
-		
-
-	.bottomForm textarea{
-		display: table-row;
-		width: 80%;
-	}
-
-	footer{
-		padding: 2em 0em;
-
-		a {
-			padding: 1em
-		}
-	} 
-}
-
-@media only screen and (max-width: 375px){
-		* {
-		font-size: x-large;
-	}
-} 
