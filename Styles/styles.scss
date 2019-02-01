@@ -1,6 +1,8 @@
 $primaryColor: #eae7dc;
 $secondaryColor: #7fb0a6;
 $tertiaryColor: #000000;
+// the next ones quaternary if you were curious but i thought that might be confusing so im just using fourth.
+$fourthColor: #202020;
 
 @mixin scrollAnchor() {
 	font-size: 2em;
@@ -102,9 +104,10 @@ $tertiaryColor: #000000;
 body,html{
 	height:100%;
 }
+
 body{
 	font-family: 'Bitter', sans-serif;
-	font-size: 1rem;
+	font-size: 16px;
 	background: #F7F7F7;
 }
 
@@ -201,23 +204,22 @@ header{
 	grid-area: desc;
 	color: $secondaryColor;
 	font-weight: 500;
-	min-height: 50vh;
+	min-height: 70vh;
 	
 	h1{
 		text-shadow: 1px 1px 1px #000;
-		font-size: 58px;
+		font-size: 3.5em;
 		font-weight: 900;
 	}
 	
 	p{
-		font-size: 24px;
+		font-size: 1.5rem;
 		color: #333;
 	}
 
 	.descContainer{
 		padding: 2rem;
 		display: grid;
-		grid-template-columns: auto auto auto;
 		grid-template-areas: 
 		"Content . Skills ";
 
@@ -232,7 +234,7 @@ header{
 			margin: 5rem;
 
 			p:nth-child(3){
-				font-size: 16px;
+				font-size: 1rem;
 				line-height: 2rem;
 				font-weight: 100;
 			}
@@ -302,7 +304,7 @@ header{
 		grid-gap: 2em;
 		grid-template-columns: auto auto auto auto;
 		padding-top: 0 2em;
-		width: 70%;
+		width: 75%;
 		margin: auto;
 		border-radius: 1%;
 		background: url(/Images/tiny_grid.png);
@@ -317,8 +319,8 @@ header{
 			padding: 2em;
 			
 			img {
-				height: 128px;
-				width: 128px;
+				height: 96px;
+				width: 96px;
 			}
 
 			h3{
@@ -336,8 +338,8 @@ header{
 
 
 footer{
-	background: $secondaryColor;
-	color: $tertiaryColor;
+	background: $fourthColor;
+	color: $secondaryColor;
 	grid-area: footer;
 	padding: 2em 0em;
 	
@@ -356,23 +358,275 @@ footer{
 	}
 	
 	a{
-		color: $tertiaryColor;
+		color: $secondaryColor;
 		padding: 2em;
-		text-decoration: none;	
+		text-decoration: none;
+		transition: font-size 1s;	
+	}
+	
+	a:hover{
+		font-size: 1.5rem;
 	}
 }
 
-@media screen and (max-width: 1024px){
-	.pageContainer {
-		grid-template-columns: 10% auto 10%;
-		grid-template-areas:
-			 "nav nav nav "
-			 "overView overView overView"
-			 "hero hero hero"
-			 "desc desc desc"
-			 "portfolio portfolio portfolio  "
-			 "skill skill skill"
-			 "footer   footer   footer";
+@media only screen and (min-width: 2000px){
+	body{
+		font-size: 1vw;
+	}
+
+	header{
+		padding: 2em 0em;
+		nav{
+			a{
+				padding: 2em;
+			}
+	
+			a:hover{
+				font-size: 1.5em;
+			}
+		}
+	}
+	
+	.overViewBackground{
+		.overViewHeader{
+			font-size: 5em;
+		}
+	
+		.overViewContent{
+			font-size: 2em;
+		}
+	}
+	
+	.description{
+		h1{
+			font-size: 3.5em;
+		}
+		
+		p{
+			font-size: 1.5em;
+		}
+	
+		.descContainer{
+			padding: 2em;
+	
+			.descContent{
+				padding: 2em;
+				min-height: 50vh;
+				margin: 4rem;
+	
+				p:nth-child(3){
+					font-size: 1em;
+					line-height: 2em;
+				}
+			}
+
+			.skillGrid{
+				.skills {
+					height: 100px;
+					width: 100px;
+				}
+			}
+		}
+	}
+	
+	.portfolio{
+		.project{
+			img{
+				width: 1200px;
+				height: 896px;
+			}
+
+			.container{
+				padding: 3em;
+
+				a{
+					text-shadow: 1px 1px 1px #000;
+					font-size: 3.5em;
+				}
+	
+				p{
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
+	
+	
+	.skillBackground{
+		.skillGrid{
+			.skills {
+				padding: 2em;
+				
+				img {
+					height: 120px;
+					width: 120px;
+				}
+			}
+		}
+	}
+
+	footer{
+		img{
+			height: 96px;
+			width: 96px;
+		}
+		
+		a:hover{
+			font-size: 1.5em;
+		}
+	}
+}
+
+@media only screen and (max-width: 1600px){
+	
+	body{
+		font-size: 14px;
+	}
+
+	.overViewBackground{
+		.overViewHeader{
+			font-size: 5em;
+		}
+	
+		.overViewContent{
+			font-size: 2em;
+		}
+	}
+	
+	.description{
+		h1{
+			font-size: 3.5em;
+		}
+		
+		p{
+			font-size: 1.5em;
+		}
+	
+		.descContainer{
+			padding: 1.5rem;
+
+			.descContent{
+				padding: 1.5rem;
+				min-height: 55vh;
+				margin: 3rem;
+	
+				p:nth-child(3){
+					line-height: 2rem;
+				}
+			}
+		}
+	}
+	
+	.portfolio{
+		grid-area: portfolio;
+		min-height: 100vh;
+		
+		.project{
+			height: 70%;
+
+			img{
+				width: 800px;
+				height: 596px;
+			}
+
+			.container{
+				padding: 3em;
+				a{
+					font-size: 56px;
+				}
+	
+				p{
+					color: #333333;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 1024px){
+	body{
+		font-size: 16px;
+	}
+
+	.overViewBackground{
+		.overViewHeader{
+			font-size: 4em;
+		}
+	
+		.overViewContent{
+			font-size: 1.5em;
+		}
+	}
+	
+	.description{
+		h1{
+			font-size: 3.5em;
+		}
+		
+		p{
+			font-size: 1.5em;
+		}
+	
+		.descContainer{
+			padding: 1.5rem;
+			grid-template-areas: 
+			"Content"
+			"Skills ";
+			text-align: center;
+
+			.descContent{
+				padding: 1.5rem;
+				min-height: 55vh;
+				margin: 3rem;
+				min-height: 45vh;
+
+				p:nth-child(3){
+					line-height: 2rem;
+				}
+			}
+
+			.skillGrid{
+				.skillContainer{
+					margin: auto;
+					width: 50%;
+				}
+				.skills {
+					height: 108px;
+					width: 108px;
+				}
+			}
+		}
+	}
+	
+	.portfolio{
+		grid-area: portfolio;
+		min-height: 100vh;
+		
+		.project{
+			transition: 0.3s;
+			width: 70%;
+			margin: auto;
+			height: 70%;
+
+			img{
+				width: 800px;
+				height: 596px;
+			}
+
+			.container{
+				padding: 3em;
+				a{
+					font-size: 56px;
+				}
+	
+				p{
+					color: #333333;
+					font-size: 20px;
+				}
+			}
+		}
 	}
 
 	.skillBackground{
