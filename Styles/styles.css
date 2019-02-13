@@ -152,7 +152,7 @@ header nav a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: hero;
-  background: url("/Images/Blue.jpg");
+  background: url("Images/Blue.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
