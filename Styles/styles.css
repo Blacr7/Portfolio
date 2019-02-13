@@ -152,7 +152,7 @@ header nav a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: hero;
-  background: url("Images/Blue.jpg");
+  background: url("./Images/Blue.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -328,7 +328,7 @@ header nav a:hover {
   width: 75%;
   margin: auto;
   border-radius: 1%;
-  background: url(/Images/tiny_grid.png);
+  background: url("./Images/tiny_grid.png");
   -webkit-box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
           box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
   min-height: 100vh;
