@@ -163,7 +163,7 @@ header{
 	height: 100vh;
 	position: relative;
 	grid-area: hero;
-	background: url("./Images/Blue.jpg");
+	background: url(../Images/Blue.jpg);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -306,7 +306,7 @@ header{
 		width: 75%;
 		margin: auto;
 		border-radius: 1%;
-		background: url("./Images/tiny_grid.png");
+		background: url("../Images/tiny_grid.png");
 		box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
 		min-height: 100vh;
 
@@ -334,7 +334,6 @@ header{
 		}	
 	}
 }
-
 
 footer{
 	background: $fourthColor;
