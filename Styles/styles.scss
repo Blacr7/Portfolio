@@ -117,7 +117,6 @@ body{
 	grid-template-columns: 10% auto 10%;
 	grid-template-areas:
 		 "nav nav nav "
-		 "overView overView overView"
 		 "hero hero hero"
 		 "desc desc desc"
 		 "portfolio portfolio portfolio  "
@@ -136,7 +135,7 @@ header{
 	position: absolute;
 	-webkit-text-stroke-width: 0;
 	   -webkit-text-stroke-color: black;
-	   
+	
 	nav{
 		
 		li, ul{
@@ -149,7 +148,10 @@ header{
 		a{
 			text-decoration: none;
 			padding: 2rem;
-			color: #000;
+			color: #fff;
+			text-shadow: 1px 1px 1px #000;
+			font-weight: 900;
+			font-size: 1.3em;
 			transition: font-size 1s;
 		}
 
@@ -159,6 +161,7 @@ header{
 	}
 }
 
+// Contains overview and hero image section.
 .heroImage{
 	height: 100vh;
 	position: relative;
@@ -167,36 +170,33 @@ header{
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover ;
-	filter: contrast(70%);
-}
-
-.overViewBackground{
-	grid-area: overView;
-	z-index: 2;
+	background-size: cover;
 	
-	.overView{
-		display: flex;
-		flex-direction:column;
-		justify-content: center;	
-		text-align: center;
-		background-attachment: fixed;
-		height: 100vh;
-		color: #fff;
-		text-shadow: 1px 1px 1px #000;
-		position: absolute; 
-		left: 0; 
-		right: 0; 
-		margin-left: auto; 
-		margin-right: auto;
-	}
+	.overViewBackground{
+		grid-area: overView;
+		z-index: 2;
+		
+		.overView{
+			display: flex;
+			flex-direction:column;
+			justify-content: center;	
+			text-align: center;
+			background-attachment: fixed;
+			height: 100vh;
+			color: #fff;
+			text-shadow: 1px 1px 1px #000;
+			background: rgba(0, 0, 0, 0.3);	
+		}
 
-    .overViewHeader{
-		font-size: 5rem;
-	}
+		.overViewHeader{
+			font-size: 6rem;
+		}
 
-	.overViewContent{
-		font-size: 2rem;
+		.overViewContent{
+			font-size: 2rem;
+			font-style: italic;
+			font-weight: 100;
+		}
 	}
 }
 
@@ -267,7 +267,7 @@ header{
 
 .portfolio{
 	grid-area: portfolio;
-	min-height: 100vh;
+	min-height: 70vh;
 	
 	.project{
 		transition: 0.3s;
@@ -275,14 +275,21 @@ header{
 		margin: auto;
 		height: 70%;
 
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		
 		.container{
 			text-align: center;
 			padding: 3em;
+
 			a{
 				text-decoration: none;
 				color: $secondaryColor;
 				text-shadow: 1px 1px 1px #000;
-				font-size: 56px;
+				font-size: 3.5em;
 				font-weight: 900;
 			}
 
@@ -340,7 +347,7 @@ footer{
 	color: $secondaryColor;
 	grid-area: footer;
 	padding: 2em 0em;
-	
+
 	img{
 		height: 96px;
 		width: 96px;
@@ -478,7 +485,7 @@ footer{
 @media only screen and (max-width: 1600px){
 	
 	body{
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	.overViewBackground{
@@ -505,7 +512,7 @@ footer{
 
 			.descContent{
 				padding: 1.5rem;
-				min-height: 55vh;
+				min-height: 500px;
 				margin: 3rem;
 	
 				p:nth-child(3){
@@ -517,22 +524,11 @@ footer{
 	
 	.portfolio{
 		grid-area: portfolio;
-		min-height: 100vh;
 		
 		.project{
 			height: 70%;
-
-			img{
-				width: 800px;
-				height: 596px;
-			}
-
 			.container{
 				padding: 3em;
-				a{
-					font-size: 56px;
-				}
-	
 				p{
 					color: #333333;
 					font-size: 20px;
@@ -542,20 +538,9 @@ footer{
 	}
 }
 
-
 @media only screen and (max-width: 1024px){
 	body{
 		font-size: 16px;
-	}
-
-	.overViewBackground{
-		.overViewHeader{
-			font-size: 4em;
-		}
-	
-		.overViewContent{
-			font-size: 1.5em;
-		}
 	}
 	
 	.description{
@@ -576,7 +561,6 @@ footer{
 
 			.descContent{
 				padding: 1.5rem;
-				min-height: 55vh;
 				margin: 3rem;
 				min-height: 45vh;
 
@@ -599,29 +583,15 @@ footer{
 	}
 	
 	.portfolio{
-		grid-area: portfolio;
-		min-height: 100vh;
-		
 		.project{
 			transition: 0.3s;
 			width: 70%;
 			margin: auto;
 			height: 70%;
-
-			img{
-				width: 800px;
-				height: 596px;
-			}
-
 			.container{
 				padding: 3em;
 				a{
-					font-size: 56px;
-				}
-	
-				p{
-					color: #333333;
-					font-size: 20px;
+					font-size: 3.5em;
 				}
 			}
 		}
@@ -641,4 +611,91 @@ footer{
 		}
 	}
 	
+}
+
+@media only screen and (max-width: 780px){
+	body{
+		font-size: 13px;
+	}
+	
+	.heroImage{
+		.overViewBackground{
+			.overViewHeader{
+				font-size: 5em;
+			}
+		
+			.overViewContent{
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.description{
+		.descContainer{
+			padding: 1rem;
+			.descContent{
+				margin: 2rem;
+				min-height: 400px;
+				p:nth-child(3){
+					text-align: initial;
+				}
+			}
+
+			.skillGrid{
+				.skillContainer{
+					margin: auto;
+					width: 100%;
+				}
+				.skills {
+					img{
+						height:80px;
+						width: 80px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.heroImage{
+		.overViewBackground{
+			.overViewHeader{
+				font-size: 4em;
+			}
+		
+			.overViewContent{
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.description{
+		.descContainer{
+			padding: 0;
+
+			.descContent{
+				margin: 5rem 0;
+				border-radius: 0%;
+			}
+		}
+	}
+
+	.portfolio{
+		.project{
+			.container{
+				padding: 3em 0;
+				a{
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+
+	.skillBackground{
+		.skillGrid{
+			width: 100%;
+			border-radius: 0%;
+		}
+	}
 }

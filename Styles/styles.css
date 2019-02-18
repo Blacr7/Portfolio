@@ -23,7 +23,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav " "overView overView overView" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio  " "skill    skill     skill" "footer   footer   footer";
+      grid-template-areas: "nav nav nav " "hero hero hero" "desc desc desc" "portfolio portfolio portfolio  " "skill    skill     skill" "footer   footer   footer";
 }
 
 .pageContainer .scrollAnchor {
@@ -136,7 +136,10 @@ header nav li, header nav ul {
 header nav a {
   text-decoration: none;
   padding: 2rem;
-  color: #000;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-weight: 900;
+  font-size: 1.3em;
   -webkit-transition: font-size 1s;
   transition: font-size 1s;
 }
@@ -148,7 +151,7 @@ header nav a:hover {
 .heroImage {
   height: 100vh;
   position: relative;
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: hero;
@@ -157,19 +160,14 @@ header nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: contrast(70%);
-          filter: contrast(70%);
 }
 
-.overViewBackground {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+.heroImage .overViewBackground {
   grid-area: overView;
   z-index: 2;
 }
 
-.overViewBackground .overView {
+.heroImage .overViewBackground .overView {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,23 +183,21 @@ header nav a:hover {
   height: 100vh;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.overViewBackground .overViewHeader {
-  font-size: 5rem;
+.heroImage .overViewBackground .overViewHeader {
+  font-size: 6rem;
 }
 
-.overViewBackground .overViewContent {
+.heroImage .overViewBackground .overViewContent {
   font-size: 2rem;
+  font-style: italic;
+  font-weight: 100;
 }
 
 .description {
-  -ms-grid-row: 4;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: desc;
@@ -278,11 +274,11 @@ header nav a:hover {
 }
 
 .portfolio {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: portfolio;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 .portfolio .project {
@@ -291,6 +287,12 @@ header nav a:hover {
   width: 50%;
   margin: auto;
   height: 70%;
+}
+
+.portfolio .project img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio .project .container {
@@ -302,7 +304,7 @@ header nav a:hover {
   text-decoration: none;
   color: #7fb0a6;
   text-shadow: 1px 1px 1px #000;
-  font-size: 56px;
+  font-size: 3.5em;
   font-weight: 900;
 }
 
@@ -312,7 +314,7 @@ header nav a:hover {
 }
 
 .skillBackground {
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: skill;
@@ -360,7 +362,7 @@ header nav a:hover {
 footer {
   background: #202020;
   color: #7fb0a6;
-  -ms-grid-row: 7;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
@@ -466,7 +468,7 @@ footer a:hover {
 
 @media only screen and (max-width: 1600px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
   .overViewBackground .overViewHeader {
     font-size: 5em;
@@ -485,31 +487,23 @@ footer a:hover {
   }
   .description .descContainer .descContent {
     padding: 1.5rem;
-    min-height: 55vh;
+    min-height: 500px;
     margin: 3rem;
   }
   .description .descContainer .descContent p:nth-child(3) {
     line-height: 2rem;
   }
   .portfolio {
-    -ms-grid-row: 5;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: portfolio;
-    min-height: 100vh;
   }
   .portfolio .project {
     height: 70%;
   }
-  .portfolio .project img {
-    width: 800px;
-    height: 596px;
-  }
   .portfolio .project .container {
     padding: 3em;
-  }
-  .portfolio .project .container a {
-    font-size: 56px;
   }
   .portfolio .project .container p {
     color: #333333;
@@ -520,12 +514,6 @@ footer a:hover {
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 16px;
-  }
-  .overViewBackground .overViewHeader {
-    font-size: 4em;
-  }
-  .overViewBackground .overViewContent {
-    font-size: 1.5em;
   }
   .description h1 {
     font-size: 3.5em;
@@ -540,7 +528,6 @@ footer a:hover {
   }
   .description .descContainer .descContent {
     padding: 1.5rem;
-    min-height: 55vh;
     margin: 3rem;
     min-height: 45vh;
   }
@@ -555,13 +542,6 @@ footer a:hover {
     height: 108px;
     width: 108px;
   }
-  .portfolio {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: portfolio;
-    min-height: 100vh;
-  }
   .portfolio .project {
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -569,19 +549,11 @@ footer a:hover {
     margin: auto;
     height: 70%;
   }
-  .portfolio .project img {
-    width: 800px;
-    height: 596px;
-  }
   .portfolio .project .container {
     padding: 3em;
   }
   .portfolio .project .container a {
-    font-size: 56px;
-  }
-  .portfolio .project .container p {
-    color: #333333;
-    font-size: 20px;
+    font-size: 3.5em;
   }
   .skillBackground .skillGrid {
     -ms-grid-columns: auto auto;
@@ -591,6 +563,62 @@ footer a:hover {
   .skillBackground .skillGrid .skills img {
     height: 64px;
     width: 64px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    font-size: 13px;
+  }
+  .heroImage .overViewBackground .overViewHeader {
+    font-size: 5em;
+  }
+  .heroImage .overViewBackground .overViewContent {
+    font-size: 1.5em;
+  }
+  .description .descContainer {
+    padding: 1rem;
+  }
+  .description .descContainer .descContent {
+    margin: 2rem;
+    min-height: 400px;
+  }
+  .description .descContainer .descContent p:nth-child(3) {
+    text-align: initial;
+  }
+  .description .descContainer .skillGrid .skillContainer {
+    margin: auto;
+    width: 100%;
+  }
+  .description .descContainer .skillGrid .skills img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .heroImage .overViewBackground .overViewHeader {
+    font-size: 4em;
+  }
+  .heroImage .overViewBackground .overViewContent {
+    font-size: 1.5em;
+  }
+  .description .descContainer {
+    padding: 0;
+  }
+  .description .descContainer .descContent {
+    margin: 5rem 0;
+    border-radius: 0%;
+  }
+  .portfolio .project .container {
+    padding: 3em 0;
+  }
+  .portfolio .project .container a {
+    font-size: 3.5em;
+  }
+  .skillBackground .skillGrid {
+    width: 100%;
+    border-radius: 0%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
