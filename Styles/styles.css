@@ -12,6 +12,7 @@ body, html {
 }
 
 body {
+  position: relative;
   font-family: 'Bitter', sans-serif;
   font-size: 16px;
   background: #F7F7F7;
@@ -126,6 +127,15 @@ header {
   -webkit-text-stroke-color: black;
 }
 
+header nav #menu-icon {
+  display: none;
+  background-color: #f9f9f9;
+  z-index: 1;
+  background: url("../Images/Hamburger.png") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 header nav li, header nav ul {
   display: inline;
   list-style: none;
@@ -133,7 +143,7 @@ header nav li, header nav ul {
   padding: 0;
 }
 
-header nav a {
+header nav ul a {
   text-decoration: none;
   padding: 2rem;
   color: #fff;
@@ -144,7 +154,7 @@ header nav a {
   transition: font-size 1s;
 }
 
-header nav a:hover {
+header nav ul a:hover {
   font-size: 1.5rem;
 }
 
@@ -160,11 +170,11 @@ header nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 2;
 }
 
 .heroImage .overViewBackground {
   grid-area: overView;
-  z-index: 2;
 }
 
 .heroImage .overViewBackground .overView {
@@ -387,12 +397,6 @@ footer a {
   color: #7fb0a6;
   padding: 2em;
   text-decoration: none;
-  -webkit-transition: font-size 1s;
-  transition: font-size 1s;
-}
-
-footer a:hover {
-  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 2000px) {
@@ -511,7 +515,7 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1224px) {
   body {
     font-size: 16px;
   }
@@ -570,6 +574,47 @@ footer a:hover {
   body {
     font-size: 13px;
   }
+  header nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 4;
+    /* Sit on top */
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header nav #menu-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding-left: 8em;
+  }
+  header nav ul {
+    position: relative;
+    display: none;
+    width: 12rem;
+  }
+  header nav ul a {
+    padding: 1rem 2rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header nav li {
+    text-align: center;
+    width: 6rem;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  header nav li a {
+    float: left;
+  }
+  header nav:hover ul {
+    display: block;
+  }
   .heroImage .overViewBackground .overViewHeader {
     font-size: 5em;
   }
@@ -614,11 +659,20 @@ footer a:hover {
     padding: 3em 0;
   }
   .portfolio .project .container a {
-    font-size: 3.5em;
+    font-size: 3em;
   }
   .skillBackground .skillGrid {
     width: 100%;
     border-radius: 0%;
+  }
+  footer {
+    padding: 2em 0em;
+  }
+  footer a {
+    padding: .5em;
+    text-decoration: none;
+    -webkit-transition: font-size 1s;
+    transition: font-size 1s;
   }
 }
 /*# sourceMappingURL=styles.css.map */

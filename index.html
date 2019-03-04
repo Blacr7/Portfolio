@@ -13,13 +13,17 @@
 <body>
     <div class="pageContainer" id="goToTop">
         <header>
-            <nav>
+            <nav id="nav">
+                <a href="#" onclick="openNav()" id="menu-icon" alt="hamburger icon"></a>
+                
+
                 <ul class="style1">
                     <li><a href="#goToDescription">About Me</a></li>
                     <li><a href="#goToPortfolio">Portfolio</a></li>
                     <li><a href="#goToSkills">Skills</a></li>
                     <li><a href="assets/RobertBlackResume.pdf" target="none">Resume</a></li>
                 </ul>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </nav>
         </header>
 

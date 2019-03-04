@@ -106,6 +106,7 @@ body,html{
 }
 
 body{
+	position: relative;
 	font-family: 'Bitter', sans-serif;
 	font-size: 16px;
 	background: #F7F7F7;
@@ -137,7 +138,15 @@ header{
 	   -webkit-text-stroke-color: black;
 	
 	nav{
-		
+		#menu-icon {
+			display: none;
+			background-color: #f9f9f9;
+			z-index: 1;
+			background: url("../Images/Hamburger.png") center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
 		li, ul{
 			display: inline;
 			list-style: none;
@@ -145,19 +154,22 @@ header{
 			padding: 0;
 		}
 
-		a{
-			text-decoration: none;
-			padding: 2rem;
-			color: #fff;
-			text-shadow: 1px 1px 1px #000;
-			font-weight: 900;
-			font-size: 1.3em;
-			transition: font-size 1s;
-		}
+		ul{
+			a{
+				text-decoration: none;
+				padding: 2rem;
+				color: #fff;
+				text-shadow: 1px 1px 1px #000;
+				font-weight: 900;
+				font-size: 1.3em;
+				transition: font-size 1s;
+			}
 
-		a:hover{
-			font-size: 1.5rem;
+			a:hover{
+				font-size: 1.5rem;
+			}
 		}
+			
 	}
 }
 
@@ -171,10 +183,11 @@ header{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	z-index: 2;
 	
 	.overViewBackground{
 		grid-area: overView;
-		z-index: 2;
+		
 		
 		.overView{
 			display: flex;
@@ -366,11 +379,6 @@ footer{
 		color: $secondaryColor;
 		padding: 2em;
 		text-decoration: none;
-		transition: font-size 1s;	
-	}
-	
-	a:hover{
-		font-size: 1.5rem;
 	}
 }
 
@@ -538,7 +546,7 @@ footer{
 	}
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1224px){
 	body{
 		font-size: 16px;
 	}
@@ -618,6 +626,54 @@ footer{
 		font-size: 13px;
 	}
 	
+	header{
+		nav{
+			height: 100%;
+			width: 0;
+			position: fixed; /* Stay in place */
+			z-index: 4; /* Sit on top */
+			top: 0;
+			background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+			transition: 0.5s;
+
+			#menu-icon {
+				display:block;
+				width: 50px;
+				height: 50px;
+				padding-left: 8em;
+			}
+
+			ul{ 
+                position: relative;
+                display: none;
+                width: 12rem;
+			}
+			
+			ul{
+				a{
+					padding: 1rem 2rem;
+					transition: 0.3s;
+				}
+			}
+
+            li {
+                text-align: center;
+                width: 6rem;
+				margin: 0;
+				background-color: #f9f9f9;
+
+                a{
+					float: left;
+                }
+            }
+            
+            &:hover ul{
+				display: block;
+            }
+		}
+	}
+	
+
 	.heroImage{
 		.overViewBackground{
 			.overViewHeader{
@@ -655,6 +711,7 @@ footer{
 			}
 		}
 	}
+
 }
 
 @media only screen and (max-width: 500px){
@@ -686,7 +743,7 @@ footer{
 			.container{
 				padding: 3em 0;
 				a{
-					font-size: 3.5em;
+					font-size: 3em;
 				}
 			}
 		}
@@ -698,4 +755,14 @@ footer{
 			border-radius: 0%;
 		}
 	}
+
+	footer{
+		padding: 2em 0em;
+
+		a{
+			padding: .5em;
+			text-decoration: none;
+			transition: font-size 1s;	
+		}
+	}	
 }
