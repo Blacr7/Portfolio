@@ -13,5 +13,4 @@ function openNav() {
 //TODO fix thebug that occurs when you which from portrait to landscape.
 function closeNav() {
     document.getElementsByTagName("nav")[0].style.width = "0%";
-    document.getElementById("style1").style.display = "none";
 }
