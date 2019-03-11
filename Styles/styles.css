@@ -169,7 +169,7 @@ header nav ul a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: hero;
-  background: url(../Images/Blue.jpg);
+  background: url(../Images/Blue-min.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,7 +197,7 @@ header nav ul a:hover {
   height: 100vh;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .heroImage .overViewBackground .overViewHeader {
