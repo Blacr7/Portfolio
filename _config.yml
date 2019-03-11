@@ -1,1 +1,9 @@
 theme: jekyll-theme-hacker
+title: Robert Black Portfolio
+description: Portfolio website for Robert Black, a webdev, Web Developer, Web Designer, UX/UI Developer based in south florida
+author: Robert Black Jr
+social:
+    name: Robert Black
+    links:
+      - https://www.linkedin.com/in/robert-black-abb3a5159/
+      - https://github.com/Blacr7
