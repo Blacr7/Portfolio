@@ -235,7 +235,8 @@ header nav ul a:hover {
   padding: 2rem;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "Content . Skills ";
+  grid-auto-columns: 1fr 1fr;
+      grid-template-areas: "Content  Skills ";
 }
 
 .description .descContainer .descContent {
@@ -245,7 +246,6 @@ header nav ul a:hover {
   grid-area: Content;
   display: -ms-grid;
   display: grid;
-  border-radius: 2%;
   background: #fff;
   -webkit-box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
           box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
@@ -261,7 +261,7 @@ header nav ul a:hover {
 
 .description .descContainer .descContent:nth-child(2) {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-area: Skills;
 }
 
@@ -519,7 +519,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 1224px) {
+@media only screen and (max-width: 1024px) {
   body {
     font-size: 16px;
   }
@@ -537,7 +537,6 @@ footer a {
   .description .descContainer .descContent {
     padding: 1.5rem;
     margin: 3rem;
-    min-height: 45vh;
   }
   .description .descContainer .descContent p:nth-child(3) {
     line-height: 2rem;
@@ -605,7 +604,8 @@ footer a {
   }
   header nav ul {
     position: relative;
-    top: 40%;
+    display: block;
+    top: 15%;
     width: 100%;
     text-align: center;
     margin-top: 30px;

@@ -237,14 +237,14 @@ header{
 	.descContainer{
 		padding: 2rem;
 		display: grid;
+		grid-auto-columns: 1fr 1fr;
 		grid-template-areas: 
-		"Content . Skills ";
+		"Content  Skills ";
 
 		.descContent{
 			padding: 2rem;
 			grid-area: Content;
 			display: grid;
-			border-radius: 2%;
 			background: #fff;
 			box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
 			min-height: 40vh;
@@ -550,7 +550,7 @@ footer{
 	}
 }
 
-@media only screen and (max-width: 1224px){
+@media only screen and (max-width: 1024px){
 	body{
 		font-size: 16px;
 	}
@@ -574,7 +574,6 @@ footer{
 			.descContent{
 				padding: 1.5rem;
 				margin: 3rem;
-				min-height: 45vh;
 
 				p:nth-child(3){
 					line-height: 2rem;
@@ -658,7 +657,8 @@ footer{
 
 			ul{
 				position: relative;
-				top: 40%;
+				display: block;
+				top: 15%;
 				width: 100%;
 				text-align: center;
 				margin-top: 30px;
