@@ -7,7 +7,6 @@ console.log(shoutOuts[0] + "\n\n" + shoutOuts[1] + "\n\n" + shoutOuts[2]);
 
 function openNav() {
     document.getElementsByTagName("nav")[0].style.width = "100%";
-    document.getElementById("style1").style.display = "block";
 }
 
 //TODO fix thebug that occurs when you which from portrait to landscape.
