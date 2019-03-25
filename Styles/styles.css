@@ -24,7 +24,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav " "hero hero hero" "desc desc desc" "portfolio portfolio portfolio  " "skill    skill     skill" "footer   footer   footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc portfolio portfolio" "skill    skill     skill skill" "footer   footer   footer footer";
 }
 
 .pageContainer .scrollAnchor {
@@ -118,7 +118,7 @@ body {
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 4;
   grid-area: nav;
   padding: 2rem 0rem;
   z-index: 3;
@@ -167,7 +167,7 @@ header nav ul a:hover {
   position: relative;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 4;
   grid-area: hero;
   background: url(../Images/Blue-min.jpg);
   background-attachment: fixed;
@@ -213,7 +213,7 @@ header nav ul a:hover {
 .description {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: desc;
   color: #7fb0a6;
   font-weight: 500;
@@ -221,34 +221,29 @@ header nav ul a:hover {
 }
 
 .description h1 {
-  text-shadow: 1px 1px 1px #000;
   font-size: 3.5em;
-  font-weight: 900;
+  font-weight: bolder;
 }
 
 .description p {
   font-size: 1.5rem;
   color: #333;
+  font-weight: 200;
 }
 
 .description .descContainer {
   padding: 2rem;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-columns: 1fr 1fr;
-      grid-template-areas: "Content  Skills ";
+  height: 100%;
 }
 
 .description .descContainer .descContent {
   padding: 2rem;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: Content;
+  text-align: center;
   display: -ms-grid;
   display: grid;
   background: #fff;
-  -webkit-box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
   min-height: 40vh;
   margin: 5rem;
 }
@@ -260,37 +255,13 @@ header nav ul a:hover {
 }
 
 .description .descContainer .descContent:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: Skills;
 }
 
-.description .descContainer .skillGrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-}
-
-.description .descContainer .skillGrid .skills {
-  height: 84px;
-  width: 84px;
-}
-
-.description .descContainer .skillGrid .skills img {
-  width: 100%;
-  height: 100%;
-}
-
-.description .descContainer .skillGrid .skills h3 {
-  color: #444444;
-  text-align: center;
-}
-
 .portfolio {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
   grid-area: portfolio;
   min-height: 70vh;
 }
@@ -298,12 +269,13 @@ header nav ul a:hover {
 .portfolio .project {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  width: 50%;
   margin: auto;
+  width: 80%;
   height: 70%;
 }
 
 .portfolio .project img {
+  padding: 2em;
   display: block;
   width: 100%;
   height: auto;
@@ -311,13 +283,10 @@ header nav ul a:hover {
 
 .portfolio .project .container {
   text-align: center;
-  padding: 3em;
 }
 
-.portfolio .project .container a {
-  text-decoration: none;
+.portfolio .project .container span {
   color: #7fb0a6;
-  text-shadow: 1px 1px 1px #000;
   font-size: 3.5em;
   font-weight: 900;
 }
@@ -327,11 +296,25 @@ header nav ul a:hover {
   font-size: 20px;
 }
 
+.portfolio .project .container button {
+  border: none;
+  padding: 1em;
+  margin: .5em;
+  background: #7fb0a6;
+  font-size: 100%;
+}
+
+.portfolio .project .container button a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .skillBackground {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 4;
   grid-area: skill;
+  padding-top: 1em;
 }
 
 .skillBackground .skillGrid {
@@ -340,10 +323,8 @@ header nav ul a:hover {
   grid-gap: 2em;
   -ms-grid-columns: auto auto auto auto;
       grid-template-columns: auto auto auto auto;
-  padding-top: 0 2em;
   width: 75%;
   margin: auto;
-  border-radius: 1%;
   background: url("../Images/tiny_grid.png");
   -webkit-box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
           box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
@@ -376,9 +357,9 @@ header nav ul a:hover {
 footer {
   background: #202020;
   color: #7fb0a6;
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 4;
   grid-area: footer;
   padding: 2em 0em;
 }
@@ -502,9 +483,9 @@ footer a {
     line-height: 2rem;
   }
   .portfolio {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
     grid-area: portfolio;
   }
   .portfolio .project {
