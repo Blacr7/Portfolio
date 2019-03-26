@@ -163,7 +163,7 @@ header{
 			a{
 				text-decoration: none;
 				padding: 2rem;
-				color: #fff;
+				color: $primaryColor;
 				text-shadow: 1px 1px 1px #000;
 				font-weight: 900;
 				font-size: 1.3em;
@@ -180,7 +180,7 @@ header{
 
 // Contains overview and hero image section.
 .heroImage{
-	height: 70vh;
+	height: 50vh;
 	position: relative;
 	grid-area: hero;
 	background-color: $secondaryColor;
@@ -188,20 +188,20 @@ header{
 	
 	.overViewBackground{
 		grid-area: overView;
-		
 		.overView{
 			display: flex;
 			flex-direction:column;
 			justify-content: center;	
 			text-align: center;
 			background-attachment: fixed;
-			height: 100vh;
-			color: #fff;
+			height: 50vh;
+			color: $primaryColor;
 			text-shadow: 1px 1px 1px #000;
 		}
 
 		.overViewHeader{
 			font-size: 6rem;
+			font-weight: bolder;
 		}
 
 		.overViewContent{
@@ -214,19 +214,18 @@ header{
 
 .description{
 	grid-area: desc;
-	color: $secondaryColor;
 	font-weight: 500;
-	min-height: 70vh;
+	min-height: 50vh;
 	
-
-	h1{
+	h2{
 		font-size: 3.5em;
 		font-weight: bolder;
+		color: $secondaryColor;
 	}
 	
 	p{
 		font-size: 1.5rem;
-		color: #333;
+		color: $fourthColor;
 		font-weight: 200;
 	}
 
@@ -258,6 +257,12 @@ header{
 			grid-area: Skills;
 		}
 	}
+
+	a{
+		color: $secondaryColor;
+		font-size: 1.5rem;
+		font-weight: bolder;
+	}
 }
 
 .portfolio{
@@ -272,7 +277,6 @@ header{
 		transition: 0.3s;
 		margin: auto;
 		width: 80%;
-		height: 70%;
 		
 		img{
 			padding: 2em;
@@ -291,7 +295,7 @@ header{
 
 			p{
 				color: #333333;
-				font-size: 20px;
+				font-size: 1.25em;
 			}
 			button{
 				border: none;
@@ -313,19 +317,37 @@ header{
 	grid-area: contact;
 	background-color: $secondaryColor;
 	height: 60vh;
-	width: 100%;
 	-webkit-clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
 	clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-wrap: wrap;
+	text-align: center;
 
-	input, textarea{
-		background-color: $primaryColor;
-		padding: 1em;
-		margin: 1em;
-		border: none;
+	h2{
+		font-size: 3.5em;
+		font-weight: bolder;
+		line-height: 30vh;
+		color: $primaryColor;
+	}
+
+	.contactForm{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+
+		input, textarea{
+			background-color: $primaryColor;
+			padding: 1em;
+			margin: 1em;
+			width: 90%;
+			border: none;
+			color: #165C4E;
+			font-size: 1em;
+		}
+
+		textarea{
+			height: 10em;
+			width: 25em;
+		}
 	}
 }
 
@@ -417,7 +439,7 @@ footer{
 	}
 	
 	.description{
-		h1{
+		h2{
 			font-size: 3.5em;
 		}
 		
@@ -450,12 +472,6 @@ footer{
 	
 				p{
 					font-size: 1.25em;
-				}
-
-				button{
-					a{
-						
-					}
 				}
 			}
 		}
@@ -500,7 +516,7 @@ footer{
 	}
 	
 	.description{
-		h1{
+		h2{
 			font-size: 3.5em;
 		}
 		
@@ -521,7 +537,6 @@ footer{
 	
 	.portfolio{
 		.project{
-			height: 70%;
 			width: 100%;
 			.container{
 				p{
@@ -543,6 +558,7 @@ footer{
 			}
 		}
 	}
+	
 	.pageContainer {
 		grid-template-areas:
 			 "nav nav nav"
@@ -555,7 +571,7 @@ footer{
 	}
 
 	.description{
-		h1{
+		h2{
 			font-size: 3.5em;
 		}
 		
@@ -579,10 +595,7 @@ footer{
 	
 	.portfolio{
 		.project{
-			transition: 0.3s;
 			width: 70%;
-			margin: auto;
-			height: 70%;
 			.container{
 				padding: 3em;
 				span{
@@ -595,11 +608,16 @@ footer{
 	.contactBackground{
 		-webkit-clip-path: none;
 		clip-path: none;
+		height: unset;
+		min-height: 60vh;
 
-		input, textarea{
-			padding: .5em;
-			margin-top: .5em;
+		.contactForm{
+			flex-direction: column;
+			input, textarea{
+				width: 90%;
+			}
 		}
+		
 	}
 	
 
@@ -675,7 +693,6 @@ footer{
 			}
 		}
 	}
-	
 
 	.heroImage{
 		.overViewBackground{
@@ -695,37 +712,20 @@ footer{
 			.descContent{
 				margin: 2rem;
 				min-height: 400px;
-				p:nth-child(3){
-					text-align: initial;
-				}
-			}
-
-			.skillGrid{
-				.skillContainer{
-					margin: auto;
-					width: 100%;
-				}
-				.skills {
-					img{
-						height:80px;
-						width: 80px;
-					}
-				}
 			}
 		}
 	}
-
 }
 
 @media only screen and (max-width: 500px){
 	.heroImage{
 		.overViewBackground{
 			.overViewHeader{
-				font-size: 4em;
+				font-size: 3em;
 			}
 		
 			.overViewContent{
-				font-size: 1.5em;
+				font-size: 1.25em;
 			}
 		}
 	}
@@ -733,10 +733,21 @@ footer{
 	.description{
 		.descContainer{
 			padding: 0;
+			h2{
+				font-size: 2.5em;
+			}
 
+			p{
+				font-size:1.25em;
+			}
 			.descContent{
 				margin: 5rem 0;
 				border-radius: 0%;
+
+				p:nth-child(3){
+					font-size: 1rem;
+					line-height: 1.5rem;
+				}
 			}
 		}
 	}
@@ -747,9 +758,16 @@ footer{
 			.container{
 				padding: 3em 0;
 				span{
-					font-size: 3em;
+					font-size: 2.5em;
 				}
 			}
+		}
+	}
+
+	.contactBackground{
+		h2{
+			font-size: 2.5em;
+			line-height: 15vh;
 		}
 	}
 

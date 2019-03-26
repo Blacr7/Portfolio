@@ -150,7 +150,7 @@ header nav li, header nav ul {
 header nav ul a {
   text-decoration: none;
   padding: 2rem;
-  color: #fff;
+  color: #F7F7F7;
   text-shadow: 1px 1px 1px #000;
   font-weight: 900;
   font-size: 1.3em;
@@ -163,7 +163,7 @@ header nav ul a:hover {
 }
 
 .heroImage {
-  height: 70vh;
+  height: 50vh;
   position: relative;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -190,13 +190,14 @@ header nav ul a:hover {
           justify-content: center;
   text-align: center;
   background-attachment: fixed;
-  height: 100vh;
-  color: #fff;
+  height: 50vh;
+  color: #F7F7F7;
   text-shadow: 1px 1px 1px #000;
 }
 
 .heroImage .overViewBackground .overViewHeader {
   font-size: 6rem;
+  font-weight: bolder;
 }
 
 .heroImage .overViewBackground .overViewContent {
@@ -210,19 +211,19 @@ header nav ul a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: desc;
-  color: #7fb0a6;
   font-weight: 500;
-  min-height: 70vh;
+  min-height: 50vh;
 }
 
-.description h1 {
+.description h2 {
   font-size: 3.5em;
   font-weight: bolder;
+  color: #7fb0a6;
 }
 
 .description p {
   font-size: 1.5rem;
-  color: #333;
+  color: #202020;
   font-weight: 200;
 }
 
@@ -263,6 +264,12 @@ header nav ul a:hover {
   grid-area: Skills;
 }
 
+.description a {
+  color: #7fb0a6;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
 .portfolio {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
@@ -286,7 +293,6 @@ header nav ul a:hover {
   transition: 0.3s;
   margin: auto;
   width: 80%;
-  height: 70%;
 }
 
 .portfolio .project img {
@@ -308,7 +314,7 @@ header nav ul a:hover {
 
 .portfolio .project .container p {
   color: #333333;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .portfolio .project .container button {
@@ -333,26 +339,46 @@ header nav ul a:hover {
   grid-area: contact;
   background-color: #7fb0a6;
   height: 60vh;
-  width: 100%;
   -webkit-clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
   clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
+  text-align: center;
+}
+
+.contactBackground h2 {
+  font-size: 3.5em;
+  font-weight: bolder;
+  line-height: 30vh;
+  color: #F7F7F7;
+}
+
+.contactBackground .contactForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.contactBackground input, .contactBackground textarea {
+.contactBackground .contactForm input, .contactBackground .contactForm textarea {
   background-color: #F7F7F7;
   padding: 1em;
   margin: 1em;
+  width: 90%;
   border: none;
+  color: #165C4E;
+  font-size: 1em;
+}
+
+.contactBackground .contactForm textarea {
+  height: 10em;
+  width: 25em;
 }
 
 .skillBackground {
@@ -442,7 +468,7 @@ footer a {
   .overViewBackground .overViewContent {
     font-size: 2em;
   }
-  .description h1 {
+  .description h2 {
     font-size: 3.5em;
   }
   .description p {
@@ -489,7 +515,7 @@ footer a {
   .overViewBackground .overViewContent {
     font-size: 2em;
   }
-  .description h1 {
+  .description h2 {
     font-size: 3.5em;
   }
   .description p {
@@ -503,7 +529,6 @@ footer a {
     line-height: 2rem;
   }
   .portfolio .project {
-    height: 70%;
     width: 100%;
   }
   .portfolio .project .container p {
@@ -522,7 +547,7 @@ footer a {
   .pageContainer {
         grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "contact contact contact" "skill    skill skill" "footer   footer footer";
   }
-  .description h1 {
+  .description h2 {
     font-size: 3.5em;
   }
   .description p {
@@ -540,11 +565,7 @@ footer a {
     line-height: 2rem;
   }
   .portfolio .project {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
     width: 70%;
-    margin: auto;
-    height: 70%;
   }
   .portfolio .project .container {
     padding: 3em;
@@ -555,10 +576,17 @@ footer a {
   .contactBackground {
     -webkit-clip-path: none;
     clip-path: none;
+    height: unset;
+    min-height: 60vh;
   }
-  .contactBackground input, .contactBackground textarea {
-    padding: .5em;
-    margin-top: .5em;
+  .contactBackground .contactForm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactBackground .contactForm input, .contactBackground .contactForm textarea {
+    width: 90%;
   }
   .skillBackground .skillGrid {
     -ms-grid-columns: auto auto;
@@ -633,32 +661,31 @@ footer a {
     margin: 2rem;
     min-height: 400px;
   }
-  .description .descContainer .descContent p:nth-child(3) {
-    text-align: initial;
-  }
-  .description .descContainer .skillGrid .skillContainer {
-    margin: auto;
-    width: 100%;
-  }
-  .description .descContainer .skillGrid .skills img {
-    height: 80px;
-    width: 80px;
-  }
 }
 
 @media only screen and (max-width: 500px) {
   .heroImage .overViewBackground .overViewHeader {
-    font-size: 4em;
+    font-size: 3em;
   }
   .heroImage .overViewBackground .overViewContent {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   .description .descContainer {
     padding: 0;
   }
+  .description .descContainer h2 {
+    font-size: 2.5em;
+  }
+  .description .descContainer p {
+    font-size: 1.25em;
+  }
   .description .descContainer .descContent {
     margin: 5rem 0;
     border-radius: 0%;
+  }
+  .description .descContainer .descContent p:nth-child(3) {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .portfolio .project {
     width: 100%;
@@ -667,7 +694,11 @@ footer a {
     padding: 3em 0;
   }
   .portfolio .project .container span {
-    font-size: 3em;
+    font-size: 2.5em;
+  }
+  .contactBackground h2 {
+    font-size: 2.5em;
+    line-height: 15vh;
   }
   .skillBackground .skillGrid {
     width: 100%;
