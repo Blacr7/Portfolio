@@ -339,8 +339,6 @@ header nav ul a:hover {
   grid-area: contact;
   background-color: #7fb0a6;
   height: 60vh;
-  -webkit-clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
-  clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
   text-align: center;
 }
 
