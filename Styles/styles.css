@@ -24,7 +24,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc portfolio portfolio" "skill    skill     skill skill" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc portfolio portfolio" "contact contact contact contact" "skill    skill     skill skill" "footer   footer   footer footer";
 }
 
 .pageContainer .scrollAnchor {
@@ -39,7 +39,7 @@ body {
   width: 2em;
   height: 2em;
   margin: 0 auto;
-  color: #eae7dc;
+  color: #F7F7F7;
 }
 
 @-webkit-keyframes wobble {
@@ -163,17 +163,13 @@ header nav ul a:hover {
 }
 
 .heroImage {
-  height: 100vh;
+  height: 70vh;
   position: relative;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: hero;
-  background: url(../Images/Blue-min.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #7fb0a6;
   z-index: 2;
 }
 
@@ -197,7 +193,6 @@ header nav ul a:hover {
   height: 100vh;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .heroImage .overViewBackground .overViewHeader {
@@ -234,6 +229,16 @@ header nav ul a:hover {
 .description .descContainer {
   padding: 2rem;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .description .descContainer .descContent {
@@ -263,7 +268,17 @@ header nav ul a:hover {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: portfolio;
-  min-height: 70vh;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio .project {
@@ -311,12 +326,40 @@ header nav ul a:hover {
   text-decoration: none;
 }
 
-.skillBackground {
+.contactBackground {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
+  grid-area: contact;
+  background-color: #7fb0a6;
+  height: 60vh;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
+  clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contactBackground input, .contactBackground textarea {
+  background-color: #F7F7F7;
+  padding: 1em;
+  margin: 1em;
+  border: none;
+}
+
+.skillBackground {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: skill;
-  padding-top: 1em;
 }
 
 .skillBackground .skillGrid {
@@ -358,7 +401,7 @@ header nav ul a:hover {
 footer {
   background: #202020;
   color: #7fb0a6;
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
@@ -470,8 +513,14 @@ footer a {
 }
 
 @media only screen and (max-width: 1024px) {
+  .heroImage {
+    height: 100vh;
+  }
+  .heroImage .overViewBackground .overView {
+    height: 100vh;
+  }
   .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "skill    skill skill" "footer   footer footer";
+        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "contact contact contact" "skill    skill skill" "footer   footer footer";
   }
   .description h1 {
     font-size: 3.5em;
@@ -502,6 +551,14 @@ footer a {
   }
   .portfolio .project .container span {
     font-size: 3.5em;
+  }
+  .contactBackground {
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+  .contactBackground input, .contactBackground textarea {
+    padding: .5em;
+    margin-top: .5em;
   }
   .skillBackground .skillGrid {
     -ms-grid-columns: auto auto;

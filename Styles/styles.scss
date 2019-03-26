@@ -1,4 +1,4 @@
-$primaryColor: #eae7dc;
+$primaryColor: #F7F7F7;
 $secondaryColor: #7fb0a6;
 $tertiaryColor: #000000;
 // the next ones quaternary if you were curious but i thought that might be confusing so im just using fourth.
@@ -109,7 +109,7 @@ body{
 	position: relative;
 	font-family: 'Bitter', sans-serif;
 	font-size: 16px;
-	background: #F7F7F7;
+	background: $primaryColor;
 }
 
 .pageContainer {
@@ -120,6 +120,7 @@ body{
 		 "nav nav nav nav"
 		 "hero hero hero hero"
 		 "desc desc portfolio portfolio"
+		 "contact contact contact contact"
 		 "skill    skill     skill skill"
 		 "footer   footer   footer footer";
 	
@@ -179,14 +180,10 @@ header{
 
 // Contains overview and hero image section.
 .heroImage{
-	height: 100vh;
+	height: 70vh;
 	position: relative;
 	grid-area: hero;
-	background: url(../Images/Blue-min.jpg);
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: $secondaryColor;
 	z-index: 2;
 	
 	.overViewBackground{
@@ -201,7 +198,6 @@ header{
 			height: 100vh;
 			color: #fff;
 			text-shadow: 1px 1px 1px #000;
-			background: rgba(0, 0, 0, 0.2);	
 		}
 
 		.overViewHeader{
@@ -222,6 +218,7 @@ header{
 	font-weight: 500;
 	min-height: 70vh;
 	
+
 	h1{
 		font-size: 3.5em;
 		font-weight: bolder;
@@ -236,6 +233,11 @@ header{
 	.descContainer{
 		padding: 2rem;
 		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+
 		.descContent{
 			padding: 2rem;
 			text-align: center;
@@ -260,13 +262,18 @@ header{
 
 .portfolio{
 	grid-area: portfolio;
-	min-height: 70vh;
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+
 	.project{
 		transition: 0.3s;
 		margin: auto;
 		width: 80%;
 		height: 70%;
-
+		
 		img{
 			padding: 2em;
 			display: block;
@@ -302,9 +309,28 @@ header{
 	}
 }
 
+.contactBackground{
+	grid-area: contact;
+	background-color: $secondaryColor;
+	height: 60vh;
+	width: 100%;
+	-webkit-clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
+	clip-path: polygon(0 0, 100% 21%, 100% 82%, 0% 100%);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+
+	input, textarea{
+		background-color: $primaryColor;
+		padding: 1em;
+		margin: 1em;
+		border: none;
+	}
+}
+
 .skillBackground{
 	grid-area: skill;
-	padding-top: 1em;
 
 	.skillGrid{
 		display: grid;
@@ -509,12 +535,21 @@ footer{
 
 @media only screen and (max-width: 1024px){
 	
+	.heroImage{
+		height: 100vh;
+		.overViewBackground{
+			.overView{
+				height: 100vh;
+			}
+		}
+	}
 	.pageContainer {
 		grid-template-areas:
 			 "nav nav nav"
 			 "hero hero hero"
 			 "desc desc desc"
 			 "portfolio portfolio portfolio"
+			 "contact contact contact"
 			 "skill    skill skill"
 			 "footer   footer footer";
 	}
@@ -556,6 +591,17 @@ footer{
 			}
 		}
 	}
+
+	.contactBackground{
+		-webkit-clip-path: none;
+		clip-path: none;
+
+		input, textarea{
+			padding: .5em;
+			margin-top: .5em;
+		}
+	}
+	
 
 	.skillBackground{
 		.skillGrid{
