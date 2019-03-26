@@ -302,6 +302,8 @@ header nav ul a:hover {
   margin: .5em;
   background: #7fb0a6;
   font-size: 100%;
+  -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
 }
 
 .portfolio .project .container button a {
@@ -346,7 +348,6 @@ header nav ul a:hover {
 
 .skillBackground .skillGrid .skills h3 {
   color: #7fb0a6;
-  text-shadow: 1px 1px 1px #000;
 }
 
 .skillBackground .skillGrid #moreAbove {
@@ -362,11 +363,6 @@ footer {
   -ms-grid-column-span: 4;
   grid-area: footer;
   padding: 2em 0em;
-}
-
-footer img {
-  height: 96px;
-  width: 96px;
 }
 
 footer .ft-left {
@@ -421,19 +417,7 @@ footer a {
     font-size: 1em;
     line-height: 2em;
   }
-  .description .descContainer .skillGrid .skills {
-    height: 100px;
-    width: 100px;
-  }
-  .portfolio .project img {
-    width: 1200px;
-    height: 896px;
-  }
-  .portfolio .project .container {
-    padding: 3em;
-  }
-  .portfolio .project .container a {
-    text-shadow: 1px 1px 1px #000;
+  .portfolio .project .container span {
     font-size: 3.5em;
   }
   .portfolio .project .container p {
@@ -449,9 +433,6 @@ footer a {
   footer img {
     height: 96px;
     width: 96px;
-  }
-  footer a:hover {
-    font-size: 1.5em;
   }
 }
 
@@ -471,28 +452,16 @@ footer a {
   .description p {
     font-size: 1.5em;
   }
-  .description .descContainer {
-    padding: 1.5rem;
-  }
   .description .descContainer .descContent {
-    padding: 1.5rem;
-    min-height: 500px;
-    margin: 3rem;
+    margin: 3em;
+    min-height: 50vh;
   }
   .description .descContainer .descContent p:nth-child(3) {
     line-height: 2rem;
   }
-  .portfolio {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-    grid-area: portfolio;
-  }
   .portfolio .project {
     height: 70%;
-  }
-  .portfolio .project .container {
-    padding: 3em;
+    width: 100%;
   }
   .portfolio .project .container p {
     color: #333333;
@@ -501,8 +470,8 @@ footer a {
 }
 
 @media only screen and (max-width: 1024px) {
-  body {
-    font-size: 16px;
+  .pageContainer {
+        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "skill    skill skill" "footer   footer footer";
   }
   .description h1 {
     font-size: 3.5em;
@@ -512,7 +481,6 @@ footer a {
   }
   .description .descContainer {
     padding: 1.5rem;
-        grid-template-areas: "Content" "Skills ";
     text-align: center;
   }
   .description .descContainer .descContent {
@@ -521,14 +489,6 @@ footer a {
   }
   .description .descContainer .descContent p:nth-child(3) {
     line-height: 2rem;
-  }
-  .description .descContainer .skillGrid .skillContainer {
-    margin: auto;
-    width: 50%;
-  }
-  .description .descContainer .skillGrid .skills {
-    height: 108px;
-    width: 108px;
   }
   .portfolio .project {
     -webkit-transition: 0.3s;
@@ -540,7 +500,7 @@ footer a {
   .portfolio .project .container {
     padding: 3em;
   }
-  .portfolio .project .container a {
+  .portfolio .project .container span {
     font-size: 3.5em;
   }
   .skillBackground .skillGrid {
@@ -643,15 +603,17 @@ footer a {
     margin: 5rem 0;
     border-radius: 0%;
   }
+  .portfolio .project {
+    width: 100%;
+  }
   .portfolio .project .container {
     padding: 3em 0;
   }
-  .portfolio .project .container a {
+  .portfolio .project .container span {
     font-size: 3em;
   }
   .skillBackground .skillGrid {
     width: 100%;
-    border-radius: 0%;
   }
   footer {
     padding: 2em 0em;
