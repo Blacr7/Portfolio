@@ -7,18 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="Portfolio for Robert Black a Web Developer, UX/UI designer based in south Florida."> 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#7fb0a6">
   <link rel="stylesheet" href="Styles/styles.css">
   <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="Images/favicon_io/site.webmanifest">
+  <link rel="manifest" name="favicon" href="Images/favicon_io/site.webmanifest">
   <script src="script.js"></script>
 </head>
 
 <body>
     <div class="pageContainer" id="goToTop">
         <header>
-            <a href="#" onclick="openNav()" id="menu-icon"></a>
+            <a href="#" onclick="openNav()" id="menu-icon" alt="hamburger image"></a>
 
             <nav id="nav">
                 <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">&times;</a>
@@ -34,7 +35,11 @@
         <section class="heroImage">
             <div id="goToOverview" class="overViewBackground" >
                 <div class="overView">
-                    <h1 class="overViewHeader">Robert Black JR</h1>
+                    <h1 class="overViewHeader">
+                        <span>R</span><span>o</span><span>b</span><span>e</span><span>r</span><span>t</span> 
+                        <span>B</span><span>l</span><span>a</span><span>c</span><span>k</span>
+                        <span>J</span><span>R</span>
+                    </h1>
                     <p class="overViewContent">Web Developer, Programmer, Coder</p>
 
                     <!--    Down arrow to indicate there is more to see below the current view point line   -->
@@ -63,10 +68,10 @@
                 <div class="project">
                     <img src="Images/JaniqueCombined-min.png" alt="mobile Version & Ipad Version">
                     <div class="container">
-                        <span href="http://janiquemynotrealty.com/" target="none">Janique Mynot Realty</span>
+                        <span>Janique Mynot Realty</span>
                         <p>Real Estate Portfolio for Janique Mynot</p>
-                        <button><a href="http://janiquemynotrealty.com/" target="none">Visit Site</a></button>
-                        <button><a href="https://github.com/Blacr7/JaniqueMynotRealty" target="none">View on GitHub</a></button>
+                        <a href="http://janiquemynotrealty.com/" target="none">Visit Site</a>
+                        <a href="https://github.com/Blacr7/JaniqueMynotRealty" target="none">View on GitHub</a>
                     </div>
                 </div>
         </section>
