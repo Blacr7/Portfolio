@@ -9,7 +9,6 @@ function openNav() {
     document.getElementsByTagName("nav")[0].style.width = "100%";
 }
 
-//TODO fix thebug that occurs when you which from portrait to landscape.
 function closeNav() {
     document.getElementsByTagName("nav")[0].style.display = "inline";
     document.getElementsByTagName("nav")[0].style.width = "0%";
