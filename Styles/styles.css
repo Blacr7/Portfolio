@@ -24,95 +24,50 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc portfolio portfolio" "contact contact contact contact" "skill    skill     skill skill" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc portfolio portfolio" "skill    skill     skill skill"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
 .pageContainer .scrollAnchor {
   font-size: 2em;
   text-decoration: none;
-  -webkit-animation: wobble 1.7s steps(5, end) infinite;
-  animation: wobble 1.7s steps(5, end) infinite;
+  -webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+  animation: pulsate-fwd 2s ease-in-out infinite both;
   position: absolute;
   bottom: 5%;
-  right: 5%;
+  right: 50%;
   border-radius: 100%;
-  width: 2em;
-  height: 2em;
   margin: 0 auto;
   color: #F7F7F7;
 }
 
-@-webkit-keyframes wobble {
-  0%,
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
   100% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-  15% {
-    -webkit-transform: translateX(-30px) rotate(-6deg);
-    transform: translateX(-30px) rotate(-6deg);
-  }
-  30% {
-    -webkit-transform: translateX(15px) rotate(6deg);
-    transform: translateX(15px) rotate(6deg);
-  }
-  45% {
-    -webkit-transform: translateX(-15px) rotate(-3.6deg);
-    transform: translateX(-15px) rotate(-3.6deg);
-  }
-  65% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-  75% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
-@keyframes wobble {
-  0%,
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
   100% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
-  15% {
-    -webkit-transform: translateX(-30px) rotate(-6deg);
-    transform: translateX(-30px) rotate(-6deg);
-  }
-  30% {
-    -webkit-transform: translateX(15px) rotate(6deg);
-    transform: translateX(15px) rotate(6deg);
-  }
-  45% {
-    -webkit-transform: translateX(-15px) rotate(-3.6deg);
-    transform: translateX(-15px) rotate(-3.6deg);
-  }
-  65% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-  75% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-}
-
-.pageContainer .scrollAnchor:hover {
-  -webkit-animation: none;
-          animation: none;
 }
 
 header {
@@ -127,7 +82,6 @@ header {
 
 header #menu-icon {
   display: none;
-  background-color: #f9f9f9;
   z-index: 1;
   background: url("../Images/Hamburger.png") center;
   background-size: contain;
@@ -145,18 +99,22 @@ header nav li, header nav ul {
   padding: 0;
 }
 
+header nav ul li {
+  padding: 1em;
+}
+
 header nav ul a {
   text-decoration: none;
-  padding: 2rem;
   color: #F7F7F7;
   font-weight: 900;
   font-size: 1.3em;
-  -webkit-transition: font-size 1s;
-  transition: font-size 1s;
+  -webkit-transition: font-size 1s, border-bottom 1s;
+  transition: font-size 1s, border-bottom 1s;
 }
 
 header nav ul a:hover {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  border-bottom: solid #F7F7F7 0.1em;
 }
 
 .heroImage {
@@ -166,7 +124,7 @@ header nav ul a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: hero;
-  background-color: #7fb0a6;
+  background-color: #497478;
   z-index: 2;
 }
 
@@ -178,13 +136,17 @@ header nav ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
   background-attachment: fixed;
   height: 50vh;
@@ -192,17 +154,20 @@ header nav ul a:hover {
 }
 
 .heroImage .overViewBackground .overViewHeader {
-  font-size: 6em;
+  font-size: 5rem;
   font-weight: bolder;
 }
 
 .heroImage .overViewBackground .overViewHeader span {
-  -webkit-transition: font-size 1s;
-  transition: font-size 1s;
+  padding: 0;
+  letter-spacing: 1px;
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
 }
 
 .heroImage .overViewBackground .overViewHeader span:hover {
-  font-size: 1.5em;
+  background-color: #F7F7F7;
+  color: #497478;
 }
 
 .heroImage .overViewBackground .overViewContent {
@@ -223,18 +188,16 @@ header nav ul a:hover {
 .description h2 {
   font-size: 3.5em;
   font-weight: bolder;
-  color: #7fb0a6;
+  color: #497478;
 }
 
 .description p {
   font-size: 1.5rem;
-  color: #202020;
-  font-weight: 200;
+  font-weight: 600;
+  color: #333333;
 }
 
 .description .descContainer {
-  padding: 2rem;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,6 +208,7 @@ header nav ul a:hover {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: 100%;
 }
 
 .description .descContainer .descContent {
@@ -252,27 +216,28 @@ header nav ul a:hover {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  background: #fff;
-  -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
-  min-height: 40vh;
+  height: 50%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
   margin: 5rem;
 }
 
 .description .descContainer .descContent p:nth-child(3) {
   font-size: 1rem;
-  line-height: 2rem;
-  font-weight: 100;
-}
-
-.description .descContainer .descContent:nth-child(2) {
-  grid-area: Skills;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .description a {
-  color: #7fb0a6;
-  font-size: 1.5rem;
-  font-weight: bolder;
+  padding: 1em;
+  margin: 0 1em;
+  background: #497478;
+  -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
+  display: inline-block;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .portfolio {
@@ -312,7 +277,7 @@ header nav ul a:hover {
 }
 
 .portfolio .project .container span {
-  color: #7fb0a6;
+  color: #497478;
   font-size: 3.5em;
   font-weight: 900;
 }
@@ -325,29 +290,33 @@ header nav ul a:hover {
 
 .portfolio .project .container a {
   padding: 1em;
-  margin: 1em;
-  background: #7fb0a6;
-  font-size: 100%;
+  margin: 0 1em;
+  background: #497478;
   -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
           box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
-  color: #fff;
+  display: inline-block;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 .contactBackground {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: contact;
-  background-color: #7fb0a6;
-  height: 60vh;
+  background-color: #497478;
+  min-height: 60vh;
   text-align: center;
+  width: 75%;
+  margin: 2em auto;
+  -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
 }
 
 .contactBackground h2 {
   font-size: 3.5em;
   font-weight: bolder;
-  line-height: 30vh;
+  line-height: 15vh;
   color: #F7F7F7;
 }
 
@@ -355,34 +324,37 @@ header nav ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: unset;
+      flex-wrap: unset;
 }
 
 .contactBackground .contactForm input, .contactBackground .contactForm textarea {
   background-color: #F7F7F7;
   padding: 1em;
   margin: 1em;
-  width: 90%;
+  width: 50%;
   border: none;
-  color: #165C4E;
+  color: #497478;
   font-size: 1em;
 }
 
 .contactBackground .contactForm textarea {
   height: 10em;
-  width: 25em;
 }
 
 .skillBackground {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: skill;
@@ -391,14 +363,14 @@ header nav ul a:hover {
 .skillBackground .skillGrid {
   display: -ms-grid;
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 1em;
   -ms-grid-columns: auto auto auto auto;
       grid-template-columns: auto auto auto auto;
   width: 75%;
   margin: auto;
-  background: url("../Images/tiny_grid.png");
-  -webkit-box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 30px 5px rgba(0, 0, 0, 0.14);
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
   min-height: 100vh;
 }
 
@@ -407,7 +379,7 @@ header nav ul a:hover {
 }
 
 .skillBackground .skillGrid .skills {
-  padding: 2em;
+  padding: 1em;
 }
 
 .skillBackground .skillGrid .skills img {
@@ -416,37 +388,39 @@ header nav ul a:hover {
 }
 
 .skillBackground .skillGrid .skills h3 {
-  color: #7fb0a6;
-}
-
-.skillBackground .skillGrid #moreAbove {
-  bottom: 5%;
-  color: #000000;
+  color: #497478;
 }
 
 footer {
-  background: #202020;
-  color: #7fb0a6;
+  background-color: #497478;
+  color: #F7F7F7;
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
-  padding: 2em 0em;
-}
-
-footer .ft-left {
-  float: left;
-  width: 100%;
-}
-
-footer .ft-left .ft-right {
-  float: right;
+  padding: 2em 0 2em 2em;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer a {
-  color: #7fb0a6;
+  color: #F7F7F7;
   padding: 2em;
   text-decoration: none;
+}
+
+footer a:hover {
+  background: #F7F7F7;
+  color: #497478;
 }
 
 @media only screen and (min-width: 2000px) {
@@ -523,16 +497,14 @@ footer a {
   }
   .description .descContainer .descContent {
     margin: 3em;
-    min-height: 50vh;
   }
   .description .descContainer .descContent p:nth-child(3) {
     line-height: 2rem;
   }
   .portfolio .project {
-    width: 100%;
+    width: 90%;
   }
   .portfolio .project .container p {
-    color: #333333;
     font-size: 20px;
   }
 }
@@ -545,24 +517,13 @@ footer a {
     height: 100vh;
   }
   .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "contact contact contact" "skill    skill skill" "footer   footer footer";
+        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "skill    skill skill" "contact contact contact" "footer   footer footer";
   }
   .description h2 {
     font-size: 3.5em;
   }
   .description p {
     font-size: 1.5em;
-  }
-  .description .descContainer {
-    padding: 1.5rem;
-    text-align: center;
-  }
-  .description .descContainer .descContent {
-    padding: 1.5rem;
-    margin: 3rem;
-  }
-  .description .descContainer .descContent p:nth-child(3) {
-    line-height: 2rem;
   }
   .portfolio .project {
     width: 70%;
@@ -574,16 +535,7 @@ footer a {
     font-size: 3.5em;
   }
   .contactBackground {
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: unset;
-    min-height: 60vh;
-  }
-  .contactBackground .contactForm {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 90%;
   }
   .contactBackground .contactForm input, .contactBackground .contactForm textarea {
     width: 90%;
@@ -641,6 +593,7 @@ footer a {
   }
   header nav ul a:hover {
     font-size: 2.5em;
+    border-bottom: unset;
   }
   header nav .closebutton {
     display: block;
@@ -654,12 +607,8 @@ footer a {
   .heroImage .overViewBackground .overViewContent {
     font-size: 1.5em;
   }
-  .description .descContainer {
-    padding: 1rem;
-  }
   .description .descContainer .descContent {
     margin: 2rem;
-    min-height: 400px;
   }
 }
 
@@ -674,18 +623,18 @@ footer a {
     padding: 0;
   }
   .description .descContainer h2 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
   .description .descContainer p {
     font-size: 1.25em;
   }
   .description .descContainer .descContent {
-    margin: 5rem 0;
-    border-radius: 0%;
+    margin: 2rem 0;
+    padding: 1em;
   }
   .description .descContainer .descContent p:nth-child(3) {
+    text-align: center;
     font-size: 1rem;
-    line-height: 1.5rem;
   }
   .portfolio .project {
     width: 100%;
@@ -694,7 +643,10 @@ footer a {
     padding: 3em 0;
   }
   .portfolio .project .container span {
-    font-size: 2.5em;
+    font-size: 3em;
+  }
+  .contactBackground {
+    width: 100%;
   }
   .contactBackground h2 {
     font-size: 2.5em;
@@ -705,12 +657,30 @@ footer a {
   }
   footer {
     padding: 2em 0em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footerRight {
+    margin: 1em 0;
   }
   footer a {
-    padding: .5em;
-    text-decoration: none;
-    -webkit-transition: font-size 1s;
-    transition: font-size 1s;
+    padding: 1em 1em 0 0;
+  }
+  footer a:hover {
+    background-color: unset;
+    color: unset;
   }
 }
 /*# sourceMappingURL=styles.css.map */
