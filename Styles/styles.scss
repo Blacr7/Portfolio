@@ -110,8 +110,8 @@ $fourthColor: #333333;
 			
 			&:nth-child(4){
 				left: 90%;
-				width: 60px;
-				height: 60px;
+				width: 3.75em;
+				height: 3.75em;
 				
 				animation-duration: 22s;
 			}
@@ -122,18 +122,18 @@ $fourthColor: #333333;
 			
 			&:nth-child(6){
 				left: 70%;
-				width: 120px;
-				height: 120px;
+				width: 7.5em;
+				height: 7.5em;
 
-				bottom: -120px;
+				bottom: -7.5em;
 				animation-delay: 3s;
 			}
 			
 			&:nth-child(7){
 				left: 32%;
-				width: 140px;
-				height: 140px;
-				bottom: -140px;
+				width: 8.75em;
+				height: 8.75em;
+				bottom: -8.75em;
 				animation-delay: 1x;
 
 			}
@@ -164,8 +164,24 @@ $fourthColor: #333333;
 				animation-delay: 9s;
 			}
 
-			&:hover{
-				animation: none;
+			&:nth-child(11){
+				left: 20%;
+				width: 30em;
+				height: 30em;
+				bottom: -30em;
+
+				animation: bigSquare 80s 1 1s;
+				animation-delay: 30s;
+
+
+				@-webkit-keyframes bigSquare {
+					0%   { transform: translateY(0); }
+					100% { transform: translateY(-400%) rotate(100deg); }
+				}
+				@keyframes bigSquare {
+					0%   { transform: translateY(0); }
+					100% { transform: translateY(-400%) rotate(100deg); }
+				}
 			}
 		}
 		
@@ -186,6 +202,7 @@ $fourthColor: #333333;
 	font-size: 3.5em;
 	font-weight: 900;
 }
+
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
 *{
@@ -647,11 +664,7 @@ footer{
 			}
 		}
 
-		.bg-bubbles{
-			li{
-				bottom: -20vh;
-			}
-		}
+		@include backgroundBubbles(30s, -130vh)
 	}
 	
 	.pageContainer {
@@ -738,7 +751,7 @@ footer{
 			z-index: 4;
 			top: 0;
 			background-color: rgba(0,0,0, 0.9);
-			transition: 0.7s;
+			transition: 1s;
 			overflow-x: hidden;
 			
 			a{
@@ -750,12 +763,14 @@ footer{
 			}
 
 			ul{
-				position: relative;
-				display: block;
-				top: 15%;
-				width: 100%;
-				text-align: center;
-				margin-top: 30px;
+				min-height: 100%;
+				width: 100vw;
+                display:flex;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: wrap;
+				flex-direction: column;
+                text-align: center;
 
 				a{
 					font-size: 2em;
@@ -818,11 +833,8 @@ footer{
 				font-size: 1.25em;
 			}
 		}
-		.bg-bubbles{
-			all:unset;
-			display: none;
-			
-		}
+
+		@include backgroundBubbles(30s, -700px);
 	}
 
 	.description{
