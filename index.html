@@ -9,6 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#7fb0a6">
   <link rel="stylesheet" href="Styles/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="http://mynameismatthieu.com/WOW/css/libs/animate.css">
   <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon_io/favicon-16x16.png">
@@ -22,7 +24,7 @@
             <a href="#" onclick="openNav()" id="menu-icon" alt="hamburger image"></a>
 
             <nav id="nav">
-                <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
                 <ul id="style1">
                     <li><a href="#goToDescription">About Me</a></li>
                     <li><a href="#goToSkills">Skills</a></li>
@@ -67,26 +69,58 @@
             <div class="descContainer">
                 <div class="descContent">
                     <h2>About Me</h2>
-                    <p>Hello, I'm Robert a Web Developer living in South Florida.</p>
+                    <p>Hello, I'm Robert a Web Developer living in South Florida</p>
 
-                    <p>I became fully engrossed with computers when I was 7 years old, and since then I have turned that love and hobby into a career where i can turn ideas into wonderful Websites.
+                    <p>I became fully engrossed with computers when I was 7 years old, and since then I have turned that love and hobby into a career where i can turn ideas into wonderful Websites.</p>
+
                     <br>
-                        If you have an Idea you want converted into a site lets get in  <a href="#goToContact">Contact!</a>
-                    </p>
+
+                    <p>I created my first website in high school, when my PhotoShop teacher taught the class some html and css at the end of the semester. from there I started styling MySpace pages for my friends and classmates</p>
+
+                    <p>If you have an Idea you want converted into a site lets get in <a href="#goToContact">Contact!</a> </p>
+                    
+                    
+                        
                 </div>
             </div>
         </section>
 
         <section id="goToPortfolio" class="portfolio">
-                <div class="project">
-                    <img src="Images/JaniqueCombined-min.png" alt="mobile Version & Ipad Version">
-                    <div class="container">
-                        <span>Janique Mynot Realty</span>
-                        <p>Real Estate Portfolio for Janique Mynot</p>
-                        <a href="http://janiquemynotrealty.com/" target="none">Visit Site</a>
-                        <a href="https://github.com/Blacr7/JaniqueMynotRealty" target="none">View on GitHub</a>
-                    </div>
+            <div class="project">
+                <img src="Images/JaniqueCombined-min.png" alt="mobile Version & Ipad Version">
+                <div class="container">
+                    <span>Janique Mynot Realty</span>
+                    <p>Real Estate Portfolio for Janique Mynot</p>
+                    <a href="http://janiquemynotrealty.com/" target="none">Visit Site</a>
+                    <a href="https://github.com/Blacr7/JaniqueMynotRealty" target="none">View on GitHub</a>
                 </div>
+            </div>
+        </section>
+
+        <section class="portfolioDesc">
+            <div class="descContent">
+                <div data-wow-duration="2s" class="descBox wow bounceInLeft ">
+                    <i class="fas fa-mobile" role="img" aria-label="Responsive"></i>
+                    <h3>Responsive</h3>
+                    <p>Coded and Designed to look amazing on a variety of different resolutions and view ports ranging from 4k to phone screens.</p>
+                </div>
+                <div data-wow-duration="2s" class="descBox wow bounceInRight ">
+                    <i class="far fa-window-restore" role="img" aria-label="Compatible"></i>
+                    <h3>Cross-Browser Compatible</h3>
+                    <p>Using techniques and tools to ensure full functionality across a wide range of the worlds top browsers. </p>
+                </div>
+
+                <div data-wow-duration="2s" data-wow-delay="1s" class="descBox wow bounceInLeft ">
+                    <i class="fab fa-sass" role="img" aria-label="Sass"></i>
+                    <h3>Personalized </h3>
+                    <p>Built from the ground up, while features were closely monitored and approved by the sites owner.</p>
+                </div>
+                <div data-wow-duration="2s" data-wow-delay="1s"class="descBox wow bounceInRight ">
+                    <i class="fas fa-database" role="img" aria-label="Hosting"></i>
+                    <h3>Hosting</h3>
+                    <p>Hosted and configured with a domain name</p>
+                </div>
+            </div>
         </section>
 
         <section id="goToContact" class="contactBackground">
@@ -94,11 +128,11 @@
 
             <form class="contactForm" method="post" action="https://formspree.io/blacr7mail@gmail.com">
                 <div class="input">
-                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
 
                 <div class="input">
-                    <input type="text" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="email" id="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="input">
@@ -150,7 +184,7 @@
                     <div class="skills"><img src="Svgs/VisualStudioCode.svg" alt="VisualStudioCode logo"><h3>Visual Studio Code</h3></div>
                 </div>
                 <div class="skillContainer">
-                    <div class="skills"><img src="Svgs/Wordpress.svg" alt="Wordpress logo"><h3>Wordpress</h3></div>
+                    <div class="skills"><img src="Svgs/Wordpress.svg" alt="WordPress logo"><h3>WordPress</h3></div>
                 </div>
             </div>
         </section>
@@ -164,7 +198,11 @@
             </div> 
         </footer>
     </div>
-  
+
+    <script src="http://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
 </body>
 
 </html>

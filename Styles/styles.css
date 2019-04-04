@@ -14,7 +14,7 @@ body, html {
 body {
   position: relative;
   font-family: 'Bitter', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   background: #F7F7F7;
 }
 
@@ -24,21 +24,24 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc portfolio portfolio" "skill    skill     skill skill"  "contact contact contact contact" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc desc desc" "portfolioDesc portfolioDesc portfolio portfolio" "skill    skill     skill skill"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
 .pageContainer .scrollAnchor {
-  font-size: 2em;
+  font-size: 32px;
   text-decoration: none;
   -webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
   animation: pulsate-fwd 2s ease-in-out infinite both;
   position: absolute;
   bottom: 5%;
   right: 50%;
-  height: 1em;
   border-radius: 100%;
   margin: 0 auto;
   color: #F7F7F7;
+  width: 53px;
+  padding: 8px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @-webkit-keyframes pulsate-fwd {
@@ -71,12 +74,18 @@ body {
   }
 }
 
+.pageContainer .scrollAnchor:hover {
+  background: #F7F7F7;
+  color: #497478;
+  border-radius: 40px;
+}
+
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: nav;
-  padding: 2rem 0rem;
+  padding: 2em 0em;
   z-index: 3;
   position: absolute;
 }
@@ -89,7 +98,7 @@ header #menu-icon {
   background-repeat: no-repeat;
 }
 
-header nav .closebutton {
+header nav .closeButton {
   display: none;
 }
 
@@ -109,12 +118,11 @@ header nav ul a {
   color: #F7F7F7;
   font-weight: 900;
   font-size: 1.3em;
-  -webkit-transition: font-size 1s, border-bottom 1s;
-  transition: font-size 1s, border-bottom 1s;
+  -webkit-transition: border-bottom .5s;
+  transition: border-bottom .5s;
 }
 
 header nav ul a:hover {
-  font-size: 1.7rem;
   border-bottom: solid #F7F7F7 0.1em;
 }
 
@@ -147,8 +155,8 @@ header nav ul a:hover {
   height: 3em;
   background: #699fa4;
   bottom: -15vh;
-  -webkit-animation: square 35s infinite 1s;
-  animation: square 35s infinite 1s;
+  -webkit-animation: square 35s infinite 0s;
+  animation: square 35s infinite 0s;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
@@ -292,10 +300,11 @@ header nav ul a:hover {
   background-attachment: fixed;
   height: 100vh;
   color: #F7F7F7;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .heroImage .overViewBackground .overViewHeader {
-  font-size: 5rem;
+  font-size: 5em;
   font-weight: bolder;
   pointer-events: visible;
 }
@@ -303,8 +312,8 @@ header nav ul a:hover {
 .heroImage .overViewBackground .overViewHeader span {
   padding: 0;
   letter-spacing: 1px;
-  -webkit-transition: background-color 1s, color 1s;
-  transition: background-color 1s, color 1s;
+  -webkit-transition: background-color 1.2s, color 1s;
+  transition: background-color 1.2s, color 1s;
 }
 
 .heroImage .overViewBackground .overViewHeader span:hover {
@@ -313,7 +322,7 @@ header nav ul a:hover {
 }
 
 .heroImage .overViewBackground .overViewContent {
-  font-size: 2rem;
+  font-size: 2em;
   font-style: italic;
   font-weight: 100;
 }
@@ -325,22 +334,9 @@ header nav ul a:hover {
 .description {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 4;
   grid-area: desc;
   font-weight: 500;
-  min-height: 50vh;
-}
-
-.description h2 {
-  color: #497478;
-  font-size: 3.5em;
-  font-weight: 900;
-}
-
-.description p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333333;
 }
 
 .description .descContainer {
@@ -354,40 +350,54 @@ header nav ul a:hover {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100%;
 }
 
 .description .descContainer .descContent {
-  padding: 2rem;
+  padding: 2em;
+  margin: auto;
+  width: 90%;
   text-align: center;
   display: -ms-grid;
   display: grid;
-  height: 50%;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
-  margin: 5rem;
 }
 
-.description .descContainer .descContent p:nth-child(3) {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
+.description .descContainer .descContent h2 {
+  color: #497478;
+  font-size: 3em;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.description .descContainer .descContent p {
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+.description .descContainer .descContent p:nth-child(2) {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #5c9398;
 }
 
 .description a {
   padding: 1em;
   margin: 0 1em;
   background: #497478;
-  -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
   display: inline-block;
-  color: #FFFFFF;
+  color: #F7F7F7;
   text-decoration: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: auto;
+}
+
+.description a:hover {
+  border-radius: 40px;
+  background: #784d49;
 }
 
 .portfolio {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: portfolio;
@@ -408,13 +418,13 @@ header nav ul a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
 
 .portfolio .project img {
-  padding: 2em;
+  width: 80%;
   display: block;
-  width: 100%;
+  margin: auto;
   height: auto;
 }
 
@@ -424,12 +434,12 @@ header nav ul a:hover {
 
 .portfolio .project .container span {
   color: #497478;
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .portfolio .project .container p {
-  color: #333333;
   font-size: 1.25em;
   margin: 0 0 1em;
 }
@@ -438,31 +448,95 @@ header nav ul a:hover {
   padding: 1em;
   margin: 0 1em;
   background: #497478;
-  -webkit-box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
   display: inline-block;
-  color: #FFFFFF;
+  color: #F7F7F7;
   text-decoration: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.portfolio .project .container a:hover {
+  border-radius: 40px;
+  background: #784d49;
+}
+
+.portfolioDesc {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: portfolioDesc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5em;
+}
+
+.portfolioDesc .descContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.portfolioDesc .descBox {
+  padding: 1em;
+  max-width: 50%;
+  text-align: center;
+}
+
+.portfolioDesc .descBox i {
+  font-size: 3em;
+  color: #365558;
+}
+
+.portfolioDesc .descBox h3 {
+  color: #5c9398;
+}
+
+.portfolioDesc .descBox p {
+  text-align: left;
 }
 
 .contactBackground {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: contact;
   background-color: #497478;
   min-height: 60vh;
   text-align: center;
-  width: 75%;
+  width: 90%;
   margin: 2em auto;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
   -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
           box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
 }
 
 .contactBackground h2 {
   color: #497478;
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
   line-height: 15vh;
   color: #F7F7F7;
 }
@@ -494,30 +568,40 @@ header nav ul a:hover {
   border: none;
   color: #497478;
   font-size: 1em;
+  border-radius: 30px;
+}
+
+.contactBackground .contactForm input:focus, .contactBackground .contactForm textarea:focus {
+  outline: none;
+  border: 4px solid #5c9398;
 }
 
 .contactBackground .contactForm textarea {
   height: 10em;
+  border-radius: 5px;
+}
+
+.contactBackground:hover {
+  -webkit-box-shadow: 0 16px 20px 10px rgba(0, 0, 0, 0.28);
+          box-shadow: 0 16px 20px 10px rgba(0, 0, 0, 0.28);
 }
 
 .skillBackground {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: skill;
-  width: 75%;
+  width: 90%;
   margin: auto;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
   text-align: center;
   min-height: 50vh;
 }
 
 .skillBackground h2 {
   color: #497478;
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
   margin: 1em;
 }
 
@@ -525,8 +609,8 @@ header nav ul a:hover {
   display: -ms-grid;
   display: grid;
   grid-gap: 1em;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   height: 100%;
 }
 
@@ -551,7 +635,7 @@ header nav ul a:hover {
 footer {
   background-color: #497478;
   color: #F7F7F7;
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
@@ -582,96 +666,7 @@ footer a:hover {
 
 @media only screen and (min-width: 2000px) {
   body {
-    font-size: 1vw;
-  }
-  header {
-    padding: 2em 0em;
-  }
-  header nav a {
-    padding: 2em;
-  }
-  header nav a:hover {
-    font-size: 1.5em;
-  }
-  .overViewBackground .overViewHeader {
-    font-size: 5em;
-  }
-  .overViewBackground .overViewContent {
-    font-size: 2em;
-  }
-  .description h2 {
-    font-size: 3.5em;
-  }
-  .description p {
-    font-size: 1.5em;
-  }
-  .description .descContainer {
-    padding: 2em;
-  }
-  .description .descContainer .descContent {
-    padding: 2em;
-    min-height: 50vh;
-    margin: 4rem;
-  }
-  .description .descContainer .descContent p:nth-child(3) {
-    font-size: 1em;
-    line-height: 2em;
-  }
-  .portfolio .project .container span {
-    font-size: 3.5em;
-  }
-  .portfolio .project .container p {
-    font-size: 1.25em;
-  }
-  .skillBackground .skillGrid .skills {
-    padding: 2em;
-  }
-  .skillBackground .skillGrid .skills img {
-    height: 120px;
-    width: 120px;
-  }
-  footer img {
-    height: 96px;
-    width: 96px;
-  }
-}
-
-@media only screen and (max-width: 1600px) {
-  body {
-    font-size: 16px;
-  }
-  .overViewBackground .overViewHeader {
-    font-size: 5em;
-  }
-  .overViewBackground .overViewContent {
-    font-size: 2em;
-  }
-  .description h2 {
-    font-size: 3.5em;
-  }
-  .description p {
-    font-size: 1.5em;
-  }
-  .description .descContainer .descContent {
-    margin: 3em;
-  }
-  .description .descContainer .descContent p:nth-child(3) {
-    line-height: 2rem;
-  }
-  .portfolio .project {
-    width: 90%;
-  }
-  .portfolio .project .container p {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .heroImage {
-    height: 100vh;
-  }
-  .heroImage .overViewBackground .overView {
-    height: 100vh;
+    font-size: .8vw;
   }
   .heroImage ul {
     position: absolute;
@@ -690,8 +685,8 @@ footer a:hover {
     height: 3em;
     background: #699fa4;
     bottom: -15vh;
-    -webkit-animation: square 30s infinite 1s;
-    animation: square 30s infinite 1s;
+    -webkit-animation: square 35s infinite 0s;
+    animation: square 35s infinite 0s;
     -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
   }
@@ -707,8 +702,8 @@ footer a:hover {
     bottom: -5em;
     -webkit-animation-delay: 3s;
             animation-delay: 3s;
-    -webkit-animation-duration: 23s;
-            animation-duration: 23s;
+    -webkit-animation-duration: 28s;
+            animation-duration: 28s;
   }
   .heroImage ul li:nth-child(3) {
     left: 25%;
@@ -719,8 +714,8 @@ footer a:hover {
     left: 90%;
     width: 3.75em;
     height: 3.75em;
-    -webkit-animation-duration: 25s;
-            animation-duration: 25s;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
   }
   .heroImage ul li:nth-child(5) {
     left: 55%;
@@ -747,8 +742,8 @@ footer a:hover {
     height: 20px;
     -webkit-animation-delay: 15s;
             animation-delay: 15s;
-    -webkit-animation-duration: 40s;
-            animation-duration: 40s;
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
   }
   .heroImage ul li:nth-child(9) {
     left: 25%;
@@ -756,8 +751,8 @@ footer a:hover {
     height: 25px;
     -webkit-animation-delay: 2s;
             animation-delay: 2s;
-    -webkit-animation-duration: 26s;
-            animation-duration: 26s;
+    -webkit-animation-duration: 31s;
+            animation-duration: 31s;
   }
   .heroImage ul li:nth-child(10) {
     left: 80%;
@@ -772,8 +767,141 @@ footer a:hover {
     width: 8em;
     height: 8em;
     bottom: -8em;
-    -webkit-animation-duration: 50s;
-            animation-duration: 50s;
+    -webkit-animation-duration: 55s;
+            animation-duration: 55s;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+  }
+  @-webkit-keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-140vh) rotate(250deg);
+              transform: translateY(-140vh) rotate(250deg);
+    }
+  }
+  @keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-140vh) rotate(250deg);
+              transform: translateY(-140vh) rotate(250deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .pageContainer {
+        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "portfolioDesc portfolioDesc portfolioDesc" "skill    skill skill" "contact contact contact" "footer   footer footer";
+  }
+  .heroImage ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    overflow: hidden;
+  }
+  .heroImage ul li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 3em;
+    height: 3em;
+    background: #699fa4;
+    bottom: -15vh;
+    -webkit-animation: square 35s infinite 0s;
+    animation: square 35s infinite 0s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  .heroImage ul li:nth-child(1) {
+    left: 5%;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .heroImage ul li:nth-child(2) {
+    left: 20%;
+    width: 5em;
+    height: 5em;
+    bottom: -5em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-duration: 28s;
+            animation-duration: 28s;
+  }
+  .heroImage ul li:nth-child(3) {
+    left: 25%;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  .heroImage ul li:nth-child(4) {
+    left: 90%;
+    width: 3.75em;
+    height: 3.75em;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+  }
+  .heroImage ul li:nth-child(5) {
+    left: 55%;
+  }
+  .heroImage ul li:nth-child(6) {
+    left: 70%;
+    width: 7.5em;
+    height: 7.5em;
+    bottom: -7.5em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  .heroImage ul li:nth-child(7) {
+    left: 32%;
+    width: 8.75em;
+    height: 8.75em;
+    bottom: -8.75em;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .heroImage ul li:nth-child(8) {
+    left: 15%;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+  }
+  .heroImage ul li:nth-child(9) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 31s;
+            animation-duration: 31s;
+  }
+  .heroImage ul li:nth-child(10) {
+    left: 80%;
+    width: 10em;
+    height: 10em;
+    bottom: -10em;
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+  }
+  .heroImage ul li:nth-child(11) {
+    left: 90%;
+    width: 8em;
+    height: 8em;
+    bottom: -8em;
+    -webkit-animation-duration: 55s;
+            animation-duration: 55s;
     -webkit-animation-delay: 20s;
             animation-delay: 20s;
   }
@@ -796,27 +924,6 @@ footer a:hover {
       -webkit-transform: translateY(-130vh) rotate(250deg);
               transform: translateY(-130vh) rotate(250deg);
     }
-  }
-  .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "skill    skill skill" "contact contact contact" "footer   footer footer";
-  }
-  .description .descContent {
-    min-height: 50vh;
-  }
-  .description h2 {
-    font-size: 3.5em;
-  }
-  .description p {
-    font-size: 1.5em;
-  }
-  .portfolio .project {
-    width: 70%;
-  }
-  .portfolio .project .container {
-    padding: 3em;
-  }
-  .portfolio .project .container span {
-    font-size: 3.5em;
   }
   .contactBackground {
     width: 90%;
@@ -839,7 +946,7 @@ footer a:hover {
 
 @media only screen and (max-width: 780px) {
   body {
-    font-size: 13px;
+    font-size: 16px;
   }
   header #menu-icon {
     display: block;
@@ -859,7 +966,6 @@ footer a:hover {
     overflow-x: hidden;
   }
   header nav a {
-    padding: 1rem 2rem;
     text-decoration: none;
     color: #818181;
     display: block;
@@ -872,11 +978,11 @@ footer a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-line-pack: center;
-        align-content: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: vertical;
@@ -888,39 +994,11 @@ footer a:hover {
   header nav ul a {
     font-size: 2em;
   }
-  header nav ul a:hover {
-    font-size: 2.5em;
-    border-bottom: unset;
-  }
-  header nav .closebutton {
+  header nav .closeButton {
     display: block;
     font-size: 5em;
     position: absolute;
     right: 5%;
-  }
-  .heroImage .overViewBackground .overViewHeader {
-    font-size: 5em;
-  }
-  .heroImage .overViewBackground .overViewContent {
-    font-size: 1.5em;
-  }
-  .heroImage .bg-bubbles li {
-    bottom: -20vh;
-  }
-  .heroImage .bg-bubbles:nth-child(10) {
-    bottom: -35vh;
-  }
-  .description .descContainer .descContent {
-    margin: 2rem;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .heroImage .overViewBackground .overViewHeader {
-    font-size: 3em;
-  }
-  .heroImage .overViewBackground .overViewContent {
-    font-size: 1.25em;
   }
   .heroImage ul {
     position: absolute;
@@ -939,8 +1017,141 @@ footer a:hover {
     height: 3em;
     background: #699fa4;
     bottom: -15vh;
-    -webkit-animation: square 30s infinite 1s;
-    animation: square 30s infinite 1s;
+    -webkit-animation: square 35s infinite 0s;
+    animation: square 35s infinite 0s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  .heroImage ul li:nth-child(1) {
+    left: 5%;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .heroImage ul li:nth-child(2) {
+    left: 20%;
+    width: 5em;
+    height: 5em;
+    bottom: -5em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-duration: 28s;
+            animation-duration: 28s;
+  }
+  .heroImage ul li:nth-child(3) {
+    left: 25%;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  .heroImage ul li:nth-child(4) {
+    left: 90%;
+    width: 3.75em;
+    height: 3.75em;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+  }
+  .heroImage ul li:nth-child(5) {
+    left: 55%;
+  }
+  .heroImage ul li:nth-child(6) {
+    left: 70%;
+    width: 7.5em;
+    height: 7.5em;
+    bottom: -7.5em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  .heroImage ul li:nth-child(7) {
+    left: 32%;
+    width: 8.75em;
+    height: 8.75em;
+    bottom: -8.75em;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .heroImage ul li:nth-child(8) {
+    left: 15%;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+  }
+  .heroImage ul li:nth-child(9) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 31s;
+            animation-duration: 31s;
+  }
+  .heroImage ul li:nth-child(10) {
+    left: 80%;
+    width: 10em;
+    height: 10em;
+    bottom: -10em;
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+  }
+  .heroImage ul li:nth-child(11) {
+    left: 90%;
+    width: 8em;
+    height: 8em;
+    bottom: -8em;
+    -webkit-animation-duration: 55s;
+            animation-duration: 55s;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+  }
+  @-webkit-keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-130vh) rotate(250deg);
+              transform: translateY(-130vh) rotate(250deg);
+    }
+  }
+  @keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-130vh) rotate(250deg);
+              transform: translateY(-130vh) rotate(250deg);
+    }
+  }
+  .portfolioDesc {
+    margin: 2em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 12px;
+  }
+  .heroImage ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    overflow: hidden;
+  }
+  .heroImage ul li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 3em;
+    height: 3em;
+    background: #699fa4;
+    bottom: -15vh;
+    -webkit-animation: square 30s infinite 0s;
+    animation: square 30s infinite 0s;
     -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
   }
@@ -1032,8 +1243,8 @@ footer a:hover {
               transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(-700px) rotate(250deg);
-              transform: translateY(-700px) rotate(250deg);
+      -webkit-transform: translateY(-900px) rotate(250deg);
+              transform: translateY(-900px) rotate(250deg);
     }
   }
   @keyframes square {
@@ -1042,42 +1253,22 @@ footer a:hover {
               transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(-700px) rotate(250deg);
-              transform: translateY(-700px) rotate(250deg);
+      -webkit-transform: translateY(-900px) rotate(250deg);
+              transform: translateY(-900px) rotate(250deg);
     }
   }
-  .description .descContainer {
-    padding: 0;
-  }
-  .description .descContainer h2 {
-    font-size: 3em;
-  }
-  .description .descContainer p {
-    font-size: 1.25em;
-  }
   .description .descContainer .descContent {
-    margin: 2rem 0;
+    margin: 2em 0;
     padding: 1em;
   }
-  .description .descContainer .descContent p:nth-child(3) {
-    text-align: center;
-    font-size: 1rem;
-  }
-  .portfolio .project {
-    width: 100%;
-  }
-  .portfolio .project .container {
-    padding: 3em 0;
-  }
   .portfolio .project .container span {
-    font-size: 3em;
+    font-size: 2.5em;
   }
   .contactBackground {
     width: 100%;
   }
   .contactBackground h2 {
     font-size: 2.5em;
-    line-height: 15vh;
   }
   .skillBackground {
     width: 100%;

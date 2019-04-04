@@ -1,25 +1,27 @@
 //-----------------------------------------------------------COLORS-------------------------------------------------------------------------------
 $primaryColor: #F7F7F7;
 $secondaryColor: #497478;
-$tertiaryColor: #FFFFFF;
-$fourthColor: #333333;
+$tertiaryColor: lighten($color: $secondaryColor , $amount: 10%);
+$fourthColor: complement($color: $secondaryColor );
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //---------------------------------------------MIXINS-------------------------------------------------------------
 @mixin scrollAnchor() {
-	font-size: 2em;
+	font-size: 32px;
 	text-decoration: none;
 	-webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
 	        animation: pulsate-fwd 2s ease-in-out infinite both;
 	position: absolute;
 	bottom: 5%;
 	right: 50%;
-	height: 1em;
 	border-radius: 100%;
 	margin: 0 auto;
-	color: $primaryColor;
-
+    color: $primaryColor;
+    width: 53px;
+    padding: 8px;
+    transition: all 1s;
+    
 	@-webkit-keyframes pulsate-fwd {
 		0% {
 		  -webkit-transform: scale(1);
@@ -47,17 +49,28 @@ $fourthColor: #333333;
 		  -webkit-transform: scale(1);
 				  transform: scale(1);
 		}
-	  }
+      }
+    
+    &:hover{
+        background: $primaryColor;
+        color: $secondaryColor;
+        border-radius: 40px;
+    }
 }
 
 @mixin anchorButton(){
 	padding: 1em;
 	margin: 0 1em;
 	background: $secondaryColor;
-	box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.14);
 	display: inline-block; 
-	color: $tertiaryColor;
-	text-decoration: none;
+	color: $primaryColor;
+    text-decoration: none;
+    transition: all 1s;
+
+    &:hover{
+        border-radius: 40px;
+        background: $fourthColor;
+    } 
 }
 
 @mixin flexCenter(){
@@ -86,8 +99,8 @@ $fourthColor: #333333;
 			background: lighten($color: $secondaryColor , $amount: 15%);
 			bottom: -15vh;
 			
-			-webkit-animation: square $duration infinite 1s;
-			animation:         square $duration infinite 1s;
+			-webkit-animation: square $duration infinite 0s;
+			animation:         square $duration infinite 0s;
 			
 			-webkit-transition-timing-function: ease-in;
 			transition-timing-function: ease-in;
@@ -193,8 +206,18 @@ $fourthColor: #333333;
 
 @mixin h2 {
 	color: $secondaryColor;
-	font-size: 3.5em;
-	font-weight: 900;
+	font-size: 3em;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin boxShadow {
+    transition: box-shadow 1s;
+    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
+
+    &:hover{
+        box-shadow: 0 16px 20px 10px rgba(0, 0, 0, 0.28);
+    }
 }
 //-------------------------------------------------------------------------------------------------------------------------------------
 
@@ -216,7 +239,7 @@ body,html{
 body{
 	position: relative;
 	font-family: 'Bitter', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	background: $primaryColor;
 }
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -228,7 +251,8 @@ body{
 	grid-template-areas:
 		 "nav nav nav nav"
 		 "hero hero hero hero"
-		 "desc desc portfolio portfolio"
+		 "desc desc desc desc"
+		 "portfolioDesc portfolioDesc portfolio portfolio"
 		 "skill    skill     skill skill" 
 		 "contact contact contact contact"
 		 "footer   footer   footer footer";
@@ -240,7 +264,7 @@ body{
 
 header{
 	grid-area: nav;
-	padding: 2rem 0rem;
+	padding: 2em 0em;
 	z-index: 3;
 	position: absolute;
 
@@ -254,7 +278,7 @@ header{
 
 	nav{
 		
-		.closebutton{
+		.closeButton{
 			display: none;
 		} 
 
@@ -275,11 +299,10 @@ header{
 				color: $primaryColor;
 				font-weight: 900;
 				font-size: 1.3em;
-				transition: font-size 1s, border-bottom 1s;
+				transition: border-bottom .5s;
 			}
 
 			a:hover{
-				font-size: 1.7rem;
 				border-bottom: solid $primaryColor .1em;
 			}
 		}
@@ -306,18 +329,20 @@ header{
 			text-align: center;
 			background-attachment: fixed;
 			height: 100vh;
-			color: $primaryColor;
+            color: $primaryColor;
+            font-family: 'Montserrat', sans-serif;
 		}
 
 		.overViewHeader{
-			font-size: 5rem;
+			font-size: 5em;
 			font-weight: bolder;
 			pointer-events: visible;
+            
 
 			span{
 				padding: 0;
 				letter-spacing: 1px;
-				transition: background-color 1s, color 1s;
+				transition: background-color 1.2s, color 1s;
 				
 			}
 			span:hover{
@@ -327,7 +352,7 @@ header{
 		}
 
 		.overViewContent{
-			font-size: 2rem;
+			font-size: 2em;
 			font-style: italic;
 			font-weight: 100;
 		}
@@ -341,41 +366,37 @@ header{
 .description{
 	grid-area: desc;
 	font-weight: 500;
-	min-height: 50vh;
-
-	h2{
-		@include h2();
-	}
-	
-	p{
-		font-size: 1.5rem;
-		font-weight: 600;
-		color: $fourthColor;
-	}
-
+    
 	.descContainer{
 		@include flexCenter();
-		height: 100%;
-
 		.descContent{
-			padding: 2rem;
+            padding: 2em;
+            margin: auto;
+            width: 90%;
 			text-align: center;
 			display: grid;
-			height: 50%;
-			background: $tertiaryColor;
-			box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
-			margin: 5rem;
 
-			p:nth-child(3){
-				font-size: 1rem;
-				line-height: 1.5rem;
-				font-weight: 400;
-			}
+            h2{
+                @include h2();
+            }
+
+            p{
+                font-weight: 100;
+                line-height: 1.5em;
+                
+            }
+
+            p:nth-child(2){
+                font-size: 1.5em;
+                font-weight: 600;
+                color: lighten($color:$secondaryColor , $amount: 10%);
+            }
 		}
 	}
 
 	a{
-		@include anchorButton();
+        @include anchorButton();
+        margin: auto;
 	}
 }
 
@@ -387,24 +408,25 @@ header{
 	.project{
 		transition: 0.3s;
 		margin: auto;
-		width: 80%;
-		
+        width: 100%;
+        
 		img{
-			padding: 2em;
-			display: block;
-			width: 100%;
-			height: auto;
+            width: 80%;
+            display: block;
+            margin: auto;
+            height: auto;
+            
 		}
 		
 		.container{
-			text-align: center;
+            text-align: center;
 
 			span{
-				@include h2();
+                @include h2();
+                
 			}
 
 			p{
-				color: $fourthColor;
 				font-size: 1.25em;
 				margin: 0 0 1em;
 			}
@@ -412,7 +434,36 @@ header{
 			a{
 				@include anchorButton();
 			}
-		}
+		}		
+	}
+}
+
+.portfolioDesc{
+	grid-area: portfolioDesc;
+    @include flexCenter();
+    margin: 5em;
+
+    .descContent{
+        @include flexCenter();
+        flex-direction: row;
+    }
+
+	.descBox{
+        padding: 1em;
+        max-width: 50%;
+        text-align: center;
+		i{
+            font-size: 3em;
+            color: darken($color:$secondaryColor , $amount: 10%);
+            
+        }
+        
+        h3{
+            color: $tertiaryColor;
+        }
+        p{
+            text-align: left
+        }
 	}
 }
 
@@ -421,15 +472,16 @@ header{
 	background-color: $secondaryColor;
 	min-height: 60vh;
 	text-align: center;
-	width: 75%;
-	margin: 2em auto;
-	box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
-
+	width: 90%;
+    margin: 2em auto;
+    
 	h2{
 		@include h2();
 		line-height: 15vh;
-		color: $primaryColor;
-	}
+        color: $primaryColor;
+        
+    }
+    
 	.contactForm{
 		@include flexCenter();
 		flex-direction: column;
@@ -442,23 +494,33 @@ header{
 			width: 50%;
 			border: none;
 			color: $secondaryColor;
-			font-size: 1em;
-		}
-
+            font-size: 1em;
+            border-radius: 30px;
+            
+            &:focus{
+                outline: none;
+                border: 4px solid $tertiaryColor;
+            }
+        }
+        
 		textarea{
-			height: 10em;
-		}
-	}
+            height: 10em;
+            border-radius: 5px;
+        }
+        
+        
+    }
+    
+    @include boxShadow();
 }
 
 .skillBackground{
 	grid-area: skill;
-	width: 75%;
+	width: 90%;
 	margin: auto;
-	background: $tertiaryColor;
-	box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
+	//background: $tertiaryColor;
 	text-align: center;
-	min-height: 50vh;
+    min-height: 50vh;
 
 	h2{
 		@include h2();
@@ -468,7 +530,7 @@ header{
 	.skillGrid{
 		display: grid;
 		grid-gap: 1em;
-		grid-template-columns: auto auto auto auto;
+		grid-template-columns: auto auto auto;
 		height: 100%;
 
 		.skillContainer{
@@ -488,7 +550,9 @@ header{
 				color: $secondaryColor;
 			}
 		}
-	}
+    }
+
+    //@include boxShadow();
 }
 
 footer{
@@ -515,189 +579,32 @@ footer{
 
 @media only screen and (min-width: 2000px){
 	body{
-		font-size: 1vw;
+		font-size: .8vw;
 	}
-
-	header{
-		padding: 2em 0em;
-		nav{
-			a{
-				padding: 2em;
-			}
-	
-			a:hover{
-				font-size: 1.5em;
-			}
-		}
-	}
-	
-	.overViewBackground{
-		.overViewHeader{
-			font-size: 5em;
-		}
-	
-		.overViewContent{
-			font-size: 2em;
-		}
-	}
-	
-	.description{
-		h2{
-			font-size: 3.5em;
-		}
-		
-		p{
-			font-size: 1.5em;
-		}
-	
-		.descContainer{
-			padding: 2em;
-	
-			.descContent{
-				padding: 2em;
-				min-height: 50vh;
-				margin: 4rem;
-	
-				p:nth-child(3){
-					font-size: 1em;
-					line-height: 2em;
-				}
-			}
-		}
-	}
-	
-	.portfolio{
-		.project{
-			.container{
-				span{
-					font-size: 3.5em;
-				}
-	
-				p{
-					font-size: 1.25em;
-				}
-			}
-		}
-	}
-	
-	
-	.skillBackground{
-		.skillGrid{
-			.skills {
-				padding: 2em;
-				
-				img {
-					height: 120px;
-					width: 120px;
-				}
-			}
-		}
-	}
-
-	footer{
-		img{
-			height: 96px;
-			width: 96px;
-		}
-	}
-}
-
-@media only screen and (max-width: 1600px){
-	
-	body{
-		font-size: 16px;
-	}
-
-	.overViewBackground{
-		.overViewHeader{
-			font-size: 5em;
-		}
-	
-		.overViewContent{
-			font-size: 2em;
-		}
-	}
-	
-	.description{
-		h2{
-			font-size: 3.5em;
-		}
-		
-		p{
-			font-size: 1.5em;
-		}
-	
-		.descContainer{
-			.descContent{
-				margin: 3em;
-				p:nth-child(3){
-					line-height: 2rem;
-				}
-			}
-		}
-	}
-	
-	.portfolio{
-		.project{
-			width: 90%;
-			.container{
-				p{
-					font-size: 20px;
-				}
-			}
-		}
-	}
+    
+    .heroImage{
+        @include backgroundBubbles(35s, -140vh);
+    }
 }
 
 @media only screen and (max-width: 1024px){
-	
-	.heroImage{
-		height: 100vh;
-
-		.overViewBackground{
-			.overView{
-				height: 100vh;
-			}
-		}
-
-		@include backgroundBubbles(30s, -130vh)
-	}
-	
+    body{
+        font-size: 18px;
+    }
 	.pageContainer {
 		grid-template-areas:
 			 "nav nav nav"
 			 "hero hero hero"
 			 "desc desc desc"
 			 "portfolio portfolio portfolio"
+			 "portfolioDesc portfolioDesc portfolioDesc"
 			 "skill    skill skill"
 			 "contact contact contact"
 			 "footer   footer footer";
 	}
 
-	.description{
-		.descContent{
-			min-height: 50vh;
-		}
-		
-		h2{
-			font-size: 3.5em;
-		}
-		
-		p{
-			font-size: 1.5em;
-		}
-	}
-	
-	.portfolio{
-		.project{
-			width: 70%;
-			.container{
-				padding: 3em;
-				span{
-					font-size: 3.5em;
-				}
-			}
-		}
+	.heroImage{
+		@include backgroundBubbles(35s, -130vh)
 	}
 
 	.contactBackground{
@@ -729,7 +636,7 @@ footer{
 
 @media only screen and (max-width: 780px){
 	body{
-		font-size: 13px;
+		font-size: 16px;
 	}
 	
 	header{
@@ -751,7 +658,6 @@ footer{
 			overflow-x: hidden;
 			
 			a{
-				padding: 1rem 2rem;
 				text-decoration: none;
 				color: #818181;
 				display: block;
@@ -760,25 +666,17 @@ footer{
 
 			ul{
 				min-height: 100%;
-				width: 100vw;
-                display:flex;
-                align-content: center;
-                justify-content: center;
-                flex-wrap: wrap;
+                width: 100vw;
+                @include flexCenter();
 				flex-direction: column;
                 text-align: center;
 
 				a{
 					font-size: 2em;
 				}
-
-				a:hover{
-					font-size: 2.5em;
-					border-bottom: unset;
-				}
 			}
 			
-			.closebutton{
+			.closeButton{
 				display: block;
 				font-size: 5em;
 				position: absolute;
@@ -788,79 +686,36 @@ footer{
 	}
 
 	.heroImage{
-		.overViewBackground{
-			.overViewHeader{
-				font-size: 5em;
-			}
-		
-			.overViewContent{
-				font-size: 1.5em;
-			}
-		}
-
-		.bg-bubbles{
-			li{
-				bottom: -20vh;
-			}
-
-			&:nth-child(10){
-				bottom: -35vh;
-			}
-		}
-	}
-
-	.description{
-		.descContainer{
-			.descContent{
-				margin: 2rem;
-			}
-		}
-	}
+        @include backgroundBubbles(35s, -130vh)
+    }
+    
+    .portfolioDesc{
+        margin: 2em;
+    }
 }
 
 @media only screen and (max-width: 500px){
+    body{
+        font-size: 12px;
+    }
 	.heroImage{
-		.overViewBackground{
-			.overViewHeader{
-				font-size: 3em;
-			}
-		
-			.overViewContent{
-				font-size: 1.25em;
-			}
-		}
-
-		@include backgroundBubbles(30s, -700px);
+		@include backgroundBubbles(30s, -900px);
 	}
 
 	.description{
 		.descContainer{
-			padding: 0;
-			h2{
-				font-size: 3em;
-			}
-
-			p{
-				font-size:1.25em;
-			}
 			.descContent{
-				margin: 2rem 0;
+				margin: 2em 0;
 				padding: 1em;
-				p:nth-child(3){
-					text-align: center;
-					font-size: 1rem;
-				}
 			}
 		}
 	}
 
 	.portfolio{
 		.project{
-			width: 100%;
 			.container{
-				padding: 3em 0;
 				span{
-					font-size: 3em;
+					font-size: 2.5em;
 				}
 			}
 		}
@@ -870,7 +725,6 @@ footer{
 		width: 100%;
 		h2{
 			font-size: 2.5em;
-			line-height: 15vh;
 		}
 	}
 
