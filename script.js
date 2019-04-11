@@ -16,3 +16,15 @@ function closeNav() {
 }
 //------------------------------------------------------------------------------
 
+
+//-------------sticky NAV--------------------------
+window.onscroll = function() {stickyBar()};
+
+function stickyBar() {
+    if (window.pageYOffset >= document.getElementById("nav").offsetTop && window.matchMedia("(max-width: 780px)").matches == false) {
+        document.getElementById("nav").classList.add("sticky");
+    } else {
+        document.getElementById("nav").classList.remove("sticky");
+    }
+  }
+//-------------------------------------------------

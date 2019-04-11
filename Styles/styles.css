@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
 }
 
 body, html {
@@ -24,7 +25,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc desc desc" "portfolioDesc portfolioDesc portfolio portfolio" "skill    skill     skill skill"  "contact contact contact contact" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc desc desc" "portfolio portfolio portfolio portfolio" "portfolioDesc portfolioDesc portfolioDesc portfolioDesc" "skill skill skill skill"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
 .pageContainer .scrollAnchor {
@@ -34,12 +35,12 @@ body {
   animation: pulsate-fwd 2s ease-in-out infinite both;
   position: absolute;
   bottom: 5%;
-  right: 50%;
-  border-radius: 100%;
+  right: 0;
+  left: 0;
   margin: 0 auto;
   color: #F7F7F7;
-  width: 53px;
-  padding: 8px;
+  width: 50px;
+  padding: 10px;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -77,7 +78,6 @@ body {
 .pageContainer .scrollAnchor:hover {
   background: #F7F7F7;
   color: #497478;
-  border-radius: 40px;
 }
 
 header {
@@ -85,7 +85,6 @@ header {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: nav;
-  padding: 2em 0em;
   z-index: 3;
   position: absolute;
 }
@@ -98,22 +97,24 @@ header #menu-icon {
   background-repeat: no-repeat;
 }
 
-header nav .closeButton {
+header nav, header .sticky {
+  padding: 1em 0;
+}
+
+header nav .closeButton, header .sticky .closeButton {
   display: none;
 }
 
-header nav li, header nav ul {
+header nav li, header nav ul, header .sticky li, header .sticky ul {
   display: inline;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-header nav ul li {
-  padding: 1em;
+header nav ul li, header .sticky ul li {
+  padding: 0 1em;
 }
 
-header nav ul a {
+header nav ul a, header .sticky ul a {
   text-decoration: none;
   color: #F7F7F7;
   font-weight: 900;
@@ -122,8 +123,15 @@ header nav ul a {
   transition: border-bottom .5s;
 }
 
-header nav ul a:hover {
+header nav ul a:hover, header .sticky ul a:hover {
   border-bottom: solid #F7F7F7 0.1em;
+}
+
+header .sticky {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  background: #497478;
 }
 
 .heroImage {
@@ -260,8 +268,8 @@ header nav ul a:hover {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-120vh) rotate(250deg);
-            transform: translateY(-120vh) rotate(250deg);
+    -webkit-transform: translateY(-125vh) rotate(250deg);
+            transform: translateY(-125vh) rotate(250deg);
   }
 }
 
@@ -271,8 +279,8 @@ header nav ul a:hover {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-120vh) rotate(250deg);
-            transform: translateY(-120vh) rotate(250deg);
+    -webkit-transform: translateY(-125vh) rotate(250deg);
+            transform: translateY(-125vh) rotate(250deg);
   }
 }
 
@@ -325,6 +333,11 @@ header nav ul a:hover {
   font-size: 2em;
   font-style: italic;
   font-weight: 100;
+  pointer-events: visible;
+}
+
+.heroImage .overViewBackground .overViewContent span:hover {
+  border-bottom: solid #F7F7F7 0.05em;
 }
 
 .heroImage .overViewBackground .scrollAnchor {
@@ -355,8 +368,7 @@ header nav ul a:hover {
 .description .descContainer .descContent {
   padding: 2em;
   margin: auto;
-  width: 90%;
-  text-align: center;
+  width: 70%;
   display: -ms-grid;
   display: grid;
 }
@@ -371,6 +383,7 @@ header nav ul a:hover {
 .description .descContainer .descContent p {
   font-weight: 100;
   line-height: 1.5em;
+  margin: 0 0 1em;
 }
 
 .description .descContainer .descContent p:nth-child(2) {
@@ -384,24 +397,23 @@ header nav ul a:hover {
   margin: 0 1em;
   background: #497478;
   display: inline-block;
+  border: hidden .32em;
+  border-color: #F7F7F7;
   color: #F7F7F7;
   text-decoration: none;
-  -webkit-transition: all 1s;
-  transition: all 1s;
   margin: auto;
 }
 
 .description a:hover {
-  border-radius: 40px;
-  background: #784d49;
+  background: #5c9398;
+  border-color: #497478;
 }
 
 .portfolio {
   -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: portfolio;
-  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,7 +434,7 @@ header nav ul a:hover {
 }
 
 .portfolio .project img {
-  width: 80%;
+  width: 50%;
   display: block;
   margin: auto;
   height: auto;
@@ -449,21 +461,21 @@ header nav ul a:hover {
   margin: 0 1em;
   background: #497478;
   display: inline-block;
+  border: hidden .32em;
+  border-color: #F7F7F7;
   color: #F7F7F7;
   text-decoration: none;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .portfolio .project .container a:hover {
-  border-radius: 40px;
-  background: #784d49;
+  background: #5c9398;
+  border-color: #497478;
 }
 
 .portfolioDesc {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 4;
   grid-area: portfolioDesc;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,39 +509,32 @@ header nav ul a:hover {
 
 .portfolioDesc .descBox {
   padding: 1em;
-  max-width: 50%;
+  max-width: 25%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   text-align: center;
 }
 
 .portfolioDesc .descBox i {
   font-size: 3em;
-  color: #365558;
 }
 
 .portfolioDesc .descBox h3 {
   color: #5c9398;
 }
 
-.portfolioDesc .descBox p {
-  text-align: left;
-}
-
 .contactBackground {
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: contact;
   background-color: #497478;
   min-height: 60vh;
   text-align: center;
-  width: 90%;
-  margin: 2em auto;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
-  -webkit-box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.14);
+  width: 100%;
+  margin: 2em auto 0;
+  padding: 2em;
 }
 
 .contactBackground h2 {
@@ -568,26 +573,19 @@ header nav ul a:hover {
   border: none;
   color: #497478;
   font-size: 1em;
-  border-radius: 30px;
 }
 
-.contactBackground .contactForm input:focus, .contactBackground .contactForm textarea:focus {
+.contactBackground .contactForm input:focus, .contactBackground .contactForm input:hover, .contactBackground .contactForm textarea:focus, .contactBackground .contactForm textarea:hover {
   outline: none;
   border: 4px solid #5c9398;
 }
 
 .contactBackground .contactForm textarea {
   height: 10em;
-  border-radius: 5px;
-}
-
-.contactBackground:hover {
-  -webkit-box-shadow: 0 16px 20px 10px rgba(0, 0, 0, 0.28);
-          box-shadow: 0 16px 20px 10px rgba(0, 0, 0, 0.28);
 }
 
 .skillBackground {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: skill;
@@ -630,17 +628,18 @@ header nav ul a:hover {
 
 .skillBackground .skillGrid .skills h3 {
   color: #497478;
+  font-weight: 100;
 }
 
 footer {
-  background-color: #497478;
-  color: #F7F7F7;
-  -ms-grid-row: 7;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
-  padding: 2em 0 2em 2em;
-  font-weight: bolder;
+  background-color: #eaeaea;
+  color: unset;
+  padding: 0 2em;
+  font-family: 'Montserrat', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,15 +652,56 @@ footer {
           justify-content: space-between;
 }
 
-footer a {
-  color: #F7F7F7;
-  padding: 2em;
-  text-decoration: none;
+footer .footerLeft, footer .footerMiddle, footer .footerRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-footer a:hover {
-  background: #F7F7F7;
-  color: #497478;
+footer .footerRight {
+  text-align: center;
+}
+
+footer .footerRight li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 .5em;
+}
+
+footer .footerRight li:nth-child(1) {
+  display: block;
+}
+
+footer span {
+  border-bottom: solid 2px #497478;
+}
+
+footer li {
+  list-style: none;
+  padding: .5em 0;
+}
+
+footer li:nth-child(1) {
+  padding: unset;
+  padding: .5em 0;
+  font-weight: bolder;
+}
+
+footer a {
+  color: unset;
+  margin: auto;
+}
+
+footer i {
+  font-size: 2em;
 }
 
 @media only screen and (min-width: 2000px) {
@@ -925,8 +965,14 @@ footer a:hover {
               transform: translateY(-130vh) rotate(250deg);
     }
   }
-  .contactBackground {
-    width: 90%;
+  .portfolio .project img {
+    width: 75%;
+  }
+  .portfolioDesc .descBox {
+    max-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
   .contactBackground .contactForm input, .contactBackground .contactForm textarea {
     width: 90%;
@@ -952,7 +998,7 @@ footer a:hover {
     display: block;
     width: 50px;
     height: 50px;
-    padding-left: 8em;
+    margin: 1em;
   }
   header nav {
     height: 100%;
@@ -994,11 +1040,17 @@ footer a:hover {
   header nav ul a {
     font-size: 2em;
   }
+  header nav ul li {
+    padding: 1em;
+  }
   header nav .closeButton {
     display: block;
     font-size: 5em;
     position: absolute;
     right: 5%;
+  }
+  header nav .sticky {
+    all: unset;
   }
   .heroImage ul {
     position: absolute;
@@ -1124,14 +1176,14 @@ footer a:hover {
               transform: translateY(-130vh) rotate(250deg);
     }
   }
-  .portfolioDesc {
-    margin: 2em;
+  .description .descContainer .descContent {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
   .heroImage ul {
     position: absolute;
@@ -1243,8 +1295,8 @@ footer a:hover {
               transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(-900px) rotate(250deg);
-              transform: translateY(-900px) rotate(250deg);
+      -webkit-transform: translateY(-140vh) rotate(250deg);
+              transform: translateY(-140vh) rotate(250deg);
     }
   }
   @keyframes square {
@@ -1253,16 +1305,25 @@ footer a:hover {
               transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(-900px) rotate(250deg);
-              transform: translateY(-900px) rotate(250deg);
+      -webkit-transform: translateY(-140vh) rotate(250deg);
+              transform: translateY(-140vh) rotate(250deg);
     }
   }
   .description .descContainer .descContent {
     margin: 2em 0;
     padding: 1em;
   }
+  .portfolio .project img {
+    width: 90%;
+  }
   .portfolio .project .container span {
     font-size: 2.5em;
+  }
+  .portfolioDesc .descBox {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
   }
   .contactBackground {
     width: 100%;
@@ -1273,32 +1334,14 @@ footer a:hover {
   .skillBackground {
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 10px;
+  }
   footer {
-    padding: 2em 0em;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  footer .footerRight {
-    margin: 2em 0;
-  }
-  footer a {
-    padding: 1em 1em 0 0;
-  }
-  footer a:hover {
-    background-color: unset;
-    color: unset;
+    padding: unset;
   }
 }
 /*# sourceMappingURL=styles.css.map */

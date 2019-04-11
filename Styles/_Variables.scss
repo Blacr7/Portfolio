@@ -1,0 +1,215 @@
+//-----------------------------------------------------------COLORS-------------------------------------------------------------------------------
+$primaryColor: #F7F7F7;
+$secondaryColor: #497478;
+$tertiaryColor: lighten($color: $secondaryColor , $amount: 10%);
+$fourthColor: complement($color: $secondaryColor );
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//---------------------------------------------MIXINS-------------------------------------------------------------
+@mixin scrollAnchor() {
+	font-size: 32px;
+	text-decoration: none;
+	-webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+	        animation: pulsate-fwd 2s ease-in-out infinite both;
+	position: absolute;
+	bottom: 5%;
+		right: 0;
+		left: 0;
+	margin: 0 auto;
+    color: $primaryColor;
+    width: 50px;
+    padding: 10px;
+    transition: all 1s;
+    
+	@-webkit-keyframes pulsate-fwd {
+		0% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+		50% {
+		  -webkit-transform: scale(1.3);
+				  transform: scale(1.3);
+		}
+		100% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+	  }
+	  @keyframes pulsate-fwd {
+		0% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+		50% {
+		  -webkit-transform: scale(1.3);
+				  transform: scale(1.3);
+		}
+		100% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+      }
+    
+    &:hover{
+        background: $primaryColor;
+        color: $secondaryColor;
+    }
+}
+
+@mixin anchorButton(){
+	padding: 1em;
+	margin: 0 1em;
+	background: $secondaryColor;
+	display: inline-block; 
+	border: hidden .32em;
+	border-color: $primaryColor;
+	color: $primaryColor;
+  text-decoration: none;
+  //transition: all 1s;
+
+    &:hover{
+			background: $tertiaryColor;
+			border-color: $secondaryColor;
+    } 
+}
+
+@mixin flexCenter(){
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+@mixin backgroundBubbles($duration, $animationHeight) {
+	ul{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -99;
+		overflow: hidden;
+		
+		li{
+			position: absolute;
+			list-style: none;
+			display: block;
+			width: 3em;
+			height: 3em;
+			background: lighten($color: $secondaryColor , $amount: 15%);
+			bottom: -15vh;
+            
+			-webkit-animation: square $duration infinite 0s;
+			animation:         square $duration infinite 0s;
+			
+			-webkit-transition-timing-function: ease-in;
+			transition-timing-function: ease-in;
+			
+
+			&:nth-child(1){
+				left: 5%;
+				animation-delay: 7s;
+			}
+			
+			&:nth-child(2){
+				left: 20%;
+				width: 5em;
+				height: 5em;
+				bottom: -5em;
+
+				animation-delay: 3s;
+				animation-duration: $duration - 7;
+			}
+			
+			&:nth-child(3){
+				left: 25%;
+				animation-delay: 5s;
+			}
+			
+			&:nth-child(4){
+				left: 90%;
+				width: 3.75em;
+				height: 3.75em;
+				
+				animation-duration: $duration - 5;
+			}
+			
+			&:nth-child(5){
+				left: 55%;
+			}
+			
+			&:nth-child(6){
+				left: 70%;
+				width: 7.5em;
+				height: 7.5em;
+
+				bottom: -7.5em;
+				animation-delay: 3s;
+			}
+			
+			&:nth-child(7){
+				left: 32%;
+				width: 8.75em;
+				height: 8.75em;
+				bottom: -8.75em;
+				animation-delay: 7s;
+
+			}
+			
+			&:nth-child(8){
+				left: 15%;
+				width: 20px;
+				height: 20px;
+
+				animation-delay: 15s;
+				animation-duration: $duration + 10;
+			}
+			
+			&:nth-child(9){
+				left: 25%;
+				width: 25px;
+				height: 25px;
+				
+				animation-delay: 2s;
+				animation-duration: $duration - 4;
+			}
+			
+			&:nth-child(10){
+				left: 80%;
+				width: 10em;
+				height: 10em;
+				bottom: -10em;
+				animation-delay: 9s;
+			}
+
+			&:nth-child(11){
+				left: 90%;
+				width: 8em;
+				height: 8em;
+				bottom: -8em;
+				animation-duration: $duration + 20;
+				animation-delay: 20s;
+			}
+		}
+		
+	}
+
+	@-webkit-keyframes square {
+		0%   { transform: translateY(0); }
+		100% { transform: translateY($animationHeight) rotate(250deg); }
+	  }
+	  @keyframes square {
+		0%   { transform: translateY(0); }
+		100% { transform: translateY($animationHeight) rotate(250deg); }
+	}
+}
+
+@mixin h2 {
+	color: $secondaryColor;
+	font-size: 3em;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------

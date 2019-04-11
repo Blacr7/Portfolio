@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#7fb0a6">
   <link rel="stylesheet" href="Styles/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <link rel="stylesheet" href="http://mynameismatthieu.com/WOW/css/libs/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon_io/favicon-16x16.png">
@@ -42,7 +42,11 @@
                         <span>B</span><span>l</span><span>a</span><span>c</span><span>k</span>
                         <span>J</span><span>R</span>
                     </h1>
-                    <p class="overViewContent">Web Developer, Programmer, Coder</p>
+                    <p class="overViewContent">
+                        <span>Web Developer</span>,
+                        <span>Programmer</span>,
+                        <span>Coder</span>
+                    </p>
 
                     <!--    Down arrow to indicate there is more to see below the current view point line   -->
                     <a id="moreBelow" class="scrollAnchor" href="#goToDescription"><span>&dArr;</span></a>
@@ -73,13 +77,9 @@
 
                     <p>I became fully engrossed with computers when I was 7 years old, and since then I have turned that love and hobby into a career where i can turn ideas into wonderful Websites.</p>
 
-                    <br>
-
-                    <p>I created my first website in high school, when my PhotoShop teacher taught the class some html and css at the end of the semester. from there I started styling MySpace pages for my friends and classmates</p>
-
-                    <p>If you have an Idea you want converted into a site lets get in <a href="#goToContact">Contact!</a> </p>
+                    <p>I created my first website in high school, when my PhotoShop teacher taught the class some html and css at the end of the semester I enjoyed it so much I started styling MySpace pages for my friends and classmates, and then went on to do Web Development in College. If you have an Idea you want converted into a site lets get in: </p>
                     
-                    
+                    <a href="#goToContact">Contact!</a>
                         
                 </div>
             </div>
@@ -99,23 +99,23 @@
 
         <section class="portfolioDesc">
             <div class="descContent">
-                <div data-wow-duration="2s" class="descBox wow bounceInLeft ">
+                <div data-wow-duration="2s" class="descBox wow bounceInLeft">
                     <i class="fas fa-mobile" role="img" aria-label="Responsive"></i>
                     <h3>Responsive</h3>
                     <p>Coded and Designed to look amazing on a variety of different resolutions and view ports ranging from 4k to phone screens.</p>
                 </div>
-                <div data-wow-duration="2s" class="descBox wow bounceInRight ">
+                <div data-wow-duration="2.25s" data-wow-delay="1s"class="descBox wow bounceInLeft">
                     <i class="far fa-window-restore" role="img" aria-label="Compatible"></i>
                     <h3>Cross-Browser Compatible</h3>
                     <p>Using techniques and tools to ensure full functionality across a wide range of the worlds top browsers. </p>
                 </div>
 
-                <div data-wow-duration="2s" data-wow-delay="1s" class="descBox wow bounceInLeft ">
+                <div data-wow-duration="2.75s" data-wow-delay="2s" class="descBox wow bounceInLeft ">
                     <i class="fab fa-sass" role="img" aria-label="Sass"></i>
                     <h3>Personalized </h3>
                     <p>Built from the ground up, while features were closely monitored and approved by the sites owner.</p>
                 </div>
-                <div data-wow-duration="2s" data-wow-delay="1s"class="descBox wow bounceInRight ">
+                <div data-wow-duration="3.25s" data-wow-delay="3s"class="descBox wow bounceInLeft">
                     <i class="fas fa-database" role="img" aria-label="Hosting"></i>
                     <h3>Hosting</h3>
                     <p>Hosted and configured with a domain name</p>
@@ -190,16 +190,30 @@
         </section>
 
         <footer class="footer">
-            <div class="footerLeft">&copy; Robert Black JR, 2019</div>
+            <div class="footerLeft">
+                &copy; Robert Black JR, 2019
+            </div>
+
+            <div class="footerMiddle">
+                <ul>
+                    <li><span>Contact Me</span></li>
+                    <li><a href="mailto:blacr7mail@gmail.com">blacr7mail@gmail.com</a></li>
+                    <li>(954)-296-0361</li>
+                </ul>
+            </div>
+
             <div class="footerRight">
-                <a href="mailto:blacr7mail@gmail.com">Email Me</a> 
-                <a href="https://www.linkedin.com/in/robert-black-abb3a5159/" target="none">LinkedIn </a>
-                <a href="https://github.com/Blacr7" target="none">Github</a> 
+                <ul>
+                    <li><span>Check Out</span></li>
+                    <li><a href="https://www.linkedin.com/in/robert-black-abb3a5159/" target="none"><i class="fab fa-linkedin"></i> </a></li>
+                    <li><a href="https://github.com/Blacr7" target="none"><i class="fab fa-github"></i></a></li>
+                </ul>
             </div> 
         </footer>
     </div>
 
     <script src="http://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
+
     <script>
      new WOW().init();
     </script>
