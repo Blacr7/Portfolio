@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
+  scroll-snap-align: center;
 }
 
 body, html {
@@ -129,7 +130,6 @@ header nav ul a:hover, header .sticky ul a:hover {
 
 header .sticky {
   position: fixed;
-  overflow: hidden;
   width: 100%;
   background: #497478;
 }
@@ -162,7 +162,7 @@ header .sticky {
   width: 3em;
   height: 3em;
   background: #699fa4;
-  bottom: -15vh;
+  bottom: -3em;
   -webkit-animation: square 35s infinite 0s;
   animation: square 35s infinite 0s;
   -webkit-transition-timing-function: ease-in;
@@ -196,6 +196,7 @@ header .sticky {
   left: 90%;
   width: 3.75em;
   height: 3.75em;
+  bottom: -3.75em;
   -webkit-animation-duration: 30s;
           animation-duration: 30s;
 }
@@ -252,7 +253,7 @@ header .sticky {
 }
 
 .heroImage ul li:nth-child(11) {
-  left: 90%;
+  left: 45%;
   width: 8em;
   height: 8em;
   bottom: -8em;
@@ -395,18 +396,20 @@ header .sticky {
 .description a {
   padding: 1em;
   margin: 0 1em;
+  border: solid .32em transparent;
   background: #497478;
   display: inline-block;
-  border: hidden .32em;
-  border-color: #F7F7F7;
   color: #F7F7F7;
   text-decoration: none;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
   margin: auto;
 }
 
 .description a:hover {
-  background: #5c9398;
+  background: #699fa4;
   border-color: #497478;
+  border: solid 0.32em #497478;
 }
 
 .portfolio {
@@ -459,17 +462,19 @@ header .sticky {
 .portfolio .project .container a {
   padding: 1em;
   margin: 0 1em;
+  border: solid .32em transparent;
   background: #497478;
   display: inline-block;
-  border: hidden .32em;
-  border-color: #F7F7F7;
   color: #F7F7F7;
   text-decoration: none;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 .portfolio .project .container a:hover {
-  background: #5c9398;
+  background: #699fa4;
   border-color: #497478;
+  border: solid 0.32em #497478;
 }
 
 .portfolioDesc {
@@ -487,7 +492,9 @@ header .sticky {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 5em;
+  background: #497478;
+  margin: 2em 0;
+  padding: 2em 0;
 }
 
 .portfolioDesc .descContent {
@@ -518,10 +525,18 @@ header .sticky {
 
 .portfolioDesc .descBox i {
   font-size: 3em;
+  display: block;
 }
 
 .portfolioDesc .descBox h3 {
-  color: #5c9398;
+  color: white;
+  display: inline-block;
+  border-bottom: solid 0.1em #699fa4;
+}
+
+.portfolioDesc .descBox p {
+  text-align: start;
+  color: #F7F7F7;
 }
 
 .contactBackground {
@@ -575,9 +590,9 @@ header .sticky {
   font-size: 1em;
 }
 
-.contactBackground .contactForm input:focus, .contactBackground .contactForm input:hover, .contactBackground .contactForm textarea:focus, .contactBackground .contactForm textarea:hover {
+.contactBackground .contactForm input:focus, .contactBackground .contactForm textarea:focus {
   outline: none;
-  border: 4px solid #5c9398;
+  border: 4px solid #699fa4;
 }
 
 .contactBackground .contactForm textarea {
@@ -650,6 +665,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 1em;
 }
 
 footer .footerLeft, footer .footerMiddle, footer .footerRight {
@@ -663,6 +679,10 @@ footer .footerLeft, footer .footerMiddle, footer .footerRight {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+footer .footerLeft a, footer .footerMiddle a, footer .footerRight a {
+  font-weight: 100;
 }
 
 footer .footerRight {
@@ -724,7 +744,7 @@ footer i {
     width: 3em;
     height: 3em;
     background: #699fa4;
-    bottom: -15vh;
+    bottom: -3em;
     -webkit-animation: square 35s infinite 0s;
     animation: square 35s infinite 0s;
     -webkit-transition-timing-function: ease-in;
@@ -754,6 +774,7 @@ footer i {
     left: 90%;
     width: 3.75em;
     height: 3.75em;
+    bottom: -3.75em;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
   }
@@ -803,7 +824,7 @@ footer i {
             animation-delay: 9s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 90%;
+    left: 45%;
     width: 8em;
     height: 8em;
     bottom: -8em;
@@ -857,7 +878,7 @@ footer i {
     width: 3em;
     height: 3em;
     background: #699fa4;
-    bottom: -15vh;
+    bottom: -3em;
     -webkit-animation: square 35s infinite 0s;
     animation: square 35s infinite 0s;
     -webkit-transition-timing-function: ease-in;
@@ -887,6 +908,7 @@ footer i {
     left: 90%;
     width: 3.75em;
     height: 3.75em;
+    bottom: -3.75em;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
   }
@@ -936,7 +958,7 @@ footer i {
             animation-delay: 9s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 90%;
+    left: 45%;
     width: 8em;
     height: 8em;
     bottom: -8em;
@@ -1068,7 +1090,7 @@ footer i {
     width: 3em;
     height: 3em;
     background: #699fa4;
-    bottom: -15vh;
+    bottom: -3em;
     -webkit-animation: square 35s infinite 0s;
     animation: square 35s infinite 0s;
     -webkit-transition-timing-function: ease-in;
@@ -1098,6 +1120,7 @@ footer i {
     left: 90%;
     width: 3.75em;
     height: 3.75em;
+    bottom: -3.75em;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
   }
@@ -1147,7 +1170,7 @@ footer i {
             animation-delay: 9s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 90%;
+    left: 45%;
     width: 8em;
     height: 8em;
     bottom: -8em;
@@ -1201,7 +1224,7 @@ footer i {
     width: 3em;
     height: 3em;
     background: #699fa4;
-    bottom: -15vh;
+    bottom: -3em;
     -webkit-animation: square 30s infinite 0s;
     animation: square 30s infinite 0s;
     -webkit-transition-timing-function: ease-in;
@@ -1231,6 +1254,7 @@ footer i {
     left: 90%;
     width: 3.75em;
     height: 3.75em;
+    bottom: -3.75em;
     -webkit-animation-duration: 25s;
             animation-duration: 25s;
   }
@@ -1280,7 +1304,7 @@ footer i {
             animation-delay: 9s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 90%;
+    left: 45%;
     width: 8em;
     height: 8em;
     bottom: -8em;
@@ -1333,6 +1357,9 @@ footer i {
   }
   .skillBackground {
     width: 100%;
+  }
+  footer {
+    padding: unset;
   }
 }
 

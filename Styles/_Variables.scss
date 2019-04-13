@@ -1,8 +1,7 @@
 //-----------------------------------------------------------COLORS-------------------------------------------------------------------------------
 $primaryColor: #F7F7F7;
 $secondaryColor: #497478;
-$tertiaryColor: lighten($color: $secondaryColor , $amount: 10%);
-$fourthColor: complement($color: $secondaryColor );
+$tertiaryColor: lighten($color: $secondaryColor , $amount: 15%);
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -60,17 +59,17 @@ $fourthColor: complement($color: $secondaryColor );
 @mixin anchorButton(){
 	padding: 1em;
 	margin: 0 1em;
+	border: solid .32em transparent;
 	background: $secondaryColor;
 	display: inline-block; 
-	border: hidden .32em;
-	border-color: $primaryColor;
 	color: $primaryColor;
   text-decoration: none;
-  //transition: all 1s;
+  transition: background-color .5s;
 
     &:hover{
 			background: $tertiaryColor;
 			border-color: $secondaryColor;
+			border: solid .32em $secondaryColor;
     } 
 }
 
@@ -98,7 +97,7 @@ $fourthColor: complement($color: $secondaryColor );
 			width: 3em;
 			height: 3em;
 			background: lighten($color: $secondaryColor , $amount: 15%);
-			bottom: -15vh;
+			bottom: -3em;
             
 			-webkit-animation: square $duration infinite 0s;
 			animation:         square $duration infinite 0s;
@@ -132,6 +131,7 @@ $fourthColor: complement($color: $secondaryColor );
 				width: 3.75em;
 				height: 3.75em;
 				
+				bottom: -3.75em;
 				animation-duration: $duration - 5;
 			}
 			
@@ -170,7 +170,7 @@ $fourthColor: complement($color: $secondaryColor );
 				left: 25%;
 				width: 25px;
 				height: 25px;
-				
+
 				animation-delay: 2s;
 				animation-duration: $duration - 4;
 			}
@@ -184,7 +184,7 @@ $fourthColor: complement($color: $secondaryColor );
 			}
 
 			&:nth-child(11){
-				left: 90%;
+				left: 45%;
 				width: 8em;
 				height: 8em;
 				bottom: -8em;
