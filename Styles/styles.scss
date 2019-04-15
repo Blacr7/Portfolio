@@ -9,7 +9,7 @@
 	scroll-behavior: smooth;
     box-sizing: border-box;
 	text-decoration: none;
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 }
 
 body,html{
@@ -38,10 +38,6 @@ body{
 		 "skill skill skill skill" 
 		 "contact contact contact contact"
 		 "footer   footer   footer footer";
-	
-	.scrollAnchor{
-		@include scrollAnchor();
-	}
 }
 
 header{
@@ -59,6 +55,8 @@ header{
 
 	nav, .sticky{
 		padding: 1em 0;
+		width: 100%;
+		overflow: hidden;
 
 		.closeButton{
 			display: none;
@@ -90,7 +88,6 @@ header{
 	
 	.sticky{
 		position: fixed;
-		width: 100%;
 		background: $secondaryColor;
 	}
 }
@@ -102,7 +99,7 @@ header{
 	grid-area: hero;
 	z-index: 1;
 	background: $secondaryColor;
-	@include backgroundBubbles(35s, -125vh);
+	@include backgroundBubbles(30s, -125vh);
 
 	.overViewBackground{
 		grid-area: overView;
@@ -150,12 +147,16 @@ header{
 			pointer-events: visible;
 		}
 	}
+
+	.scrollAnchor{
+		@include scrollAnchor();
+	}
 }
 
 .description{
 	grid-area: desc;
 	font-weight: 500;
-	
+
 	.descContainer{
 		@include flexCenter();
 		.descContent{
@@ -166,6 +167,7 @@ header{
 
             h2{
 				@include h2();
+				margin: .5em 0 0;
             }
 
             p{
@@ -200,7 +202,7 @@ header{
 		img{
             width: 50%;
             display: block;
-            margin: auto;
+            margin: 5em auto auto;
             height: auto;
 		}
 		
@@ -226,8 +228,7 @@ header{
 
 .portfolioDesc{
 	grid-area: portfolioDesc;
-    @include flexCenter();
-	background: $secondaryColor;
+	@include flexCenter();
 	margin: 2em 0;
 	padding: 2em 0;
 
@@ -242,6 +243,7 @@ header{
 		max-width: 25%;
 		flex: 0 0 25%;
 		text-align: center;
+		background: $secondaryColor;
 
 		i{
 			font-size: 3em;
@@ -259,16 +261,28 @@ header{
 			color: $primaryColor;
 		}
 	}
+
+	.descBox:nth-child(1), .descBox:nth-child(3){
+		background: $primaryColor;
+		h3{
+			color: $secondaryColor;
+		}
+
+		p{
+			color: $secondaryColor;
+		}
+	}
 }
 
 .contactBackground{
 	grid-area: contact;
+	position: relative;
 	background-color: $secondaryColor;
 	min-height: 60vh;
 	text-align: center;
 	width: 100%;
 	margin: 2em auto 0;
-	padding: 2em;
+	padding: 3em 2em;
     
 	h2{
 		@include h2();
@@ -299,7 +313,14 @@ header{
 		textarea{
             height: 10em;
         }
-    }
+	}
+	
+	.scrollAnchor{
+		@include scrollAnchor();
+		bottom: -0em;
+		right: 90%;
+		left: 0;
+	}
 }
 
 .skillBackground{
@@ -344,8 +365,8 @@ header{
 
 footer{
 	grid-area: footer;
-	background-color: darken($color: $primaryColor, $amount: 5%);
-	color: unset;
+	background-color: $secondaryColor;
+	color: $primaryColor;
 	padding: 0 2em;
 	font-family: 'Montserrat', sans-serif;
 	display: flex;
@@ -374,7 +395,7 @@ footer{
 	}
 
 	span{
-		border-bottom: solid 2px $secondaryColor;
+		border-bottom: solid 2px $fourthColor;
 	}
 	
 	li{

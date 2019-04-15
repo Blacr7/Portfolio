@@ -24,7 +24,6 @@ function openNav() {
 function closeNav() {
     if(window.matchMedia("(max-width: 780px)").matches){
         document.getElementsByTagName("nav")[0].style.width = "0%";
-        document.getElementsByClassName("sticky")[0].style.width = "100%";
     }
 }
 //------------------------------------------------------------------------------

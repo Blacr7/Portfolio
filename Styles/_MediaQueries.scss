@@ -128,7 +128,14 @@
 	}
 
 	.heroImage{
-        @include backgroundBubbles(35s, -130vh)
+		@include backgroundBubbles(35s, -130vh);
+		height: 100vh;
+		
+		.overViewBackground{
+			.overView{
+				height: 100vh;
+			}
+		}
 	}
 
 	.description{

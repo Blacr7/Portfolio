@@ -2,23 +2,24 @@
 $primaryColor: #F7F7F7;
 $secondaryColor: #497478;
 $tertiaryColor: lighten($color: $secondaryColor , $amount: 15%);
+$fourthColor: #273d4a;
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //---------------------------------------------MIXINS-------------------------------------------------------------
 @mixin scrollAnchor() {
-	font-size: 32px;
+	font-size: 2rem;
 	text-decoration: none;
 	-webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
 	        animation: pulsate-fwd 2s ease-in-out infinite both;
 	position: absolute;
-	bottom: 5%;
+	bottom: 10%;
 		right: 0;
 		left: 0;
-	margin: 0 auto;
+	margin: auto;
     color: $primaryColor;
-    width: 50px;
-    padding: 10px;
+    width: 1.56em;
+    padding: .32em;
     transition: all 1s;
     
 	@-webkit-keyframes pulsate-fwd {
