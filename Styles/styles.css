@@ -26,7 +26,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc desc desc" "portfolio portfolio portfolio portfolio" "portfolioDesc portfolioDesc portfolioDesc portfolioDesc" "skill skill skill skill"  "contact contact contact contact" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc desc desc" "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc" "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc" "skill skill skill skill"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
 header {
@@ -415,10 +415,6 @@ header .sticky {
 }
 
 .portfolio {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: portfolio;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,7 +435,7 @@ header .sticky {
 }
 
 .portfolio .project img {
-  width: 50%;
+  width: 70%;
   display: block;
   margin: 5em auto auto;
   height: auto;
@@ -480,10 +476,6 @@ header .sticky {
 }
 
 .portfolioDesc {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: portfolioDesc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,8 +545,36 @@ header .sticky {
   color: #497478;
 }
 
-.contactBackground {
+.jmRealty {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: jmRealty;
+}
+
+.jmRealtyDesc {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: jmRealtyDesc;
+}
+
+.poxRaze {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: poxRaze;
+}
+
+.poxRazeDesc {
   -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: poxRazeDesc;
+}
+
+.contactBackground {
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: contact;
@@ -564,7 +584,7 @@ header .sticky {
   text-align: center;
   width: 100%;
   margin: 2em auto 0;
-  padding: 3em 2em;
+  padding: 3em 2em 4em;
 }
 
 .contactBackground h2 {
@@ -630,7 +650,7 @@ header .sticky {
   -webkit-transition: all 1s;
   transition: all 1s;
   bottom: -0em;
-  right: 90%;
+  right: 0;
   left: 0;
 }
 
@@ -670,7 +690,7 @@ header .sticky {
 }
 
 .skillBackground {
-  -ms-grid-row: 6;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: skill;
@@ -717,7 +737,7 @@ header .sticky {
 }
 
 footer {
-  -ms-grid-row: 8;
+  -ms-grid-row: 10;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
@@ -930,7 +950,7 @@ footer i {
     font-size: 18px;
   }
   .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "portfolio portfolio portfolio" "portfolioDesc portfolioDesc portfolioDesc" "skill    skill skill" "contact contact contact" "footer   footer footer";
+        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc " "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc " "skill    skill skill" "contact contact contact" "footer   footer footer";
   }
   .heroImage ul {
     position: absolute;
@@ -1058,7 +1078,7 @@ footer i {
     }
   }
   .portfolio .project img {
-    width: 75%;
+    width: 100%;
   }
   .portfolioDesc .descBox {
     max-width: 50%;
@@ -1413,9 +1433,6 @@ footer i {
     margin: 2em 0;
     padding: 1em;
   }
-  .portfolio .project img {
-    width: 90%;
-  }
   .portfolio .project .container span {
     font-size: 2.5em;
   }
@@ -1424,6 +1441,9 @@ footer i {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+  .portfolioDesc .descBox p {
+    text-align: center;
   }
   .contactBackground {
     width: 100%;
