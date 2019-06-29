@@ -96,6 +96,7 @@
 			a{
 				text-decoration: none;
 				color: #818181;
+				z-index: 5;
 				display: block;
 				transition: 0.7s;
 			}
@@ -214,5 +215,17 @@
 
 	footer{
 		padding: unset;
+	}
+}
+
+@media only screen and (max-width: 780px) and (orientation : landscape){
+	.heroImage{
+		@include backgroundBubbles(none, none);
+	}
+
+	.portfolioDesc{
+		.descBox{
+			box-shadow:none ;
+		}
 	}
 }

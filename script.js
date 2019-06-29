@@ -9,12 +9,19 @@ console.log(shoutOuts[0] + "\n\n" + shoutOuts[1] + "\n\n" + shoutOuts[2] + "\n\n
 //--------------Hamburger code for smaller resolutions--------------------------------
 
 window.addEventListener("orientationchange", function() {
+    let descBox = document.getElementsByClassName("descBox");
+    let menuIcon = document.getElementById('menu-icon');
     // Switch the Navbar between visible and not visible 
     // if the user changes the orientation of their device after the page has already loaded
     if(window.matchMedia("(orientation: portrait)").matches){
-        document.getElementsByTagName("nav")[0].style.width = "100%";  
-    }else if(window.matchMedia("(orientation: landscape)").matches){
-        document.getElementsByTagName("nav")[0].style.width = "0%"; 
+        document.getElementsByTagName("nav")[0].style.width = "0%";
+        for (const [index, value] of Object.entries(descBox)) {
+            if(index % 2 >= 1){
+                value.style.boxShadow = "none";
+            }
+        }
+    }if(window.matchMedia("(orientation: portrait)").matches && menuIcon.style.display != 'none'){
+        document.getElementsByTagName("nav")[0].style.width = "100%";
     }
 });
 
