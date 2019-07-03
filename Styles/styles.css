@@ -26,7 +26,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero" "desc desc desc desc" "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc" "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc" "skill skill skill skill"  "contact contact contact contact" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "desc desc desc desc"  "skill skill skill skill"   "contact contact contact contact" "footer   footer   footer footer";
 }
 
 header {
@@ -111,8 +111,8 @@ header .sticky {
   height: 3em;
   background: #699fa4;
   bottom: -3em;
-  -webkit-animation: square 30s infinite 0s;
-  animation: square 30s infinite 0s;
+  -webkit-animation: square 35s infinite 0s;
+  animation: square 35s infinite 0s;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
@@ -130,8 +130,8 @@ header .sticky {
   bottom: -5em;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-  -webkit-animation-duration: 23s;
-          animation-duration: 23s;
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s;
 }
 
 .heroImage ul li:nth-child(3) {
@@ -145,8 +145,8 @@ header .sticky {
   width: 3.75em;
   height: 3.75em;
   bottom: -3.75em;
-  -webkit-animation-duration: 25s;
-          animation-duration: 25s;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
 }
 
 .heroImage ul li:nth-child(5) {
@@ -177,8 +177,8 @@ header .sticky {
   height: 20px;
   -webkit-animation-delay: 15s;
           animation-delay: 15s;
-  -webkit-animation-duration: 40s;
-          animation-duration: 40s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
 }
 
 .heroImage ul li:nth-child(9) {
@@ -187,8 +187,8 @@ header .sticky {
   height: 25px;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
-  -webkit-animation-duration: 26s;
-          animation-duration: 26s;
+  -webkit-animation-duration: 31s;
+          animation-duration: 31s;
 }
 
 .heroImage ul li:nth-child(10) {
@@ -205,8 +205,8 @@ header .sticky {
   width: 8em;
   height: 8em;
   bottom: -8em;
-  -webkit-animation-duration: 50s;
-          animation-duration: 50s;
+  -webkit-animation-duration: 55s;
+          animation-duration: 55s;
   -webkit-animation-delay: 20s;
           animation-delay: 20s;
 }
@@ -283,14 +283,22 @@ header .sticky {
 }
 
 .heroImage .overViewBackground .overViewContent {
-  font-size: 2em;
-  font-style: italic;
-  font-weight: 100;
   pointer-events: visible;
 }
 
-.heroImage .overViewBackground .overViewContent span:hover {
-  border-bottom: solid #F7F7F7 0.05em;
+.heroImage .overViewBackground .overViewContent i {
+  color: #F7F7F7;
+  font-size: 3em;
+  padding: .5em;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.heroImage .overViewBackground .overViewContent i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .heroImage .overViewBackground .scrollAnchor {
@@ -357,7 +365,7 @@ header .sticky {
 }
 
 .description {
-  -ms-grid-row: 3;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: desc;
@@ -454,6 +462,7 @@ header .sticky {
 
 .portfolio .project .container {
   text-align: center;
+  margin: 5em auto;
 }
 
 .portfolio .project .container span {
@@ -498,8 +507,8 @@ header .sticky {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 2em 0;
-  padding: 2em 0;
+  margin: 2em 0 auto;
+  padding: 2em 0 auto;
 }
 
 .portfolioDesc .descContent {
@@ -561,28 +570,28 @@ header .sticky {
 }
 
 .jmRealty {
-  -ms-grid-row: 4;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: jmRealty;
 }
 
 .jmRealtyDesc {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: jmRealtyDesc;
 }
 
 .poxRaze {
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: poxRaze;
 }
 
 .poxRazeDesc {
-  -ms-grid-row: 7;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: poxRazeDesc;
@@ -978,7 +987,7 @@ footer i {
     font-size: 18px;
   }
   .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero" "desc desc desc" "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc " "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc " "skill    skill skill" "contact contact contact" "footer   footer footer";
+        grid-template-areas: "nav nav nav" "hero hero hero"  "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc "  "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc "  "desc desc desc"  "skill skill skill"  "contact contact contact" "footer footer footer";
   }
   .heroImage ul {
     position: absolute;

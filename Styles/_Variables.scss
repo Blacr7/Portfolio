@@ -95,6 +95,7 @@ $fourthColor: #273d4a;
 		z-index: -99;
 		overflow: hidden;
 		
+
 		li{
 			position: absolute;
 			list-style: none;
@@ -103,7 +104,7 @@ $fourthColor: #273d4a;
 			height: 3em;
 			background: lighten($color: $secondaryColor , $amount: 15%);
 			bottom: -3em;
-            
+			
 			-webkit-animation: square $duration infinite 0s;
 			animation:         square $duration infinite 0s;
 			

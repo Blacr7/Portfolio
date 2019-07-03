@@ -19,12 +19,14 @@ body,html{
 
 body{
 	font-family: 'Bitter', sans-serif;
+
+	// font size determines the size of a large sum of the page to scale the site for different resolutions simply alter the body tags font size
 	font-size: 18px;
+	
 	background: $primaryColor;
 }
 
-//------------------------------------------------------------------------------------------------------------------------------------
-
+// Format the position of the major sections of the site within the page container
 .pageContainer {
 	display: grid;
 	position: relative;
@@ -32,15 +34,23 @@ body{
 	grid-template-areas:
 		 "nav nav nav nav"
 		 "hero hero hero hero"
-		 "desc desc desc desc"
+
          "jmRealty jmRealty jmRealty jmRealty"
 		 "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"
+		 
 		 "poxRaze poxRaze poxRaze poxRaze"
 		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
+
+		 "desc desc desc desc"
+
 		 "skill skill skill skill" 
+
 		 "contact contact contact contact"
 		 "footer   footer   footer footer";
 }
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
 
 header{
 	grid-area: nav;
@@ -93,14 +103,14 @@ header{
 	}
 }
 
-// Contains overview and hero image section.
+// Contains overview, hero image section, and the floating background elements.
 .heroImage{
 	height: 100vh;
 	position: relative;
 	grid-area: hero;
 	z-index: 1;
 	background: $secondaryColor;
-	@include backgroundBubbles(30s, -125vh);
+	@include backgroundBubbles(35s, -125vh);
 
 	.overViewBackground{
 		grid-area: overView;
@@ -136,13 +146,17 @@ header{
 		}
 
 		.overViewContent{
-			font-size: 2em;
-			font-style: italic;
-			font-weight: 100;
 			pointer-events: visible;
+			
+			i{
+				color: $primaryColor;
+				font-size: 3em;
+				padding: .5em;
+				transition: transform .5s;
 
-			span:hover{
-				border-bottom: solid $primaryColor .05em;
+				&:hover{
+					transform: scale(1.1)
+				}
 			}
 		}
 
@@ -209,7 +223,8 @@ header{
 		}
 		
 		.container{
-            text-align: center;
+			text-align: center;
+			margin: 5em auto;
 
 			span{
                 @include h2();
@@ -230,8 +245,8 @@ header{
 
 .portfolioDesc{
 	@include flexCenter();
-	margin: 2em 0;
-	padding: 2em 0;
+	margin: 2em 0 auto;
+	padding: 2em 0 auto;
 
     .descContent{
         @include flexCenter();

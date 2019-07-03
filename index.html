@@ -28,12 +28,12 @@
                 <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
 
                 <ul id="style1">
-                    <li><a href="#goToDescription" onclick="closeNav()">About Me</a></li>
                     <li><a href="#goToPortfolio" onclick="closeNav()">Projects</a></li>
+                    <li><a href="#goToDescription" onclick="closeNav()">About Me</a></li>
                     <li><a href="#goToSkills" onclick="closeNav()">Skills</a></li>
                     <li><a href="#goToContact" onclick="closeNav()">Contact Me</a></li>
                     
-                    <li><a href="assets/RobertBlackResume.pdf" target="none">Resume</a></li>
+                    <li></li>
                 </ul>
             </nav>
         </header>
@@ -47,14 +47,14 @@
                         <span>J</span><span>R</span>
                     </h1>
 
-                    <p class="overViewContent">
-                        <span>Web Developer</span>,
-                        <span>Programmer</span>,
-                        <span>Coder</span>
-                    </p>
+                    <div class="overViewContent">
+                        <span><a href="https://www.linkedin.com/in/robert-black-abb3a5159/" target="none"><i class="fab fa-linkedin"></i> </a></span>
+                        <span><a href="https://github.com/Blacr7" target="none"><i class="fab fa-github"></i></a></span>
+                        <span><a href="assets/RobertBlackResume.pdf" target="none"><i class="fas fa-file-pdf"></i></a></span> 
+                    </div>
 
                     <!--    Down arrow to indicate there is more to see below the current view point line   -->
-                    <a id="moreBelow" class="scrollAnchor" href="#goToDescription"><i class="fas fa-arrow-down "></i></a>
+                    <a id="moreBelow" class="scrollAnchor" href="#goToPortfolio"><i class="fas fa-arrow-down "></i></a>
                 </div>
             </div>
 
@@ -82,9 +82,9 @@
 
                     <p>I became fully engrossed with computers when I was 7 years old, and since then I have turned that love and hobby into a career where I can turn ideas into wonderful Websites.</p>
 
-                    <p>I created my first website in high school, when my PhotoShop teacher taught the class some html and css at the end of the semester I enjoyed it so much I started styling MySpace pages for my friends and classmates, I then went on to do Web Development in College.</p>
+                    <p>I created my first website in high school, when my PhotoShop teacher taught the class some html and css at the end of the semester, I enjoyed it so much I started styling MySpace pages for my friends and classmates, I then went on to do Web Development in College.</p>
                     
-                    <p>If you have an Idea you want converted into a site lets get in: </p>
+                    <p>If you have any ideas you want converted into a site lets get in: </p>
                     
                     <a href="#goToContact">Contact!</a>
                         
@@ -94,35 +94,36 @@
 
         <section  id="goToPortfolio" class="portfolio jmRealty">
             <div  class="project">
-                <img src="Images/JaniqueCombined-min.png" alt="mobile Version & Ipad Version">
+                
                 <div class="container">
                     <span>Janique Mynot Realty</span>
                     <p>Real Estate Portfolio for Janique Mynot</p>
                     <a href="http://janiquemynotrealty.com/" target="none">Visit Site</a>
                     <a href="https://github.com/Blacr7/JaniqueMynotRealty" target="none">View on GitHub</a>
                 </div>
+                <img src="Images/JaniqueCombined-min.png" alt="mobile Version & Ipad Version">
             </div>
         </section>
 
         <section class="portfolioDesc jmRealtyDesc">
             <div class="descContent">
-                <div class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div class="descBox" data-aos="fade-in" data-aos-duration="1300">
                     <i class="fas fa-mobile" role="img" aria-label="Responsive"></i>
                     <h3>Responsive</h3> 
                     <p>Coded and Designed to look amazing on a variety of different resolutions and view-ports, ranging from 4k to phone screens.</p>
                 </div>
-                <div  class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div  class="descBox" data-aos="fade-in" data-aos-duration="1300" data-aos-delay="250">
                     <i class="far fa-window-restore" role="img" aria-label="Compatible"></i>
                     <h3>Cross-Browser Compatible</h3>
                     <p>Using techniques and tools to ensure full functionality across a wide range of the worlds top browsers. </p>
                 </div>
 
-                <div class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div class="descBox" data-aos="fade-in" data-aos-duration="1300" data-aos-delay="500">
                     <i class="fab fa-sass" role="img" aria-label="Sass"></i>
                     <h3>Personalized </h3>
                     <p>Built from the ground up, while closely monitored and approved by the sites owner. Your input matters!</p>
                 </div>
-                <div class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div class="descBox" data-aos="fade-in" data-aos-duration="1300" data-aos-delay="750">
                     <i class="fas fa-database" role="img" aria-label="Hosting"></i>
                     <h3>Hosting</h3>
                     <p>Hosted and configured with a domain name</p>
@@ -132,37 +133,38 @@
 
         <section class="portfolio poxRaze">
             <div  class="project">
-                <img src="Images/PoxRaze-Combined.png" alt="mobile, IPad, Desktop Version">
+                
                 <div class="container">
                     <span>PoxRaze</span>
                     <p>Database for PoxNora A TCG</p>
                     <a href="https://blacr7.github.io/PoxRaze/" target="none">Visit Site</a>
                     <a href="https://github.com/Blacr7/PoxRaze" target="none">View on GitHub</a>
                 </div>
+                <img src="Images/PoxRaze-Combined.png" alt="mobile, IPad, Desktop Version">
             </div>
         </section>
 
         <section class="portfolioDesc poxRazeDesc">
             <div class="descContent">
-                <div class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div class="descBox" data-aos="fade-in" data-aos-duration="1300" >
                     <i class="fas fa-fighter-jet" role="img" aria-label="Responsive"></i>
                     <h3>Quick</h3> 
                     <p>Optimized to display and navigate through 2000+ separate Runes, conditions, and mechanics</p>
                 </div>
 
-                <div  class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div  class="descBox" data-aos="fade-in" data-aos-duration="1300" data-aos-delay="250">
                     <i class="fas fa-table" role="img" aria-label="Compatible"></i> 
                     <h3>Api</h3>
                     <p>Implemented Api Fetch and Render requests</p>
                 </div>
 
-                <div class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div class="descBox" data-aos="fade-in" data-aos-duration="1300"  data-aos-delay="500">
                     <i class="fab fa-sass" role="img" aria-label="Sass"></i>
                     <h3>Personalized</h3>
                     <p>Built and Styled from the ground up, using Sass To quickly and easily display larges amounts of Data</p>
                 </div>
                 
-                <div class="descBox" data-aos="fade-in" data-aos-duration="1000">
+                <div class="descBox" data-aos="fade-in" data-aos-duration="1300" data-aos-delay="750" >
                     <i class="fab fa-react" role="img" aria-label="Hosting"></i>
                     <h3>React</h3>
                     <p>Developed and Launched using the React Framework.</p>
