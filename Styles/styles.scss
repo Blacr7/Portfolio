@@ -1,4 +1,5 @@
 //--------------------------------------------------------INITIAL CODE------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import './_Variables.scss';
 
@@ -18,12 +19,13 @@ body,html{
 }
 
 body{
-	font-family: 'Bitter', sans-serif;
+	font-family: 'Montserrat','Bitter', sans-serif;
 
 	// font size determines the size of a large sum of the page to scale the site for different resolutions simply alter the body tags font size
 	font-size: 18px;
-	
 	background: $primaryColor;
+	color: $fourthColor;
+	overflow-x: hidden;
 }
 
 // Format the position of the major sections of the site within the page container
@@ -42,8 +44,6 @@ body{
 		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
 
 		 "desc desc desc desc"
-
-		 "skill skill skill skill" 
 
 		 "contact contact contact contact"
 		 "footer   footer   footer footer";
@@ -123,7 +123,7 @@ header{
 			background-attachment: fixed;
 			height: 100vh;
             color: $primaryColor;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Bitter', sans-serif;
 		}
 
 		.overViewHeader{
@@ -216,10 +216,10 @@ header{
         width: 100%;
         
 		img{
-            width: 70%;
+            width: 50%;
             display: block;
             margin: 5em auto auto;
-            height: auto;
+			height: auto;
 		}
 		
 		.container{
@@ -245,13 +245,18 @@ header{
 
 .portfolioDesc{
 	@include flexCenter();
-	margin: 2em 0 auto;
-	padding: 2em 0 auto;
+	
+	flex-direction: column;
+	text-align: center;
+
+	.builtWith{
+		padding: 2em 0 1em;
+	}
 
     .descContent{
         @include flexCenter();
 		flex-direction: row;
-		
+		width: 100%;
     }
 
 	.descBox{
@@ -260,7 +265,7 @@ header{
 		flex: 0 0 25%;
 		text-align: center;
 		background: $secondaryColor;
-		box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+		color: $primaryColor;
 
 		i{
 			font-size: 3em;
@@ -268,27 +273,19 @@ header{
         }
         
         h3{
-			color: lighten($primaryColor, 10%);
+			color: inherit;
 			display: inline-block;
 			border-bottom: solid .1em $tertiaryColor;
 		}
-		
+
 		p{
-			color: $primaryColor;
+			margin: .5em;
 		}
 	}
 
 	.descBox:nth-child(1), .descBox:nth-child(3){
 		background: $primaryColor;
-		box-shadow: unset;
-		
-		h3{
-			color: $secondaryColor;
-		}
-
-		p{
-			color: $secondaryColor;
-		}
+		color: $secondaryColor;
 	}
 }
 
@@ -336,7 +333,8 @@ header{
         }
         
 		textarea{
-            height: 10em;
+			height: 10em;
+			resize: vertical;
         }
 	}
 	
@@ -346,46 +344,6 @@ header{
 		right: 0;
 		left: 0;
 	}
-}
-
-.skillBackground{
-	grid-area: skill;
-	width: 90%;
-	margin: auto;
-	//background: $tertiaryColor;
-	text-align: center;
-    min-height: 50vh;
-
-	h2{
-		@include h2();
-		margin: 1em;
-	}
-
-	.skillGrid{
-		display: grid;
-		grid-gap: 1em;
-		grid-template-columns: auto auto auto;
-		height: 100%;
-
-		.skillContainer{
-			text-align: center;
-		}
-
-		.skills {
-			padding: 1em;
-			margin: 0 0 1em;
-			
-			img {
-				height: 96px;
-				width: 96px;
-			}
-
-			h3{
-				color: $secondaryColor;
-				font-weight: 100;
-			}
-		}
-    }
 }
 
 footer{
