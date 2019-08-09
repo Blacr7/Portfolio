@@ -187,7 +187,19 @@
 	}
 	
 	footer{
-		padding:unset;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 1em;
+
+		.footerLeft{
+			flex: 0 0 100%;
+			padding: 1em 0;
+		}
+
+		.footerRight{
+			align-content: unset;
+		}
 	}
 }
 
@@ -197,7 +209,7 @@
 	}
 
 	footer{
-		padding: unset;
+		flex-direction: column;
 	}
 }
 

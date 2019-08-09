@@ -1438,7 +1438,26 @@ footer i {
     font-size: 2.5em;
   }
   footer {
-    padding: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1em;
+  }
+  footer .footerLeft {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 1em 0;
+  }
+  footer .footerRight {
+    -ms-flex-line-pack: unset;
+        align-content: unset;
   }
 }
 
@@ -1447,7 +1466,10 @@ footer i {
     font-size: 10px;
   }
   footer {
-    padding: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
