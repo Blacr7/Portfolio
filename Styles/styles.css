@@ -1145,10 +1145,7 @@ footer i {
     display: block;
     font-size: 5em;
     position: absolute;
-    right: 5%;
-  }
-  header nav .sticky {
-    all: unset;
+    right: 15%;
   }
   .heroImage {
     height: 100vh;

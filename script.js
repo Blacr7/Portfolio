@@ -8,31 +8,27 @@ console.log(shoutOuts[0] + "\n\n" + shoutOuts[1] + "\n\n" + shoutOuts[2] + "\n\n
 
 //--------------Hamburger code for smaller resolutions--------------------------------
 
+let nav = document.getElementsByTagName("nav");
+
 window.addEventListener("orientationchange", function() {
-    let descBox = document.getElementsByClassName("descBox");
-    let menuIcon = document.getElementById('menu-icon');
+    let menuIcon = document.querySelector('#menu-icon');
+    let comp = window.getComputedStyle(menuIcon);
     // Switch the Navbar between visible and not visible 
     // if the user changes the orientation of their device after the page has already loaded
-    if(window.matchMedia("(orientation: portrait)").matches){
-        document.getElementsByTagName("nav")[0].style.width = "0%";
-        for (const [index, value] of Object.entries(descBox)) {
-            if(index % 2 >= 1){
-                value.style.boxShadow = "none";
-            }
-        }
-    }if(window.matchMedia("(orientation: portrait)").matches && menuIcon.style.display != 'none'){
-        document.getElementsByTagName("nav")[0].style.width = "100%";
+    if(window.matchMedia("(orientation: portrait)").matches && comp.getPropertyValue('display') == 'block'){
+        nav[0].style.width = "100%";
+    }else{
+        nav[0].style.width = "0%";
     }
+    
 });
 
 function openNav() {
-    document.getElementsByTagName("nav")[0].style.width = "100%";
+    nav[0].style.width = "100%";
 }
 
 function closeNav() {
-    if(window.matchMedia("(max-width: 780px)").matches){
-        document.getElementsByTagName("nav")[0].style.width = "0%";
-    }
+    nav[0].style.width = "0%";
 }
 //------------------------------------------------------------------------------
 
