@@ -33,6 +33,7 @@ body{
 	display: grid;
 	position: relative;
 	grid-template-columns: 10% auto 10%;
+	overflow: hidden;
 	grid-template-areas:
 		 "nav nav nav nav"
 		 "hero hero hero hero"

@@ -29,6 +29,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
+  overflow: hidden;
       grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "desc desc desc desc"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
