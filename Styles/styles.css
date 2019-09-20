@@ -30,7 +30,7 @@ body {
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
   overflow: hidden;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "desc desc desc desc"  "contact contact contact contact" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "razeEats razeEats razeEats razeEats" "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "desc desc desc desc"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
 header {
@@ -369,7 +369,7 @@ header .sticky {
 }
 
 .description {
-  -ms-grid-row: 7;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: desc;
@@ -576,14 +576,14 @@ header .sticky {
 }
 
 .jmRealty {
-  -ms-grid-row: 3;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: jmRealty;
 }
 
 .jmRealtyDesc {
-  -ms-grid-row: 4;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: jmRealtyDesc;
@@ -603,8 +603,22 @@ header .sticky {
   grid-area: poxRazeDesc;
 }
 
+.razeEats {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: razeEats;
+}
+
+.razeEatsDesc {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: razeEatsDesc;
+}
+
 .contactBackground {
-  -ms-grid-row: 8;
+  -ms-grid-row: 10;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: contact;
@@ -734,7 +748,7 @@ header .sticky {
 }
 
 footer {
-  -ms-grid-row: 9;
+  -ms-grid-row: 11;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
@@ -947,7 +961,7 @@ footer i {
     font-size: 18px;
   }
   .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero"  "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc "  "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc "  "desc desc desc"  "contact contact contact" "footer footer footer";
+        grid-template-areas: "nav nav nav" "hero hero hero"  "razeEats razeEats razeEats " "razeEatsDesc razeEatsDesc razeEatsDesc "  "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc "  "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc "  "desc desc desc"  "contact contact contact" "footer footer footer";
   }
   .heroImage ul {
     position: absolute;
@@ -1076,6 +1090,9 @@ footer i {
   }
   .portfolio .project img {
     width: 100%;
+  }
+  .portfolio .project .razeEatsImg {
+    width: 90%;
   }
   .portfolioDesc .descBox {
     max-width: 50%;

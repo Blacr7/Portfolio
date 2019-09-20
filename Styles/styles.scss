@@ -37,13 +37,16 @@ body{
 	grid-template-areas:
 		 "nav nav nav nav"
 		 "hero hero hero hero"
+		 
+		 "razeEats razeEats razeEats razeEats"
+		 "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"
+
+		 "poxRaze poxRaze poxRaze poxRaze"
+		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
 
          "jmRealty jmRealty jmRealty jmRealty"
 		 "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"
 		 
-		 "poxRaze poxRaze poxRaze poxRaze"
-		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
-
 		 "desc desc desc desc"
 
 		 "contact contact contact contact"
@@ -293,6 +296,8 @@ header{
 .jmRealty{grid-area: jmRealty;}.jmRealtyDesc{grid-area: jmRealtyDesc;}
 
 .poxRaze{grid-area: poxRaze;}.poxRazeDesc{grid-area: poxRazeDesc;}
+
+.razeEats{grid-area: razeEats;}.razeEatsDesc{grid-area: razeEatsDesc;}
 
 .contactBackground{
 	grid-area: contact;
