@@ -21,11 +21,10 @@ body,html{
 body{
 	font-family: 'Montserrat','Bitter', sans-serif;
 
-	// font size determines the size of a large sum of the page to scale the site for different resolutions simply alter the body tags font size
+	// font size determines the size of a large sum of the page, to scale the site for different resolutions simply alter the body tags font size 
 	font-size: 18px;
 	background: $primaryColor;
 	color: $fourthColor;
-	overflow-x: hidden;
 }
 
 // Format the position of the major sections of the site within the page container
@@ -33,7 +32,7 @@ body{
 	display: grid;
 	position: relative;
 	grid-template-columns: 10% auto 10%;
-	overflow: hidden;
+	overflow-x: hidden;
 	grid-template-areas:
 		 "nav nav nav nav"
 		 "hero hero hero hero"

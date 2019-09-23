@@ -20,7 +20,6 @@ body {
   font-size: 18px;
   background: #F7F7F7;
   color: #333333;
-  overflow-x: hidden;
 }
 
 .pageContainer {
@@ -29,7 +28,7 @@ body {
   position: relative;
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
-  overflow: hidden;
+  overflow-x: hidden;
       grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "razeEats razeEats razeEats razeEats" "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "desc desc desc desc"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
