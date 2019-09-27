@@ -199,6 +199,20 @@ $fourthColor: #333333;//#273d4a;
 				animation-duration: $duration + 20;
 				animation-delay: 20s;
 			}
+
+			@for $i from 11 through 21{
+				&:nth-child(#{$i}){
+					$randomSquare: random(10)+em;
+					left: random(100)+%;
+					height: $randomSquare;
+					width: $randomSquare;
+					bottom: -#{$randomSquare};
+					animation-delay: random(10)+s;
+				}
+				
+			}
+				
+
 		}
 		
 	}

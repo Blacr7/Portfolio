@@ -149,7 +149,7 @@
 	}
 	
 	.heroImage{
-		@include backgroundBubbles(30s, -140vh);
+		@include backgroundBubbles(none, none);
 	}
 
 	.description{
@@ -217,9 +217,6 @@
 }
 
 @media only screen and (max-width: 780px) and (orientation : landscape){
-	.heroImage{
-		@include backgroundBubbles(none, none);
-	}
 
 	.portfolioDesc{
 		.descBox{
