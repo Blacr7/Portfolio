@@ -39,6 +39,9 @@ body{
 		 
 		 "razeEats razeEats razeEats razeEats"
 		 "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"
+		
+		 "spaTemplate spaTemplate spaTemplate spaTemplate"
+		 "spaTemplateDesc spaTemplateDesc spaTemplateDesc spaTemplateDesc"
 
 		 "poxRaze poxRaze poxRaze poxRaze"
 		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
@@ -176,7 +179,8 @@ header{
 .description{
 	grid-area: desc;
 	font-weight: 500;
-
+	margin: 2em auto;
+	
 	.descContainer{
 		@include flexCenter();
 		.descContent{
@@ -221,13 +225,13 @@ header{
 		img{
             width: 50%;
             display: block;
-            margin: 5em auto auto;
+            margin: 2em auto auto;
 			height: auto;
 		}
 		
 		.container{
 			text-align: center;
-			margin: 5em auto;
+			margin: 5em auto auto;
 
 			span{
                 @include h2();
@@ -273,6 +277,7 @@ header{
 		i{
 			font-size: 3em;
 			display: block;
+			margin-bottom: .5rem;
         }
         
         h3{
@@ -291,6 +296,8 @@ header{
 		color: $secondaryColor;
 	}
 }
+
+.spaTemplate{grid-area: spaTemplate;} .spaTemplateDesc{grid-area: spaTemplateDesc;}
 
 .jmRealty{grid-area: jmRealty;}.jmRealtyDesc{grid-area: jmRealtyDesc;}
 
