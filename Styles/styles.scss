@@ -116,7 +116,7 @@ header{
 	grid-area: hero;
 	z-index: 1;
 	background: $secondaryColor;
-	@include backgroundBubbles(35s, -125vh);
+	@include backgroundBubbles(25s, -125vh);
 
 	.overViewBackground{
 		grid-area: overView;
