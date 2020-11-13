@@ -37,11 +37,14 @@ body{
 		 "nav nav nav nav"
 		 "hero hero hero hero"
 		 
-		 "razeEats razeEats razeEats razeEats"
-		 "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"
-		
+		 "barberShop barberShop barberShop barberShop"
+		 "barberShopDesc barberShopDesc barberShopDesc barberShopDesc"
+
 		 "spaTemplate spaTemplate spaTemplate spaTemplate"
 		 "spaTemplateDesc spaTemplateDesc spaTemplateDesc spaTemplateDesc"
+		 
+		 "razeEats razeEats razeEats razeEats"
+		 "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"
 
 		 "poxRaze poxRaze poxRaze poxRaze"
 		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
@@ -298,6 +301,8 @@ header{
 }
 
 .spaTemplate{grid-area: spaTemplate;} .spaTemplateDesc{grid-area: spaTemplateDesc;}
+
+.barberShop{grid-area: barberShop;} .barberShopDesc{grid-area: barberShopDesc;}
 
 .jmRealty{grid-area: jmRealty;}.jmRealtyDesc{grid-area: jmRealtyDesc;}
 

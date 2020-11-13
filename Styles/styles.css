@@ -29,7 +29,7 @@ body {
   -ms-grid-columns: 10% auto 10%;
       grid-template-columns: 10% auto 10%;
   overflow-x: hidden;
-      grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "razeEats razeEats razeEats razeEats" "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"  "spaTemplate spaTemplate spaTemplate spaTemplate" "spaTemplateDesc spaTemplateDesc spaTemplateDesc spaTemplateDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "desc desc desc desc"  "contact contact contact contact" "footer   footer   footer footer";
+      grid-template-areas: "nav nav nav nav" "hero hero hero hero"  "barberShop barberShop barberShop barberShop" "barberShopDesc barberShopDesc barberShopDesc barberShopDesc"  "spaTemplate spaTemplate spaTemplate spaTemplate" "spaTemplateDesc spaTemplateDesc spaTemplateDesc spaTemplateDesc"  "razeEats razeEats razeEats razeEats" "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"  "poxRaze poxRaze poxRaze poxRaze" "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"  "jmRealty jmRealty jmRealty jmRealty" "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"  "desc desc desc desc"  "contact contact contact contact" "footer   footer   footer footer";
 }
 
 header {
@@ -215,102 +215,102 @@ header .sticky {
 }
 
 .heroImage ul li:nth-child(11) {
-  left: 47%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
+  left: 43%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
 .heroImage ul li:nth-child(12) {
-  left: 40%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-}
-
-.heroImage ul li:nth-child(13) {
-  left: 32%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
-}
-
-.heroImage ul li:nth-child(14) {
-  left: 52%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.heroImage ul li:nth-child(15) {
-  left: 70%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.heroImage ul li:nth-child(16) {
-  left: 62%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-}
-
-.heroImage ul li:nth-child(17) {
-  left: 88%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.heroImage ul li:nth-child(18) {
-  left: 83%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
+  left: 71%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
   -webkit-animation-delay: 8s;
           animation-delay: 8s;
 }
 
+.heroImage ul li:nth-child(13) {
+  left: 9%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.heroImage ul li:nth-child(14) {
+  left: 76%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.heroImage ul li:nth-child(15) {
+  left: 16%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.heroImage ul li:nth-child(16) {
+  left: 81%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.heroImage ul li:nth-child(17) {
+  left: 27%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.heroImage ul li:nth-child(18) {
+  left: 59%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
 .heroImage ul li:nth-child(19) {
-  left: 87%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  left: 93%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
 }
 
 .heroImage ul li:nth-child(20) {
-  left: 9%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  left: 94%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 
 .heroImage ul li:nth-child(21) {
-  left: 36%;
-  height: 2em;
-  width: 2em;
-  bottom: -2em;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  left: 48%;
+  height: 6em;
+  width: 6em;
+  bottom: -6em;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes square {
@@ -324,7 +324,7 @@ header .sticky {
   100% {
     -webkit-transform: translateY(-125vh) rotate(250deg);
             transform: translateY(-125vh) rotate(250deg);
-    border-radius: 58% 66% 82% 74% 58% 56% 75%;
+    border-radius: 53% 60% 88% 61% 52% 68% 68%;
   }
 }
 
@@ -475,7 +475,7 @@ header .sticky {
 }
 
 .description {
-  -ms-grid-row: 11;
+  -ms-grid-row: 13;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: desc;
@@ -697,50 +697,64 @@ header .sticky {
   grid-area: spaTemplateDesc;
 }
 
+.barberShop {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: barberShop;
+}
+
+.barberShopDesc {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: barberShopDesc;
+}
+
 .jmRealty {
-  -ms-grid-row: 9;
+  -ms-grid-row: 11;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: jmRealty;
 }
 
 .jmRealtyDesc {
-  -ms-grid-row: 10;
+  -ms-grid-row: 12;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: jmRealtyDesc;
 }
 
 .poxRaze {
-  -ms-grid-row: 7;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: poxRaze;
 }
 
 .poxRazeDesc {
-  -ms-grid-row: 8;
+  -ms-grid-row: 10;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: poxRazeDesc;
 }
 
 .razeEats {
-  -ms-grid-row: 3;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: razeEats;
 }
 
 .razeEatsDesc {
-  -ms-grid-row: 4;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: razeEatsDesc;
 }
 
 .contactBackground {
-  -ms-grid-row: 12;
+  -ms-grid-row: 14;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: contact;
@@ -870,7 +884,7 @@ header .sticky {
 }
 
 footer {
-  -ms-grid-row: 13;
+  -ms-grid-row: 15;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
@@ -1057,90 +1071,90 @@ footer i {
             animation-delay: 20s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 59%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-  }
-  .heroImage ul li:nth-child(12) {
-    left: 31%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s;
-  }
-  .heroImage ul li:nth-child(13) {
-    left: 85%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 21%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 6s;
             animation-delay: 6s;
   }
-  .heroImage ul li:nth-child(14) {
-    left: 73%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
+  .heroImage ul li:nth-child(12) {
+    left: 97%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
   }
-  .heroImage ul li:nth-child(15) {
-    left: 99%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+  .heroImage ul li:nth-child(13) {
+    left: 39%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 9s;
             animation-delay: 9s;
   }
+  .heroImage ul li:nth-child(14) {
+    left: 94%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  .heroImage ul li:nth-child(15) {
+    left: 93%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
   .heroImage ul li:nth-child(16) {
-    left: 31%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s;
+    left: 65%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
   }
   .heroImage ul li:nth-child(17) {
-    left: 70%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 7s;
-            animation-delay: 7s;
+    left: 63%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
   .heroImage ul li:nth-child(18) {
-    left: 47%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-  }
-  .heroImage ul li:nth-child(19) {
-    left: 39%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 18%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 7s;
             animation-delay: 7s;
   }
+  .heroImage ul li:nth-child(19) {
+    left: 71%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
   .heroImage ul li:nth-child(20) {
-    left: 81%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s;
+    left: 99%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
   }
   .heroImage ul li:nth-child(21) {
-    left: 44%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 32%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 9s;
             animation-delay: 9s;
   }
@@ -1155,7 +1169,7 @@ footer i {
     100% {
       -webkit-transform: translateY(-140vh) rotate(250deg);
               transform: translateY(-140vh) rotate(250deg);
-      border-radius: 49% 58% 93% 62.8% 48% 61% 66%;
+      border-radius: 53% 58% 85% 73% 55% 58% 73%;
     }
   }
   @keyframes square {
@@ -1179,7 +1193,7 @@ footer i {
     font-size: 18px;
   }
   .pageContainer {
-        grid-template-areas: "nav nav nav" "hero hero hero"  "razeEats razeEats razeEats " "razeEatsDesc razeEatsDesc razeEatsDesc "  "spaTemplate spaTemplate spaTemplate " "spaTemplateDesc spaTemplateDesc spaTemplateDesc "  "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc "  "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc "  "desc desc desc"  "contact contact contact" "footer footer footer";
+        grid-template-areas: "nav nav nav" "hero hero hero"  "barberShop barberShop barberShop" "barberShopDesc barberShopDesc barberShopDesc"  "spaTemplate spaTemplate spaTemplate " "spaTemplateDesc spaTemplateDesc spaTemplateDesc "  "razeEats razeEats razeEats " "razeEatsDesc razeEatsDesc razeEatsDesc "  "jmRealty jmRealty jmRealty " "jmRealtyDesc jmRealtyDesc jmRealtyDesc "  "poxRaze poxRaze poxRaze " "poxRazeDesc poxRazeDesc poxRazeDesc "  "desc desc desc"  "contact contact contact" "footer footer footer";
   }
   .heroImage ul {
     position: absolute;
@@ -1287,90 +1301,90 @@ footer i {
             animation-delay: 20s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 36%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s;
+    left: 30%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
   }
   .heroImage ul li:nth-child(12) {
-    left: 57%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 7s;
-            animation-delay: 7s;
-  }
-  .heroImage ul li:nth-child(13) {
-    left: 19%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-  }
-  .heroImage ul li:nth-child(14) {
-    left: 63%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s;
-  }
-  .heroImage ul li:nth-child(15) {
-    left: 78%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s;
-  }
-  .heroImage ul li:nth-child(16) {
-    left: 17%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s;
-  }
-  .heroImage ul li:nth-child(17) {
-    left: 4%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 99%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 8s;
             animation-delay: 8s;
   }
-  .heroImage ul li:nth-child(18) {
-    left: 11%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+  .heroImage ul li:nth-child(13) {
+    left: 8%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .heroImage ul li:nth-child(14) {
+    left: 9%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+  }
+  .heroImage ul li:nth-child(15) {
+    left: 41%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  .heroImage ul li:nth-child(16) {
+    left: 9%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .heroImage ul li:nth-child(17) {
+    left: 75%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 9s;
             animation-delay: 9s;
+  }
+  .heroImage ul li:nth-child(18) {
+    left: 2%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
   }
   .heroImage ul li:nth-child(19) {
-    left: 88%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    left: 84%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
   }
   .heroImage ul li:nth-child(20) {
-    left: 60%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s;
+    left: 50%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
   }
   .heroImage ul li:nth-child(21) {
-    left: 80%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 24%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 5s;
             animation-delay: 5s;
   }
@@ -1385,7 +1399,7 @@ footer i {
     100% {
       -webkit-transform: translateY(-130vh) rotate(250deg);
               transform: translateY(-130vh) rotate(250deg);
-      border-radius: 51% 58% 81% 72.25% 45% 54% 71%;
+      border-radius: 40% 56% 91% 71.25% 46% 69% 65%;
     }
   }
   @keyframes square {
@@ -1588,92 +1602,92 @@ footer i {
             animation-delay: 20s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 66%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-  }
-  .heroImage ul li:nth-child(12) {
-    left: 12%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 30%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: -1s;
             animation-delay: -1s;
   }
+  .heroImage ul li:nth-child(12) {
+    left: 88%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
   .heroImage ul li:nth-child(13) {
-    left: 7%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    left: 52%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
   }
   .heroImage ul li:nth-child(14) {
-    left: 76%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 42%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .heroImage ul li:nth-child(15) {
+    left: 91%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .heroImage ul li:nth-child(16) {
+    left: 39%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 3s;
             animation-delay: 3s;
   }
-  .heroImage ul li:nth-child(15) {
-    left: 44%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-  }
-  .heroImage ul li:nth-child(16) {
-    left: 58%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-  }
   .heroImage ul li:nth-child(17) {
-    left: 44%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
+    left: 90%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
   }
   .heroImage ul li:nth-child(18) {
-    left: 91%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-  }
-  .heroImage ul li:nth-child(19) {
-    left: 52%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 87%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 6s;
             animation-delay: 6s;
   }
+  .heroImage ul li:nth-child(19) {
+    left: 8%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
   .heroImage ul li:nth-child(20) {
-    left: 78%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    left: 80%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
   }
   .heroImage ul li:nth-child(21) {
-    left: 81%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s;
+    left: 47%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
   }
   @-webkit-keyframes square {
     0% {
@@ -1686,7 +1700,7 @@ footer i {
     100% {
       -webkit-transform: translateY(-130vh) rotate(250deg);
               transform: translateY(-130vh) rotate(250deg);
-      border-radius: 50% 63% 89% 71% 57% 58% 69%;
+      border-radius: 57% 68% 76% 66% 49% 69% 69%;
     }
   }
   @keyframes square {
@@ -1821,92 +1835,92 @@ footer i {
             animation-delay: 20s;
   }
   .heroImage ul li:nth-child(11) {
-    left: 17%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s;
+    left: 31%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
   }
   .heroImage ul li:nth-child(12) {
-    left: 84%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s;
+    left: 85%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
   }
   .heroImage ul li:nth-child(13) {
-    left: 94%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 55%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .heroImage ul li:nth-child(14) {
+    left: 26%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
   }
-  .heroImage ul li:nth-child(14) {
-    left: 44%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
-  }
   .heroImage ul li:nth-child(15) {
-    left: 67%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
+    left: 58%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
   }
   .heroImage ul li:nth-child(16) {
-    left: 8%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s;
+    left: 71%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
   .heroImage ul li:nth-child(17) {
-    left: 75%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
+    left: 94%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
   }
   .heroImage ul li:nth-child(18) {
-    left: 41%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s;
+    left: 4%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
   }
   .heroImage ul li:nth-child(19) {
-    left: 82%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
+    left: 69%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
   .heroImage ul li:nth-child(20) {
-    left: 61%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: 5s;
-            animation-delay: 5s;
+    left: 84%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
   }
   .heroImage ul li:nth-child(21) {
-    left: 21%;
-    height: 2em;
-    width: 2em;
-    bottom: -2em;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s;
+    left: 81%;
+    height: 6em;
+    width: 6em;
+    bottom: -6em;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
   }
   @-webkit-keyframes square {
     0% {
@@ -1919,7 +1933,7 @@ footer i {
     100% {
       -webkit-transform: translateY(none) rotate(250deg);
               transform: translateY(none) rotate(250deg);
-      border-radius: 47% 53% 88% 59% 53% 52% 76%;
+      border-radius: 56% 56% 95% 56.4% 53% 67% 70%;
     }
   }
   @keyframes square {
