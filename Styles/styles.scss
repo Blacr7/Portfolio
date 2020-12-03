@@ -300,7 +300,7 @@ header{
 	}
 }
 
-.spaTemplate{grid-area: spaTemplate;} .spaTemplateDesc{grid-area: spaTemplateDesc;}
+.spaTemplate{grid-area: spaTemplate; display: none;} .spaTemplateDesc{grid-area: spaTemplateDesc; display: none;}
 
 .barberShop{grid-area: barberShop;} .barberShopDesc{grid-area: barberShopDesc;}
 
