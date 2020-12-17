@@ -37,6 +37,9 @@ body{
 		 "nav nav nav nav"
 		 "hero hero hero hero"
 		 
+		 "poxRaze poxRaze poxRaze poxRaze"
+		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
+
 		 "barberShop barberShop barberShop barberShop"
 		 "barberShopDesc barberShopDesc barberShopDesc barberShopDesc"
 
@@ -46,8 +49,7 @@ body{
 		 "razeEats razeEats razeEats razeEats"
 		 "razeEatsDesc razeEatsDesc razeEatsDesc razeEatsDesc"
 
-		 "poxRaze poxRaze poxRaze poxRaze"
-		 "poxRazeDesc poxRazeDesc poxRazeDesc poxRazeDesc"
+		 
 
          "jmRealty jmRealty jmRealty jmRealty"
 		 "jmRealtyDesc jmRealtyDesc jmRealtyDesc jmRealtyDesc"
@@ -97,7 +99,7 @@ header{
 				color: $primaryColor;
 				font-weight: 900;
 				font-size: 1.3em;
-				transition: border-bottom .5s;
+				transition: border-bottom .3s;
 			}
 
 			a:hover{
@@ -300,7 +302,7 @@ header{
 	}
 }
 
-.spaTemplate{grid-area: spaTemplate; display: none;} .spaTemplateDesc{grid-area: spaTemplateDesc; display: none;}
+.spaTemplate{grid-area: spaTemplate; } .spaTemplateDesc{grid-area: spaTemplateDesc; }
 
 .barberShop{grid-area: barberShop;} .barberShopDesc{grid-area: barberShopDesc;}
 
