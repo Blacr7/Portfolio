@@ -202,7 +202,7 @@ $randomSquare: random(10)+em;
 
 			@for $i from 11 through 21{
 				&:nth-child(#{$i}){
-					left: random(100)+%;
+					left: random(100) + %;
 					height: $randomSquare;
 					width: $randomSquare;
 					bottom: -#{$randomSquare};
@@ -214,31 +214,18 @@ $randomSquare: random(10)+em;
 		}
 		
 	}
-	@-webkit-keyframes square {
-		0%   { 
-			transform: translateY(0); 
-		}
-		
-		50% {
-			border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-		}
-		100% { 
-			transform: translateY($animationHeight) rotate(250deg); 
-			border-radius: random(20)+38% random(20)+52% random(20)+75% random(20)+36% / random(20)+50% random(20)+40% random(20)+50% random(20)+60%;
-		}
-	}
 	  @keyframes square {
 		0%   { 
 			transform: translateY(0); 
 		}
 
 		50% {
-			border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+			//border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
 		}
 
 		100% { 
 			transform: translateY($animationHeight) rotate(250deg); 
-			border-radius: 38% 52% 75% 36% / 50% 40% 50% 60%;
+			//border-radius: 38% 52% 75% 36% / 50% 40% 50% 60%;
 		}
 	}
 }
