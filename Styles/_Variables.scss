@@ -2,10 +2,10 @@
 $primaryColor: #F7F7F7;
 $secondaryColor: #497478;
 $tertiaryColor: darken($color: $secondaryColor , $amount: 15%);
-$fourthColor: #333333;//#273d4a;
+$fourthColor: #333333; //#273d4a;
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-$randomSquare: random(10)+em;
+$randomSquare: (random(5) + 5)+em;
 
 //---------------------------------------------MIXINS-------------------------------------------------------------
 @mixin scrollAnchor() {
@@ -107,12 +107,14 @@ $randomSquare: random(10)+em;
 			height: 3em;
 			background: lighten($color: $secondaryColor , $amount: 15%);
 			bottom: -3em;
-			-webkit-animation: square $duration  ease-in-out alternate infinite 0s;
-			animation:         square $duration  ease-in-out alternate infinite 0s;
+			animation: float $duration  ease-in-out alternate infinite 0s, blob $duration ease-in-out alternate infinite 0s;
 			
 			-webkit-transition-timing-function: ease-in;
 			transition-timing-function: ease-in;
 			
+			&:nth-child(even){
+				animation: float $duration  ease-in-out alternate infinite 0s, blob2 $duration ease-in-out alternate infinite 0s;
+			}
 
 			&:nth-child(1){
 				left: 5%;
@@ -200,32 +202,99 @@ $randomSquare: random(10)+em;
 				animation-delay: 20s;
 			}
 
-			@for $i from 11 through 21{
+			@for $i from 12 through 21{
 				&:nth-child(#{$i}){
-					left: random(100) + %;
+					left: percentage(random(100) / 100);
 					height: $randomSquare;
 					width: $randomSquare;
 					bottom: -#{$randomSquare};
+					animation: float $duration  ease-in-out alternate infinite 0s, blob3 $duration ease-in-out alternate infinite 0s;
 					animation-delay: random(12)-2s;
+					
 				}
 			}
-				
-
 		}
 		
 	}
-	  @keyframes square {
+
+	@keyframes float {
 		0%   { 
-			transform: translateY(0); 
+			transform: translateY(0);
 		}
-
-		50% {
-			//border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-		}
-
 		100% { 
 			transform: translateY($animationHeight) rotate(250deg); 
-			//border-radius: 38% 52% 75% 36% / 50% 40% 50% 60%;
+		}
+	}
+	
+	@keyframes blob {
+
+		0%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+
+		50%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+
+		100%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+	}
+
+	@keyframes blob2 {
+
+		0%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+
+		50%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+
+		100%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+	}
+
+	@keyframes blob3 {
+
+		0%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+
+		50%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+		}
+
+		100%{
+			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
 		}
 	}
 }

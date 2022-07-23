@@ -1,6 +1,6 @@
 //--------------------------------------------------------INITIAL CODE------------------------------------------------
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 @import './_Variables.scss';
 
 
@@ -19,7 +19,7 @@ body,html{
 }
 
 body{
-	font-family: 'Montserrat','Bitter', sans-serif;
+	font-family: 'Bitter', sans-serif;
 
 	// font size determines the size of a large sum of the page, to scale the site for different resolutions simply alter the body tags font size 
 	font-size: 18px;
@@ -77,8 +77,10 @@ header{
 
 	nav, .sticky{
 		padding: 1em 0;
-		width: 100%;
+		width: 99vw;
 		overflow: hidden;
+		
+		text-align: end;
 
 		.closeButton{
 			display: none;
@@ -90,8 +92,13 @@ header{
 		}
 
 		ul{
+			
 			li{
-				padding: 0 1em;
+				padding:  10px 1em;
+
+				&:hover{
+					border-bottom: solid 2px $tertiaryColor;
+				}
 			}
 
 			a{
@@ -99,11 +106,7 @@ header{
 				color: $primaryColor;
 				font-weight: 900;
 				font-size: 1.3em;
-				transition: border-bottom .3s;
-			}
-
-			a:hover{
-				border-bottom: solid $primaryColor .1em;
+				
 			}
 		}
 	}
@@ -134,7 +137,7 @@ header{
 			background-attachment: fixed;
 			height: 100vh;
             color: $primaryColor;
-            font-family: 'Bitter', sans-serif;
+            font-family: 'lato', sans-serif;
 		}
 
 		.overViewHeader{
@@ -232,6 +235,10 @@ header{
             display: block;
             margin: 2em auto auto;
 			height: auto;
+
+			&:hover{
+				transform: scale(.9);
+			}
 		}
 		
 		.container{
@@ -370,7 +377,6 @@ footer{
 	background-color: $secondaryColor;
 	color: $primaryColor;
 	padding: 2em 2em 1em;
-	font-family: 'Montserrat', sans-serif;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

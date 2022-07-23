@@ -154,10 +154,6 @@
     body{
         font-size: 14px;
 	}
-	
-	.heroImage{
-		@include backgroundBubbles(none, none);
-	}
 
 	.description{
 		.descContainer{
