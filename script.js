@@ -47,3 +47,14 @@ function stickyBar() {
     }
   }
 //-------------------------------------------------
+
+
+//---------animations------------------------
+let bubble = document.getElementsByClassName('bubble');
+
+function animationReset(e){
+    e.target.style.animation = "none";
+    setTimeout(() => {
+        e.target.style.animation = "";
+    }, 1000);
+}

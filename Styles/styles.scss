@@ -75,10 +75,9 @@ header{
 
 	nav, .sticky{
 		padding: 1em 0;
-		width: 99vw;
 		overflow: hidden;
 		
-		text-align: end;
+		//text-align: end;
 
 		.closeButton{
 			display: none;
@@ -112,6 +111,7 @@ header{
 	.sticky{
 		position: fixed;
 		background: $secondaryColor;
+		width: 99vw;
 	}
 }
 
@@ -387,6 +387,7 @@ footer{
 		}
 	}
 
+	
 	.footerRight{
 		text-align: center;
 

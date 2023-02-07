@@ -112,6 +112,8 @@ $randomSquare: (random(5) + 5)+em;
 			-webkit-transition-timing-function: ease-in;
 			transition-timing-function: ease-in;
 
+			
+
 			@for $i from 7 to 13 {
 				&:nth-child(#{$i}){
 					left: percentage(random(100) / 100);
@@ -221,6 +223,10 @@ $randomSquare: (random(5) + 5)+em;
 				animation-duration: $duration + 20;
 				animation-delay: 20s;
 			}
+			
+			&:hover{
+				cursor: pointer;
+			}
 		}
 		
 	}
@@ -237,137 +243,137 @@ $randomSquare: (random(5) + 5)+em;
 	@keyframes blob {
 
 		0%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 		
 		20%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		
 		}
 
 		40%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 		
 		60%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 
 		80%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 
 		100%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 	}
 
 	@keyframes blob2 {
 
 		0%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 		
 		20%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		
 		}
 
 		40%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 		
 		60%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 
 		80%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 
 		100%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 	}
 
 	@keyframes blob3 {
 		0%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 		
 		20%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		
 		}
 
 		40%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 		
 		60%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 
 		80%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 
 		100%{
-			border-top-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-top-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-left-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
-			border-bottom-right-radius: percentage((random(75) + 25)  / 100)  percentage((random(75) + 25)  / 100);
+			border-top-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-top-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-left-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
+			border-bottom-right-radius: percentage((random(90) + 20)  / 100)  percentage((random(90) + 20)  / 100);
 		}
 	}
 }
